@@ -18,7 +18,7 @@ Reproducible research—the concept that data and any code for analysis should b
 
 The aim of this workshop, then, is to provide a conceptual foundation for reproducible research in linguistics alongside practical hands-on training in implementing best practices in reproducible research through the use of several open-source digital tools. These include topics such as, (i) versioning with git and publishing and collaborating on versioned research outputs using web-based platforms, such as GitHub, and (ii) ‘notebooks’ or ‘dynamic documents’ that directly link the data and code for analysis to the prose of a research report using Jupyter Notebooks with Python and RStudio with R, which allow for various outputs (e.g., pdf, HTML) that contain both computer code  and rich text elements (paragraphs, equations, figures, links, etc.).
 
-##Learning outcomes
+## Learning outcomes
 
 ### By the end of the workshop, participants will be able to: 
 
