@@ -14,6 +14,7 @@
 
 
 ##Workshop Description
+
 Reproducible research—the concept that data and any code for analysis should be published alongside the research results so that others can validate and/or build upon the claims of the research—has gained real traction in the social sciences in recent years, and with the development of several open-source digital tools, conducting research in a reproducible research is more accessible than ever. While some sub-disciplines of linguistics have advocated for reproducible research and individual linguists have implemented reproducible methodologies into their research, many linguists lack the knowledge and/or practical training to make their research reproducible.
 
 The aim of this workshop, then, is to provide a conceptual foundation for reproducible research in linguistics alongside practical hands-on training in implementing best practices in reproducible research through the use of several open-source digital tools. These include topics such as, (i) versioning with git and publishing and collaborating on versioned research outputs using web-based platforms, such as GitHub, and (ii) ‘notebooks’ or ‘dynamic documents’ that directly link the data and code for analysis to the prose of a research report using Jupyter Notebooks with Python and RStudio with R, which allow for various outputs (e.g., pdf, HTML) that contain both computer code  and rich text elements (paragraphs, equations, figures, links, etc.).
