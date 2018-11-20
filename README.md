@@ -13,7 +13,7 @@
 * **Eve Koller**, University of Hawai‘i at Mānoa (<ekoller@hawaii.edu>)
 
 
-##Workshop Description
+## Workshop Description
 
 Reproducible research—the concept that data and any code for analysis should be published alongside the research results so that others can validate and/or build upon the claims of the research—has gained real traction in the social sciences in recent years, and with the development of several open-source digital tools, conducting research in a reproducible research is more accessible than ever. While some sub-disciplines of linguistics have advocated for reproducible research and individual linguists have implemented reproducible methodologies into their research, many linguists lack the knowledge and/or practical training to make their research reproducible.
 
