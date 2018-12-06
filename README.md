@@ -19,9 +19,9 @@ Reproducible research—the concept that data and any code for analysis should b
 
 The aim of this workshop, then, is to provide a conceptual foundation for reproducible research in linguistics alongside practical hands-on training in implementing best practices in reproducible research through the use of several open-source digital tools. These include topics such as, (i) versioning with git and publishing and collaborating on versioned research outputs using web-based platforms, such as GitHub, and (ii) ‘notebooks’ or ‘dynamic documents’ that directly link the data and code for analysis to the prose of a research report using Jupyter Notebooks with Python and RStudio with R, which allow for various outputs (e.g., pdf, HTML) that contain both computer code  and rich text elements (paragraphs, equations, figures, links, etc.).
 
-## Learning outcomes
+## Learning Outcomes
 
-### By the end of the workshop, participants will be able to: 
+By the end of the workshop, participants will be able to: 
 
 - Create a repository on Github
 - Create pull requests
@@ -35,8 +35,8 @@ The aim of this workshop, then, is to provide a conceptual foundation for reprod
 ## Participants
 This workshop is primarily aimed at early- and mid-career researchers, but will be accessible to both graduate students and senior researchers. Basic knowledge of either R or Python will be very beneficial but is not required. Participants will not be asked to write their own code; exercises will contain the necessary Python and R code. 
 
-## Materials
-Participants will be required to bring laptop computers to the workshop running OS-X (Mac) or Windows (mobile systems such as iPads, Android tablets, and Chromebooks are not suitable for the workshop). Prior to the workshop, the instructors will send out [instructions](installation.md) for installing all of the necessary software, which are [found on this page](installation.md). 
+## Materials, Software
+Participants will be required to bring laptop computers to the workshop running OS-X (Mac) or Windows (mobile systems such as iPads, Android tablets, and Chromebooks are not suitable for the workshop). Prior to the workshop, the instructors will send out [instructions for installing all of the necessary software](installation.md), which include git, R, and Python 3. 
 
 ## Schedule
 

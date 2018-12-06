@@ -1,0 +1,10 @@
+#------------------ Jupyter and common OS config files 
+.ipynb_checkpoints
+.DS_Store
+.Spotlight-V100
+Thumbs.db
+desktop.ini
+#------------------ Ruby and jekyll files below
+_site/
+Gemfile
+Gemfile.lock
