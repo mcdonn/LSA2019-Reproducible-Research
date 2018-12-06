@@ -1,9 +1,6 @@
 # Software Installation Guide
 
-We need three software components: **Python 3**, **Jupyter Notebook**, and **NLTK**. Two options:
-
-- If you are completely new to Python, you should install Anaconda Python. It includes all three components. ([OPTION 1](#option-1-install-everything-through-anaconda)) 
-- If you already have a working copy of Python 3 on your machine, you can install Jupyter Notebook and NLTK separately. ([OPTION 2](#option-2-already-have-python-add-on-components-separately)) 
+We need three software components: **git**, **R** and **Python 3**. The Python component also require two add-ons: **Jupyter Notebook** and **NLTK**. 
 
 
 ## Troubleshooting
@@ -12,12 +9,29 @@ If you run into problems, please:
 - On the workshop day, arrive early at 8:30am. The instructors will be ready to get hands-on with your laptop. 
 
 
-## OPTION 1: Install everything through Anaconda
+## git
+... go to git-scm... 
+
+## GitHub account
+... make sure to get education discount...
+
+## R
+... not sure how this is done... Rstudio is part of Jupyter... 
+
+
+## Python 3
+
+There are a LOT of Python distributions and therefore many ways and flavors of Python installation. Two recommended options:
+
+- If you are completely new to Python, you should install Anaconda Python. It includes all three components. ([OPTION 1](#option-1-install-everything-through-anaconda)) 
+- If you already have a working copy of Python 3 on your machine, you can install Jupyter Notebook and NLTK separately. ([OPTION 2](#option-2-already-have-python-add-on-components-separately)) 
+
+###  OPTION 1: Install everything through Anaconda
 <img src='img/anaconda_logo.png' align=right>
 
 There are many flavors of Python, but we recommend Anaconda's distribution. Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. (The downside is that it also installs lots of things you might never need.)
 
-### Install
+#### Install
 - Go to Anaconda Python's download page: [http://www.anaconda.com/download/](http://www.anaconda.com/download/)
 
 - Make sure you download and install the **Python 3.6 version**. Important!
@@ -28,7 +42,7 @@ There are many flavors of Python, but we recommend Anaconda's distribution. Anac
    - The setup file is 600MB; You will need 3GB of space on your hard drive. 
    - The default settings and options should work fine for most of you.   
 
-### Verify
+#### Verify
 Depending on your system, Anaconda may take a while to install. Once it finishes, check your installation: 
 
 - Find Anaconda Navigator in your start menu, launch it
@@ -37,7 +51,7 @@ Depending on your system, Anaconda may take a while to install. Once it finishes
 
 
 
-## OPTION 2: Already have Python, add on components separately
+### OPTION 2: Already have Python, add on components separately
 <img src='img/python_jupyter_nltk.w200.png' align=right>
 
 If you already have a working copy of Python 3 on your machine (perhaps you installed [python.org](https://www.python.org/) version of Python at some point), then you have a choice:
@@ -46,7 +60,7 @@ If you already have a working copy of Python 3 on your machine (perhaps you inst
 
 1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. 
 
-### Install
+#### Install
 - Open up a console. For Windows users, it's `cmd` (you might need to choose "Run as administrator" option); for Mac users, it's `Terminal`. ([Screenshot](img/cmd-pip3.png))
 - First, make sure your `pip3` is accessible: `where pip3` (Windows), `which pip3` (Mac). It should show pip's installation path.
 - If that worked, you can go ahead and install:
@@ -58,7 +72,7 @@ If you already have a working copy of Python 3 on your machine (perhaps you inst
 	```
 
 
-### Verify
+#### Verify
 Let's check if your installation was successful. 
 
 - Open up a console and type in `jupyter notebook`, followed by ENTER
