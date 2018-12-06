@@ -9,14 +9,13 @@ If you run into problems, please:
 - On the workshop day, arrive early at 8:30am. The instructors will be ready to get hands-on with your laptop. 
 
 
-## git
+## git and GitHub 
 ... go to git-scm... 
 
-## GitHub account
-... make sure to get education discount...
+... GitHub account... make sure to get education discount...
 
 ## R
-... not sure how this is done... Rstudio is part of Jupyter... 
+... not sure how this is done... Rstudio is also part of Anaconda... 
 
 
 ## Python 3
