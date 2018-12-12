@@ -14,9 +14,6 @@ If you run into problems, please:
 
 ... GitHub account... make sure to get education discount...
 
-## R
-... not sure how this is done... Rstudio is also part of Anaconda... 
-
 
 ## Python 3
 
@@ -25,7 +22,7 @@ There are a LOT of Python distributions and therefore many ways and flavors of P
 - If you are completely new to Python, you should install Anaconda Python. It includes all three components. ([OPTION 1](#option-1-install-everything-through-anaconda)) 
 - If you already have a working copy of Python 3 on your machine, you can install Jupyter Notebook and NLTK separately. ([OPTION 2](#option-2-already-have-python-add-on-components-separately)) 
 
-###  OPTION 1: Install everything through Anaconda
+###  OPTION 1: Install everything through Anaconda (5.3.1 version)
 <img src='img/anaconda_logo.png' align=right>
 
 There are many flavors of Python, but we recommend Anaconda's distribution. Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. (The downside is that it also installs lots of things you might never need.)
@@ -33,22 +30,21 @@ There are many flavors of Python, but we recommend Anaconda's distribution. Anac
 #### Install
 - Go to Anaconda Python's download page: [http://www.anaconda.com/download/](http://www.anaconda.com/download/)
 
-- Make sure you download and install the **Python 3.6 version**. Important!
+- Make sure you download and install the **Python 3.7 version**. Important!
 - 64-bit vs. 32-bit: if your system can handle it (most modern systems can), we recommend 64-bit, which is Anaconda's default choice also. 
 - Double-click the downloaded setup file to start the installation process. Details:
    - Ignore the question about installing Visual Studio Code. We don't need it. 
    - A "Get the cheat sheet" dialog box will pop up asking for your email. You can ignore it. 
-   - The setup file is 600MB; You will need 3GB of space on your hard drive. 
+   - The setup file is 600MB; You will need 3GB of space on your hard drive.
+   - Ignore messages about signing up for Anaconda Cloud.
    - The default settings and options should work fine for most of you.   
 
-#### Verify
+#### Verify Anaconda and Jupyter Notebooks
 Depending on your system, Anaconda may take a while to install. Once it finishes, check your installation: 
 
-- Find Anaconda Navigator in your start menu, launch it
+- Find Anaconda Navigator in your start menu (or Applications folder on Mac), launch it
 - Launch Jupyter Notebook
 - Jupyter opens up as a tab in your browser (Safari, Chrome, FireFox, etc.). You should be able to see your personal folders such as `Desktop` and `Documents`. 
-
-
 
 ### OPTION 2: Already have Python, add on components separately
 <img src='img/python_jupyter_nltk.w200.png' align=right>
@@ -84,8 +80,31 @@ Let's check if your installation was successful.
 - Then hit the play ▶ button on top. 
 - If there is no error, your installation was successful. You can now close the browser window -- no saving necessary. 
 
+## R and R Studio
+There are two options for installing R and RStudio. 
+<img src='img/r-logo.png', align='right'>
+
+1. If you plan to install Python 3 with Anaconda, you can simply Install R and RStudio using Anaconda Navigator <br> **(Choose Option 1)**. 
+<img src='img/rstudio-logo-flat.png', align='right'>
+2. However, if you don't plan to install Anaconda, it's quite simple to install R and RStudio <br> **(Choose Option 2)**. 
 
 
+
+### Option 1: Install RStudio as a part of Anaconda
+Anaconda doesn't install RStudio by default, so you need to install it. Luckily, it's quite simple. 
+
+- In the Anaconda Navigator window, click Install RStudio (1.1.456 version)
+- It will take some time to install, there's a progress bar in the lower right corner to show it's working
+- You may also be asked to update Anaconda Navigator; it's okay to install and relaunch
+- Lauch RStudio and desktop app will open
+
+### OPTION 2: Install R and RStudio 
+R and RStudio are downloaded and installed separately. 
+
+1. Download R from [https://cran.r-project.org/](https://cran.r-project.org/)
+
+
+2. Download R Studio from [https://www.rstudio.com/](https://www.rstudio.com/) 
 
 
 
