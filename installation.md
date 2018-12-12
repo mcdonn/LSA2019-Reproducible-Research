@@ -1,9 +1,9 @@
 # Software Installation Guide
 
-We need three software components: **git**, **R** and **Python 3**. The Python component also require two add-ons: **Jupyter Notebook** and **NLTK**. 
+We need three software components: [**git**](#git-and-github), [**R**](#r-and-r-studio) and [**Python 3**](#python-3). The Python component also require two add-ons: **Jupyter Notebook** and **NLTK**. 
 
 
-## Troubleshooting
+### Troubleshooting
 If you run into problems, please:
 - Email the instructors. Note your OS (Windows? Mac?) and give us a description of how and where you are stuck. Screenshots work wonders. 
 - On the workshop day, arrive early at 8:30am. The instructors will be ready to get hands-on with your laptop. 
@@ -53,16 +53,16 @@ Anaconda has the advantage of already including popular scientific libraries suc
 If you already have a working copy of Python 3 on your machine (perhaps you installed [python.org](https://www.python.org/) version of Python at some point), then you have a choice:
 
 1. Keep your existing Python copy, and install the Anaconda version separately. Both copies of Python will work independently. To go with this option, follow the [Anaconda installation instructions above](#option-1-install-everything-through-anaconda). 
-1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. It assumes you are familiar with `pip`.  
-  - In your console window (`cmd` for Windows, `Terminal` for Mac), use `pip3` to install the two add-on components: 
+1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow the instructions below. It assumes you are familiar with `pip`.  
+    - In your console window (`cmd` for Windows, `Terminal` for Mac), use `pip3` to install the two add-on components: 
 	- Install NLTK: `pip3 install nltk`
 	- Install Jupyter Notebook: `pip3 install jupyter`
-  - If it did not work, `pip3` is not in your system's path. Google for solutions or install Anaconda instead. 
-  - If installation went fine, verify your setup: 
-     - In your console, use the command`jupyter notebook` to launch jupyter. It will open a tab in your default browser. 
-	 - On the right-hand side, click on "New", choose "Python 3". Another tab will open up. 
-	 - In the top cell, type in `import nltk`, and then hit the play ▶ button on top. 
-     - If there is no error message, your installation was successful.
+    - If it did not work, `pip3` is not in your system's path. Google for solutions or install Anaconda instead. 
+    - If installation went fine, verify your setup: 
+         - In your console, use the command`jupyter notebook` to launch jupyter. It will open a tab in your default browser. 
+	     - On the right-hand side, click on "New", choose "Python 3". Another tab will open up. 
+	     - In the top cell, type in `import nltk`, and then hit the play ▶ button on top. 
+         - If there is no error message, your installation was successful.
   
 ## R and R Studio
 There are two options for installing R and RStudio. <img src='img/r-logo.png' align=right>
