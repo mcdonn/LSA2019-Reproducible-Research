@@ -17,7 +17,6 @@ If you run into problems, please:
   - (Windows users only) Line ending conversions: ([Screenshot](img/git_setup2.png)) Choose the "Checkout as-is, commit Unix-style line endings" option. 
   - For all other options, the default setting should work best for most users.   
 
-
 ### Signing up for a GitHub Account
 <img src='img/Octocat.png' align=right>
 
@@ -27,6 +26,7 @@ GitHub accounts has different types of accounts. The free account allows you to 
 	- Create a username, supply an email (best to use .edu email) and password.
 	- Choose the Free account and click Continue and then Submit
 	- You now have a GitHub account
+
 1. To apply for the educational discount, go to [https://education.github.com/](https://education.github.com/)
 	- Click on **Join GitHub Education** in the upper right corner
 	- Fill out the questions (select Individual account for question 2) and click Next
