@@ -17,10 +17,21 @@ If you run into problems, please:
   - (Windows users only) Line ending conversions: ([Screenshot](img/git_setup2.png)) Choose the "Checkout as-is, commit Unix-style line endings" option. 
   - For all other options, the default setting should work best for most users.   
 
-
 ### Signing up for a GitHub Account
-GitHub accounts are free.  make sure to get education discount...
+<img src='img/Octocat.png' align=right>
 
+GitHub accounts has different types of accounts. The free account allows you to create public repositories and collaborate with others, but you *cannot* create private repository that only you and your collaborators can view. This requires a paid 'developer' account. However, there's good news for eductors! GitHub offers educators two years free for these developer accounts, you simply need to apply and use your educational (.edu) email address. Follow these steps to sign up for GitHub and apply for the educational discount: 
+
+1. Go to [https://github.com](https://github.com)
+	- Create a username, supply an email (best to use .edu email) and password.
+	- Choose the Free account and click Continue and then Submit
+	- You now have a GitHub account
+
+1. To apply for the educational discount, go to [https://education.github.com/](https://education.github.com/)
+	- Click on **Join GitHub Education** in the upper right corner
+	- Fill out the questions (select Individual account for question 2) and click Next
+	- Then fill out your name, university issued email address, name of school, and a brief description of how you plan to use GitHub.
+	- Click Submit request and GitHub will email instructions for the rest of the process.
 
 ## Python 3
 
