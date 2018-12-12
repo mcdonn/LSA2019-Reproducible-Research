@@ -116,7 +116,4 @@ R and RStudio are downloaded and installed separately.
 	- Select the *free* download and choose the appropriate installer for your machine
 	- Run the installers 
 	- **Mac Users** simply drag the RStudio.app file into your Applications folder
-	
-
-
 
