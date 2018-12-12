@@ -17,7 +17,9 @@ If you run into problems, please:
   - (Windows users only) Line ending conversions: ([Screenshot](img/git_setup2.png)) Choose the "Checkout as-is, commit Unix-style line endings" option. 
   - For all other options, the default setting should work best for most users.   
 
-... GitHub account... make sure to get education discount...
+
+### Signing up for a GitHub Account
+GitHub accounts are free.  make sure to get education discount...
 
 
 ## Python 3
@@ -103,8 +105,7 @@ There are two options for installing R and RStudio. <img src='img/r-logo.png' al
 
 
 
-
-### Option 1: Install RStudio as a part of Anaconda
+### OPTION 1: Install RStudio as a part of Anaconda
 Anaconda doesn't install RStudio by default, so you need to install it. Luckily, it's quite simple. 
 
 - In the Anaconda Navigator window, click Install RStudio (1.1.456 version)
@@ -115,11 +116,16 @@ Anaconda doesn't install RStudio by default, so you need to install it. Luckily,
 ### OPTION 2: Install R and RStudio 
 R and RStudio are downloaded and installed separately. 
 
-1. Download R from [https://cran.r-project.org/](https://cran.r-project.org/)
-
-
-1. Download R Studio from [https://www.rstudio.com/](https://www.rstudio.com/) 
-
-
-
+1. Download R from [https://cran.r-project.org/](https://cran.r-project.org/) 
+	- Select the appropriate version of R for your machine, which takes you to another page
+	- **Mac Users:** 
+		- Under the heading *Latest Release* download **R-3.5.1.pkg** and run the installer
+		-  It is also a good idea to download and install XQuartz ([https://www.xquartz.org/](https://www.xquartz.org/))
+	- **Windows Users:** 
+		- Under the heading *Subdirectories* select **base**
+		- Then, select **Download R 3.5.1 for Windows** and run the installer
+1. Download [R Studio](https://www.rstudio.com) from [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+	- Select the *free* download and choose the appropriate installer for your machine
+	- Run the installers 
+	- **Mac Users** simply drag the RStudio.app file into your Applications folder
 
