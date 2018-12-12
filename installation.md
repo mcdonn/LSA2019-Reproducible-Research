@@ -59,7 +59,6 @@ If you already have a working copy of Python 3 on your machine (perhaps you inst
 1. Keep your existing Python copy, and install the Anaconda version separately. Both copies of Python will work independently. To go with this option, follow the [Anaconda installation instructions above](#option-1-install-everything-through-anaconda). 
 
 1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. It assumes you are familiar with `pip`.  
-
   - In your console window (`cmd` for Windows, `Terminal` for Mac), use `pip3` to install the two add-on components: 
 	- Install NLTK: `pip3 install nltk`
 	- Install Jupyter Notebook: `pip3 install jupyter`
