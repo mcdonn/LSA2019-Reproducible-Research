@@ -53,7 +53,6 @@ Anaconda has the advantage of already including popular scientific libraries suc
 If you already have a working copy of Python 3 on your machine (perhaps you installed [python.org](https://www.python.org/) version of Python at some point), then you have a choice:
 
 1. Keep your existing Python copy, and install the Anaconda version separately. Both copies of Python will work independently. To go with this option, follow the [Anaconda installation instructions above](#option-1-install-everything-through-anaconda). 
-
 1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. It assumes you are familiar with `pip`.  
   - In your console window (`cmd` for Windows, `Terminal` for Mac), use `pip3` to install the two add-on components: 
 	- Install NLTK: `pip3 install nltk`
@@ -65,32 +64,6 @@ If you already have a working copy of Python 3 on your machine (perhaps you inst
 	 - In the top cell, type in `import nltk`, and then hit the play ▶ button on top. 
      - If there is no error message, your installation was successful.
   
-<!-- 
-
-#### Install
-- Open up a console. For Windows users, it's `cmd` (you might need to choose "Run as administrator" option); for Mac users, it's `Terminal`. ([Screenshot](img/cmd-pip3.png))
-- Make sure your `pip3` is accessible: `where pip3` (Windows), `which pip3` (Mac). It should show pip's installation path. 
-- If that worked, you can go ahead and install:
-	- Install NLTK: `pip3 install nltk`
-	- Install Jupyter Notebook: `pip3 install jupyter`
-- If `where/which pip3` fails, then `pip3` is not in your system's path. After locating it on your system, you will likely need to use its full path to execute it.
-
-Try and see if you can find it in places like `C:\Program Files (x86)\Python36-32\Scripts`, `C:\Users\naraehan\AppData\Local\Programs\Python\Python36-32\Scripts`. Once you have successfully located `pip3`, you will have to execute each installation command by fully specifying its path, e.g.,:
-	```
-	C:\Users\naraehan\AppData\Local\Programs\Python\Python36-32\Scripts\pip3 install nltk
-	```
-
-
-#### Verify
-Let's check if your installation was successful. 
-
-- Open up a console and type in `jupyter notebook`, followed by ENTER
-- Jupyter opens up as a tab in your browser (Safari, Chrome, FireFox, etc.). You should be able to see your personal folders such as `Desktop` and `Documents`. 
-- On the right-hand side, click on "New", choose "Python 3".
-- Another tab opens up. In the box, type in `import nltk`, and then hit the play ▶ button on top. 
-- If there is no error message, your installation was successful. You can now close the browser window -- no saving necessary. 
--->
-
 ## R and R Studio
 There are two options for installing R and RStudio. <img src='img/r-logo.png' align=right>
 
