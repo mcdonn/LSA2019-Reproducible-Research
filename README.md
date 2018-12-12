@@ -56,6 +56,6 @@ Participants will be required to bring laptop computers to the workshop running 
 
 ## Support
 
-<img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="100" style="float:right;" /> 
+<img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="100" align="right" /> 
 
 This material is based upon work supported by the National Science Foundation under grant SMA-1745249 to the University of Hawai‘i at Mānoa. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
