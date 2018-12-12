@@ -82,11 +82,10 @@ Let's check if your installation was successful.
 
 ## R and R Studio
 There are two options for installing R and RStudio. 
-
-<img src='img/r-logo.png', align=right>
+<img src='img/r-logo.png' align=right>
 
 1. If you plan to install Python 3 with Anaconda, you can simply Install R and RStudio using Anaconda Navigator <br> **(Choose Option 1)**. 
-<img src='img/rstudio-logo-flat.png', align=right>
+<img src='img/rstudio-logo-flat.png' align=right>
 2. However, if you don't plan to install Anaconda, it's quite simple to install R and RStudio <br> **(Choose Option 2)**. 
 
 
