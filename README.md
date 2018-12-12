@@ -44,13 +44,13 @@ Participants will be required to bring laptop computers to the workshop running 
 | --- | --- | --- |
 | 9:00 - 9:15 | Introductions | |
 | 9:15 - 9:30 | Overview of workshop | Brad | 
-| 9:30 - 10:30 | [Introduction to git](intro_to_git.md) | Na-Rae |
-| **10:30 - 10:45** | **Break** | |
-| 10:45 - 12:00 | Linking git and GitHub | Na-Rae, Brad |
-| **12:00 - 1:00** |  **Lunch** | |
-| 1:00 - 1:15 | RStudio with R demo  | Brad |
-| 1:15 - 1:30 | Jupyter Notebooks with Python demo  | Na-Rae |
-| 1:30 - 3:15 | Break out groups with RStudio and Jupyter Notebooks | |
+| 9:30 - 10:45 | [Introduction to git](intro_to_git.md) | Na-Rae |
+| **10:45 - 11:00** | **Break** | |
+| 11:00 - 12:30 | Linking git and GitHub | Na-Rae, Brad |
+| **12:30 - 1:30** |  **Lunch** | |
+| 1:30 - 1:45 | RStudio with R demo  | Brad |
+| 1:45 - 2:00 | Jupyter Notebooks with Python demo  | Na-Rae |
+| 2:00 - 3:15 | Break out groups with RStudio and Jupyter Notebooks | |
 | 3:15 - 3:30 | Concluding remarks | |
 
 
