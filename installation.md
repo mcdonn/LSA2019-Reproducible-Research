@@ -32,10 +32,9 @@ There are a LOT of Python distributions and therefore many ways to install Pytho
 ###  OPTION 1: Install everything through Anaconda 
 <img src='img/anaconda_logo.png' align=right>
 
-There are many flavors of Python, but we recommend Anaconda's distribution. Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. 
+Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. 
 <!-- (The downside is that it also installs lots of things you might never need.) -->
 
-#### Install
 - Go to Anaconda Python's download page: [http://www.anaconda.com/download/](http://www.anaconda.com/download/) Current version is **5.3.1**. 
 - Make sure you download and install the **Python 3.7 version**. Important!
 - 64-bit vs. 32-bit: if your system can handle it (most modern systems can), we recommend 64-bit. 
@@ -43,13 +42,10 @@ There are many flavors of Python, but we recommend Anaconda's distribution. Anac
    - The setup file is 600MB; You will need 3GB of space on your hard drive.
    - Ignore away: a question about installing Visual Studio Code, a "Get the cheat sheet" dialog box popping up asking for your email, and a message about signing up for Anaconda Cloud. 
    - The default settings and options should work fine for most of you.   
-
-#### Verify Anaconda and Jupyter
-Depending on your system, Anaconda may take a while to install. Once it finishes, check your installation: 
-
-- Find Anaconda Navigator in your start menu (or Applications folder on Mac), launch it
-- Launch Jupyter Notebook
-- Jupyter opens up as a tab in your browser (Safari, Chrome, FireFox, etc.). You should be able to see your personal folders such as `Desktop` and `Documents`. 
+- Depending on your system, Anaconda may take a while to install. Once it finishes, check your installation: 
+   - Find Anaconda Navigator in your start menu (or Applications folder on Mac), launch it
+   - Launch Jupyter Notebook
+   - Jupyter opens up as a tab in your browser (Safari, Chrome, FireFox, etc.). You should be able to see your personal folders such as `Desktop` and `Documents`. 
 
 ### OPTION 2: Already have Python, add on components separately
 <img src='img/python_jupyter_nltk.w200.png' align=right>
