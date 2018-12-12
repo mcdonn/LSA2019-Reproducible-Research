@@ -10,7 +10,12 @@ If you run into problems, please:
 
 
 ## git and GitHub 
-... go to git-scm... 
+- Install `git` from [https://git-scm.com/downloads](https://git-scm.com/downloads).
+  - We don't need GUI clients: there is no need to install one. 
+  - (Windows users only) Choose the 64-bit version unless you know your system can only handle 32-bit. 
+  - Default editor: ([Screenshot]('img/git_setup1.png')) You don't want to use Vim! Choose your favorite editor in the drop-down menu (Sublime Text, Notepad++, Atom, etc.) if you already have one installed. If you are not sure, pick Nano.  
+  - (Windows users only) Line ending conversions: ([Screenshot]('img/git_setup2.png')) Choose the "Checkout as-is, commit Unix-style line endings" option. 
+  - For all other options, the default setting should work best for most users.   
 
 ... GitHub account... make sure to get education discount...
 
@@ -19,24 +24,23 @@ If you run into problems, please:
 
 There are a LOT of Python distributions and therefore many ways and flavors of Python installation. Two recommended options:
 
-- If you are completely new to Python, you should install Anaconda Python. It includes all three components. ([OPTION 1](#option-1-install-everything-through-anaconda)) 
-- If you already have a working copy of Python 3 on your machine, you can install Jupyter Notebook and NLTK separately. ([OPTION 2](#option-2-already-have-python-add-on-components-separately)) 
+- If you are completely new to Python, you should install Anaconda Python. It includes all necessary Python add-ons. ([OPTION 1](#option-1-install-everything-through-anaconda)) 
+- If you already have a working copy of Python 3 on your machine, you can install Jupyter Notebook and NLTK separately via `pip`. Recommended for advanced users. ([OPTION 2](#option-2-already-have-python-add-on-components-separately)) 
 
-###  OPTION 1: Install everything through Anaconda (5.3.1 version)
+###  OPTION 1: Install everything through Anaconda 
 <img src='img/anaconda_logo.png' align=right>
 
-There are many flavors of Python, but we recommend Anaconda's distribution. Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. (The downside is that it also installs lots of things you might never need.)
+There are many flavors of Python, but we recommend Anaconda's distribution. Anaconda has the advantage of already including popular scientific libraries such as NLTK. It also includes the Jupyter Notebook interface. 
+<!-- (The downside is that it also installs lots of things you might never need.) -->
 
 #### Install
-- Go to Anaconda Python's download page: [http://www.anaconda.com/download/](http://www.anaconda.com/download/)
+- Go to Anaconda Python's download page: [http://www.anaconda.com/download/](http://www.anaconda.com/download/) Current version is **5.3.1**. 
 
 - Make sure you download and install the **Python 3.7 version**. Important!
-- 64-bit vs. 32-bit: if your system can handle it (most modern systems can), we recommend 64-bit, which is Anaconda's default choice also. 
+- 64-bit vs. 32-bit: if your system can handle it (most modern systems can), we recommend 64-bit. 
 - Double-click the downloaded setup file to start the installation process. Details:
-   - Ignore the question about installing Visual Studio Code. We don't need it. 
-   - A "Get the cheat sheet" dialog box will pop up asking for your email. You can ignore it. 
    - The setup file is 600MB; You will need 3GB of space on your hard drive.
-   - Ignore messages about signing up for Anaconda Cloud.
+   - Ignore away: a question about installing Visual Studio Code, a "Get the cheat sheet" dialog box popping up asking for your email, and a message about signing up for Anaconda Cloud. 
    - The default settings and options should work fine for most of you.   
 
 #### Verify Anaconda and Jupyter Notebooks
@@ -53,19 +57,21 @@ If you already have a working copy of Python 3 on your machine (perhaps you inst
 
 1. Keep your existing Python copy, and install the Anaconda version separately. Both copies of Python will work independently. To go with this option, follow the [Anaconda installation instructions above](#option-1-install-everything-through-anaconda). 
 
-1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. 
+1. Add NLTK and Jupyter Notebook to your existing Python 3. This is a sensible thing to do! Follow instructions below. It assumes you are familiar with `pip`.  
 
 #### Install
 - Open up a console. For Windows users, it's `cmd` (you might need to choose "Run as administrator" option); for Mac users, it's `Terminal`. ([Screenshot](img/cmd-pip3.png))
-- First, make sure your `pip3` is accessible: `where pip3` (Windows), `which pip3` (Mac). It should show pip's installation path.
+- Make sure your `pip3` is accessible: `where pip3` (Windows), `which pip3` (Mac). It should show pip's installation path. 
 - If that worked, you can go ahead and install:
 	- Install NLTK: `pip3 install nltk`
 	- Install Jupyter Notebook: `pip3 install jupyter`
-- If `where pip3` fails, then `pip3` is not in your system's path. Try and see if you can find it in places like `C:\Program Files (x86)\Python36-32\Scripts`, `C:\Users\naraehan\AppData\Local\Programs\Python\Python36-32\Scripts`. Once you have successfully located `pip3`, you will have to execute each installation command by fully specifying its path, e.g.,:
+- If `where/which pip3` fails, then `pip3` is not in your system's path. After locating it on your system, you will likely need to use its full path to execute it.
+<!-- 
+Try and see if you can find it in places like `C:\Program Files (x86)\Python36-32\Scripts`, `C:\Users\naraehan\AppData\Local\Programs\Python\Python36-32\Scripts`. Once you have successfully located `pip3`, you will have to execute each installation command by fully specifying its path, e.g.,:
 	```
 	C:\Users\naraehan\AppData\Local\Programs\Python\Python36-32\Scripts\pip3 install nltk
 	```
-
+-->
 
 #### Verify
 Let's check if your installation was successful. 
@@ -73,12 +79,8 @@ Let's check if your installation was successful.
 - Open up a console and type in `jupyter notebook`, followed by ENTER
 - Jupyter opens up as a tab in your browser (Safari, Chrome, FireFox, etc.). You should be able to see your personal folders such as `Desktop` and `Documents`. 
 - On the right-hand side, click on "New", choose "Python 3".
-- Another tab opens up. In the box, type in this line:
-	```python
-	import nltk
-	```
-- Then hit the play ▶ button on top. 
-- If there is no error, your installation was successful. You can now close the browser window -- no saving necessary. 
+- Another tab opens up. In the box, type in `import nltk`, and then hit the play ▶ button on top. 
+- If there is no error message, your installation was successful. You can now close the browser window -- no saving necessary. 
 
 ## R and R Studio
 There are two options for installing R and RStudio. <img src='img/r-logo.png' align=right>
