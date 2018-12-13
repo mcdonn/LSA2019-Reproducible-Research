@@ -9,21 +9,22 @@ If you run into problems, please:
 - On the workshop day, arrive early at 8:30am. The instructors will be ready to get hands-on with your laptop. 
 
 
-## git and GitHub 
-- Install `git` from [https://git-scm.com/downloads](https://git-scm.com/downloads).
-  - We don't need GUI clients: there is no need to install one. 
-  - (Windows users only) Choose the 64-bit version unless you know your system can only handle 32-bit. 
-  - Default editor: ([Screenshot](img/git_setup1.png)) You don't want to use Vim! Choose your favorite editor in the drop-down menu (Sublime Text, Notepad++, Atom, etc.) if you already have one installed. If you are not sure, pick Nano.  
-  - (Windows users only) Line ending conversions: ([Screenshot](img/git_setup2.png)) Choose the "Checkout as-is, commit Unix-style line endings" option. 
-  - For all other options, the default setting should work best for most users.   
+## Git and GitHub 
+<img src='img/git.png' width=180px align=right>
+
+Git is an open-source version control system and runs locally on your machine. To install, head to [https://git-scm.com/downloads](https://git-scm.com/downloads). During installation, make sure to get certain settings right: 
+   - We don't need GUI clients: there is no need to install one. 
+   - Default editor: ([Screenshot](img/git_setup1.png)) You don't want to use Vim! Choose your favorite editor in the drop-down menu (Sublime Text, Notepad++, Atom, etc.) if you already have one installed. If you are not sure, pick Nano.  
+   - (Windows users only) Line ending conversions: ([Screenshot](img/git_setup2.png)) Choose the "Checkout as-is, commit Unix-style line endings" option. 
+   - For all other options, the default setting should work best for most users.   
 
 ### Signing up for a GitHub Account
 <img src='img/Octocat.png' align=right>
 
-GitHub accounts has different types of accounts. The free account allows you to create public repositories and collaborate with others, but you *cannot* create private repository that only you and your collaborators can view. This requires a paid 'developer' account. However, there's good news for eductors! GitHub offers educators two years free for these developer accounts, you simply need to apply and use your educational (.edu) email address. Follow these steps to sign up for GitHub and apply for the educational discount: 
+GitHub accounts has different types of accounts. The free account allows you to create public repositories and collaborate with others, but you *cannot* create private repository that only you and your collaborators can view. This requires a paid 'developer' account. However, there's good news for educators! GitHub offers educators two years free for these developer accounts, you simply need to apply and use your educational (.edu) email address. Follow these steps to sign up for GitHub and apply for the educational discount: 
 
 1. Go to [https://github.com](https://github.com)
-	- Create a username, supply an email (best to use .edu email) and password.
+	- Create a username, supply an email (best to use .edu email) and password. 
 	- Choose the Free account and click Continue and then Submit
 	- You now have a GitHub account
 
