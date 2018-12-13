@@ -26,11 +26,8 @@ By the end of the workshop, participants will be able to:
 - Create a repository on Github
 - Create pull requests
 - Invite collaborators
-- Use basic Python and/or Markdown in Jupyter Notebooks
-- Integrate R code and Markdown for 
-- Execute basic statistical functions in RStudio
-- Create graphs and figures in RStudio
-
+- Use Markdown with Python in Jupyter Notebooks
+- Integrate R code and Markdown for knitr documents
 
 ## Participants
 This workshop is primarily aimed at early- and mid-career researchers, but will be accessible to both graduate students and senior researchers. Basic knowledge of either R or Python will be very beneficial but is not required. Participants will not be asked to write their own code; exercises will contain the necessary Python and R code. 
