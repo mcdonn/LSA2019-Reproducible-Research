@@ -11,11 +11,6 @@ The materials below have been adapted from the excellent lessons by the Software
 1.  [Exploring History](#exploring-history) 
 1.  [Ignoring Things](#ignoring-things) 
 
-... will be heavily borrowing from Software Carpentry's lessons http://swcarpentry.github.io/git-novice/. The files on GitHub: https://github.com/swcarpentry/git-novice/tree/gh-pages/_episodes
-
-... and also my class stuff: http://www.pitt.edu/~naraehan/ling1340/
-
-
 ## Setting Up Git
 
 When we use Git on a new computer for the first time,
