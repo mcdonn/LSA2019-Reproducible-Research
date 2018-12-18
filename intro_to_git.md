@@ -63,12 +63,12 @@ Once Git is configured, we can start using it. First, let's create a directory i
 
 ```bash
 $ cd ~/Desktop
-$ mkdir planets
-$ cd planets
+$ mkdir languages
+$ cd languages
 ```
 
 
-Then we tell Git to make `planets` a **repository** -- a place where
+Then we tell Git to make `languages` a **repository** -- a place where
 Git can store versions of our files:
 
 ```bash
@@ -78,9 +78,9 @@ $ git init
 
 It is important to note that `git init` will create a repository that
 includes subdirectories and their files -- there is no need to create
-separate repositories nested within the `planets` repository, whether
+separate repositories nested within the `languages` repository, whether
 subdirectories are present from the beginning or added later. Also, note
-that the creation of the `planets` directory and its initialization as a
+that the creation of the `languages` directory and its initialization as a
 repository are completely separate processes.
 
 If we use `ls` to show the directory's contents,
@@ -91,7 +91,7 @@ $ ls
 ```
 
 But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `planets` called `.git`:
+we can see that Git has created a hidden directory within `languages` called `.git`:
 
 ```bash
 $ ls -a
@@ -121,35 +121,34 @@ nothing to commit (create/copy files and use "git add" to track)
 
 
 First let's make sure we're still in the right directory.
-You should be in the `planets` directory.
+You should be in the `languages` directory.
 
 ```bash
 $ pwd
-/home/naraehan/Desktop/planets
+/home/naraehan/Desktop/languages
 ```
 
 
-Let's create a file called `mars.txt` that contains some notes
+Let's create a file called `zulu.txt` that contains some notes
 about the Red Planet's suitability as a base.
-We'll use `nano` to edit the file;
-you can use whatever editor you like.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
+We'll use `nano` to edit the file; you can use your favorite editor.
+In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). 
 
 ```bash
-$ nano mars.txt
+$ nano zulu.txt
 ```
 
-Type the text below into the `mars.txt` file:
+Type the text below into the `zulu.txt` file:
 
 ```
-Cold and dry, but everything is my favorite color
+belongs to the Bantu language family
 ```
 
-`mars.txt` now contains a single line, which we can see by running:
+`zulu.txt` now contains a single line, which we can see by running:
 
 ```bash
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
+$ cat zulu.txt
+belongs to the Bantu language family
 ```
 
 If we check the status of our project again, Git tells us that it’s noticed the new file:
@@ -163,7 +162,7 @@ Initial commit
 Untracked files:
    (use "git add <file>..." to include in what will be committed)
 
-	mars.txt
+	zulu.txt
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
@@ -172,7 +171,7 @@ that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
 ```bash
-$ git add mars.txt
+$ git add zulu.txt
 ```
 and then check that the right thing happened:
 
@@ -185,19 +184,19 @@ Initial commit
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   mars.txt
+	new file:   zulu.txt
 ```
 
-Git now knows that it's supposed to keep track of `mars.txt`,
+Git now knows that it's supposed to keep track of `zulu.txt`,
 but it hasn't recorded these changes as a commit yet.
 To get it to do that,
 we need to run one more command:
 
 ```bash
-$ git commit -m "Start notes on Mars as a base"
-[master (root-commit) f22b25e] Start notes on Mars as a base
+$ git commit -m "start notes on Zulu language"
+[master (root-commit) f22b25e] start notes on Zulu language
  1 file changed, 1 insertion(+)
- create mode 100644 mars.txt
+ create mode 100644 zulu.txt
 ```
 
 When we run `git commit`,
@@ -230,7 +229,7 @@ commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 09:51:46 2018 -0400
 
-    Start notes on Mars as a base
+    start notes on Zulu language
 ```
 
 `git log` lists all commits  made to a repository in reverse chronological order.
@@ -239,8 +238,7 @@ the commit's full identifier
 (which starts with the same characters as
 the short identifier printed by the `git commit` command earlier),
 the commit's author,
-when it was created,
-and the log message Git was given when the commit was created.
+when it was created, and the log message Git was given when the commit was created.
 
 
 Now suppose Prof. Higgins adds more information to the file.
@@ -248,10 +246,10 @@ Now suppose Prof. Higgins adds more information to the file.
 you may use a different editor, and don't need to `cat`.)
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
+$ nano zulu.txt
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
 ```
 
 When we run `git status` now,
@@ -264,7 +262,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   mars.txt
+	modified:   zulu.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -282,13 +280,13 @@ of the file and the most recently saved version:
 
 ```bash
 $ git diff
-diff --git a/mars.txt b/mars.txt
+diff --git a/zulu.txt b/zulu.txt
 index df0654a..315bf3a 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1 +1,2 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
+ belongs to the Bantu language family
++spoken in South Africa
 ```
 
 The output is cryptic because
@@ -310,14 +308,14 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 ```bash
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
+$ git commit -m "add region information"
 $ git status
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   mars.txt
+	modified:   zulu.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -327,9 +325,9 @@ Git won't commit because we didn't use `git add` first.
 Let's fix that:
 
 ```bash
-$ git add mars.txt
-$ git commit -m "Add concerns about effects of Mars' moons on Wolfman"
-[master 34961b1] Add concerns about effects of Mars' moons on Wolfman
+$ git add zulu.txt
+$ git commit -m "add region information"
+[master 34961b1] add region information
  1 file changed, 1 insertion(+)
 ```
 
@@ -337,8 +335,7 @@ Git insists that we add files to the set we want to commit
 before actually committing anything. This allows us to commit our
 changes in stages and capture changes in logical portions rather than
 only large batches.
-For example,
-suppose we're adding a few citations to relevant research to our thesis.
+For example, suppose we're adding a few citations to relevant research to our thesis.
 We might want to commit those additions,
 and the corresponding bibliography entries,
 but *not* commit some of our work drafting the conclusion
@@ -347,7 +344,7 @@ but *not* commit some of our work drafting the conclusion
 To allow for this,
 Git has a special *staging area*
 where it keeps track of things that have been added to
-the current [changeset]({{ page.root }}/reference#changeset)
+the current **changeset** 
 but not yet committed.
 
 
@@ -376,24 +373,24 @@ to the staging area and into long-term storage.
 First, we'll add another line to the file:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
+$ nano zulu.txt
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
 ```
 
 Then see what's changed: 
 ```bash
 $ git diff
-diff --git a/mars.txt b/mars.txt
+diff --git a/zulu.txt b/zulu.txt
 index 315bf3a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
+ belongs to the Bantu language family
+ spoken in South Africa
++word order: SVO
 ```
 
 So far, so good:
@@ -403,7 +400,7 @@ Now let's put that change in the staging area
 and see what `git diff` reports:
 
 ```bash
-$ git add mars.txt
+$ git add zulu.txt
 $ git diff
 ```
 
@@ -415,14 +412,14 @@ However, if we do this:
 
 ```bash
 $ git diff --staged
-diff --git a/mars.txt b/mars.txt
+diff --git a/zulu.txt b/zulu.txt
 index 315bf3a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1,2 +1,3 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
+ belongs to the Bantu language family
+ spoken in South Africa
++word order: SVO
 ```
 
 it shows us the difference between
@@ -431,8 +428,8 @@ and what's in the staging area.
 Let's save our changes:
 
 ```bash
-$ git commit -m "Discuss concerns about Mars' climate for Mummy"
-[master 005937f] Discuss concerns about Mars' climate for Mummy
+$ git commit -m "add word order info"
+[master 005937f] add word order info
  1 file changed, 1 insertion(+)
 ```
 
@@ -449,22 +446,22 @@ and look at the history of what we've done so far:
 ```bash
 $ git log
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 10:14:07 2013 -0400
+Author: Henry Higgins <profhiggins@oxford.edu>
+Date:   Thu Aug 22 10:14:07 2018 -0400
 
-    Discuss concerns about Mars' climate for Mummy
+    add word order info
 
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 10:07:21 2013 -0400
+Author: Henry Higgins <profhiggins@oxford.edu>
+Date:   Thu Aug 22 10:07:21 2018 -0400
 
-    Add concerns about effects of Mars' moons on Wolfman
+    add region information
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
-Date:   Thu Aug 22 09:51:46 2013 -0400
+Author: Henry Higgins <profhiggins@oxford.edu>
+Date:   Thu Aug 22 09:51:46 2018 -0400
 
-    Start notes on Mars as a base
+    start notes on zulu language
 ```
 
 
@@ -474,32 +471,32 @@ As we saw in the previous lesson, we can refer to commits by their
 identifiers.  You can refer to the _most recent commit_ of the working
 directory by using the identifier `HEAD`.
 
-We've been adding one line at a time to `mars.txt`, so it's easy to track our
+We've been adding one line at a time to `zulu.txt`, so it's easy to track our
 progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make a change to `mars.txt`, adding yet another line.
+let's make a change to `zulu.txt`, adding yet another line which unfortunately contains misinformation:
 
 ```bash
-$ nano mars.txt
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
-An ill-considered change
+$ nano zulu.txt
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
+close relative of Danish
 ```
 
 Now, let's see what we get.
 
 ```bash
-$ git diff HEAD mars.txt
-diff --git a/mars.txt b/mars.txt
+$ git diff HEAD zulu.txt
+diff --git a/zulu.txt b/zulu.txt
 index b36abfd..0848c8d 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1,3 +1,4 @@
- Cold and dry, but everything is my favorite color
- The two moons may be a problem for Wolfman
- But the Mummy will appreciate the lack of humidity
-+An ill-considered change.
+ belongs to the Bantu language family
+ spoken in South Africa
+ word order: SVO
++close relative of Danish
 ```
 
 which is the same as what you would get if you leave out `HEAD` (try it).  The
@@ -509,7 +506,7 @@ that by adding `~1`
 to refer to the commit one before `HEAD`.
 
 ```bash
-$ git diff HEAD~1 mars.txt
+$ git diff HEAD~1 zulu.txt
 ```
 
 If we want to see the differences between older commits we can use `git diff`
@@ -517,35 +514,35 @@ again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
 
 
 ```bash
-$ git diff HEAD~2 mars.txt
-diff --git a/mars.txt b/mars.txt
+$ git diff HEAD~2 zulu.txt
+diff --git a/zulu.txt b/zulu.txt
 index df0654a..b36abfd 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
+ belongs to the Bantu language family
++spoken in South Africa
++word order: SVO
++close relative of Danish
 ```
 
 We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
 
 ```bash
-$ git show HEAD~2 mars.txt
+$ git show HEAD~2 zulu.txt
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Vlad Dracula <vlad@tran.sylvan.ia>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
-    Start notes on Mars as a base
+    start notes on zulu as a base
 
-diff --git a/mars.txt b/mars.txt
+diff --git a/zulu.txt b/zulu.txt
 new file mode 100644
 index 0000000..df0654a
 --- /dev/null
-+++ b/mars.txt
++++ b/zulu.txt
 @@ -0,0 +1 @@
-+Cold and dry, but everything is my favorite color
++belongs to the Bantu language family
 ```
 
 In this way,
@@ -568,11 +565,11 @@ Our first commit was given the ID
 so let's try this:
 
 ```bash
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b mars.txt
-diff --git a/mars.txt b/mars.txt
+$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b zulu.txt
+diff --git a/zulu.txt b/zulu.txt
 index df0654a..93a3e13 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1 +1,4 @@
  Cold and dry, but everything is my favorite color
 +The two moons may be a problem for Wolfman
@@ -585,23 +582,23 @@ but typing out random 40-character strings is annoying,
 so Git lets us use just the first few characters:
 
 ```bash
-$ git diff f22b25e mars.txt
-diff --git a/mars.txt b/mars.txt
+$ git diff f22b25e zulu.txt
+diff --git a/zulu.txt b/zulu.txt
 index df0654a..93a3e13 100644
---- a/mars.txt
-+++ b/mars.txt
+--- a/zulu.txt
++++ b/zulu.txt
 @@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
+ belongs to the Bantu language family
++spoken in South Africa
++word order: SVO
++close relative of Danish
 ```
 
 All right! So
 we can save changes to files and see what we've changed—now how
 can we restore older versions of things?
 Let's suppose we change our mind about the last update to
-`mars.txt` (the "ill-considered change").
+`zulu.txt` (the "ill-considered change").
 
 `git status` now tells us that the file has been changed,
 but those changes haven't been staged:
@@ -613,7 +610,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   mars.txt
+	modified:   zulu.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -622,11 +619,11 @@ We can put things back the way they were
 by using `git checkout`:
 
 ```bash
-$ git checkout HEAD mars.txt
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
-The two moons may be a problem for Wolfman
-But the Mummy will appreciate the lack of humidity
+$ git checkout HEAD zulu.txt
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
 ```
 
 As you might guess from its name,
@@ -638,9 +635,9 @@ If we want to go back even further,
 we can use a commit identifier instead:
 
 ```bash
-$ git checkout f22b25e mars.txt
-$ cat mars.txt
-Cold and dry, but everything is my favorite color
+$ git checkout f22b25e zulu.txt
+$ cat zulu.txt
+belongs to the Bantu language family
 ```
 
 
@@ -653,7 +650,7 @@ Changes to be committed:
 #   (use "git add <file>..." to update what will be committed)
 #   (use "git checkout -- <file>..." to discard changes in working directory)
 #
-#	modified:   mars.txt
+#	modified:   zulu.txt
 #
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -664,7 +661,7 @@ Again, we can put things back the way they were
 by using `git checkout`:
 
 ```bash
-$ git checkout HEAD mars.txt
+$ git checkout HEAD zulu.txt
 ```
 
 
