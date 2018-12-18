@@ -23,8 +23,9 @@ The aim of this workshop, then, is to provide a conceptual foundation for reprod
 
 By the end of the workshop, participants will be able to: 
 
-- Create a repository on Github
-- Create pull requests
+- Initiate `git` repo using the command line
+- Use basic `git` commands 
+- Create a repository on GitHub
 - Invite collaborators
 - Use Markdown with Python in Jupyter Notebooks
 - Integrate R code and Markdown for knitr documents
