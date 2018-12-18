@@ -1,0 +1,50 @@
+---
+title: "Tools for Reproducible Research in Linguistics"
+subtitle: "LSA 2019"
+author: "Bradley McDonnell^1^, Na-Rae Han^2^, Eve Koller^1^
+<br/>
+<br/>
+^1^University of Hawai‘i at Mānoa<br/> 
+^2^University of Pittsburg"
+date: "2019/01/03 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+---
+# Introductions
+
+## Share the following:
+
+- Name
+- Research interests
+- Reasons for taking the workshop
+
+
+---
+
+# What is Reproducible Research?
+
+
+---
+
+# What tools are available?
+ 
+
+---
+
+# Goals of the workshop
+
+
+---
+
+# Overview of the workshop
