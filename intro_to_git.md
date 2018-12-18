@@ -561,25 +561,7 @@ and "unique" really does mean unique:
 every change to any set of files on any computer
 has a unique 40-character identifier.
 Our first commit was given the ID
-`f22b25e3233b4645dabd0d81e651fe074bd8e73b`,
-so let's try this:
-
-```bash
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b zulu.txt
-diff --git a/zulu.txt b/zulu.txt
-index df0654a..93a3e13 100644
---- a/zulu.txt
-+++ b/zulu.txt
-@@ -1 +1,4 @@
- Cold and dry, but everything is my favorite color
-+The two moons may be a problem for Wolfman
-+But the Mummy will appreciate the lack of humidity
-+An ill-considered change
-```
-
-That's the right answer,
-but typing out random 40-character strings is annoying,
-so Git lets us use just the first few characters:
+`f22b25e3233b4645dabd0d81e651fe074bd8e73b`. Instead of forcing us to type in the full 40 characters, though, Git mercifully lets us use the first few characters: 
 
 ```bash
 $ git diff f22b25e zulu.txt
