@@ -8,3 +8,4 @@ desktop.ini
 _site/
 Gemfile
 Gemfile.lock
+.Rproj.user
