@@ -47,4 +47,18 @@ options(htmltools.dir.version = FALSE)
 
 ---
 
+# What we're teaching
+
+  1. `git`
+  2. GitHub
+  3. Jupyter Notebooks
+  4. RStudio
+
+---
+
+
 # Overview of the workshop
+
+---
+
+
