@@ -130,7 +130,7 @@ $ pwd
 
 
 Let's create a file called `zulu.txt` that contains some notes
-about the Red Planet's suitability as a base.
+about the language.
 We'll use `nano` to edit the file; you can use your favorite editor.
 In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). 
 
@@ -138,13 +138,13 @@ In particular, this does not have to be the `core.editor` you set globally earli
 $ nano zulu.txt
 ```
 
-Type the text below into the `zulu.txt` file:
+An editor window will open up. Type the text below into the `zulu.txt` file:
 
 ```
 belongs to the Bantu language family
 ```
 
-`zulu.txt` now contains a single line, which we can see by running:
+To save and exit `nano`,  hit `Ctrl+X`, and then `y` to save. `zulu.txt` now contains a single line, which we can see by running:
 
 ```bash
 $ cat zulu.txt
@@ -481,7 +481,7 @@ $ cat zulu.txt
 belongs to the Bantu language family
 spoken in South Africa
 word order: SVO
-close relative of Danish
+a close relative of Danish
 ```
 
 Now, let's see what we get.
@@ -496,14 +496,12 @@ index b36abfd..0848c8d 100644
  belongs to the Bantu language family
  spoken in South Africa
  word order: SVO
-+close relative of Danish
++a close relative of Danish
 ```
 
-which is the same as what you would get if you leave out `HEAD` (try it).  The
+which is the same as what you would get if you leave out `HEAD`.  The
 real goodness in all this is when you can refer to previous commits.  We do
-that by adding `~1` 
-(where "~" is "tilde", pronounced [**til**-d*uh*]) 
-to refer to the commit one before `HEAD`.
+that by adding `~1` to refer to the commit one before `HEAD`.
 
 ```bash
 $ git diff HEAD~1 zulu.txt
@@ -523,7 +521,7 @@ index df0654a..b36abfd 100644
  belongs to the Bantu language family
 +spoken in South Africa
 +word order: SVO
-+close relative of Danish
++a close relative of Danish
 ```
 
 We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
@@ -531,7 +529,7 @@ We could also use `git show` which shows us what changes we made at an older com
 ```bash
 $ git show HEAD~2 zulu.txt
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
-Author: Vlad Dracula <vlad@tran.sylvan.ia>
+Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     start notes on zulu as a base
@@ -573,7 +571,7 @@ index df0654a..93a3e13 100644
  belongs to the Bantu language family
 +spoken in South Africa
 +word order: SVO
-+close relative of Danish
++a close relative of Danish
 ```
 
 All right! So
