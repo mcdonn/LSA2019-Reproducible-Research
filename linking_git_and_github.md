@@ -13,12 +13,11 @@ The materials below have been adapted from the excellent lessons by the Software
 1. [Remotes in GitHub](#remotes-in-github)
 1. [Collaborating](#collaborating)
 1. [Conflicts](#conflicts)
+1. [Hands-on Group Work](#hands-on-group-work)
 
 
 
 ## Remotes in GitHub
-http://swcarpentry.github.io/git-novice/07-github/index.html
-... the screenshots are terrible
 
 
 Version control really comes into its own when we begin to collaborate with
@@ -87,7 +86,7 @@ Now that I have the repository living online, I can have collaborators.  But wha
 
 Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then clones the repo to his laptop and goes to work... He adds a new file 'japanese.txt', which he pushes to GitHub repo.  
 
-That means the GitHub repo is more up-to-date than my own local repo on my laptop! What to do? The key is **pull**. Now that the remote repo can be ahead of mine, I need to have `pull` as an important first step of my workflow. 
+That means the GitHub repo is more up-to-date than my own local repo on my laptop! What to do? The key is **pull**. Now that the remote repo can be ahead of my local copy, I need to have `pull` as an important first step of my workflow. 
 
 ```bash
 $ git pull origin master
@@ -125,7 +124,7 @@ Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on Gi
 
 
 ## Conflicts
-http://swcarpentry.github.io/git-novice/09-conflict/index.html
+
 
 As soon as people can work in parallel, they'll likely step on each other's
 toes.  Version control helps us manage these conflicts by giving us tools to
@@ -143,7 +142,7 @@ word order: SVO
 has about 10 million speakers
 ```
 
-Suppose Brad and I are working on the same file. Brad adds the line "a close relative of Xhosa", while I add "one of South Africa's official languages". After adding and committing, I try then to push:
+Suppose Brad and I are working on the same file. Brad adds the line "a close relative of Xhosa", while I add "one of South Africa's official languages". After adding and committing, I try to push:
 
 ```bash
 $ git push origin master
@@ -156,9 +155,9 @@ hint: before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-What happened? Turns out Brad had pushed his change in the meantime, therefore my local copy is in conflict. An inllustration:
+What happened? Turns out Brad had pushed his change in the meantime, therefore my local copy is in conflict. An illustration:
 
-<img src="http://swcarpentry.github.io/git-novice/fig/conflict.svg">
+<img src="http://swcarpentry.github.io/git-novice/fig/conflict.svg" width=450px>
 
 Git rejects the push because it detects that the remote repository has new updates that have not been incorporated into the local branch. What we have to do is pull the changes from GitHub, merge them into the copy we’re currently working in, and then push that. Let’s start by pulling:
 
@@ -192,14 +191,74 @@ a close relative of Xhosa
 
 Our change is preceded by `<<<<<<< HEAD`. Git has then inserted `=======` as a separator between the conflicting changes and marked the end of the content downloaded from GitHub with `>>>>>>>`. (The string of letters and digits after that marker identifies the commit we’ve just downloaded.)
 
-It is now up to us to edit this file to remove these markers and reconcile the changes. We can do anything we want: keep the change made in the local repository, keep the change made in the remote repository, write something new to replace both, or get rid of the change entirely. Let’s replace both so that the file looks like this:
+It is now up to us to edit this file to remove these markers and reconcile the changes. We can do anything we want: keep the change made in the local repository, keep the change made in the remote repository, write something new to replace both, or get rid of the change entirely. For our `zulu.txt`, edit the file to keep both lines, so the file looks like:
 
 
+```bash
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
+has about 10 million speakers
+one of South Africa's official languages
+a close relative of Xhosa
+```
 
+To finish merging, I add `zulu.txt` to the changes being made by the merge and then commit:
+
+```bash
+$ git add zulu.txt
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+	modified:   mars.txt
+```
+
+It's ready to commit:
+
+```bash
+$ git commit -m "Merge changes from GitHub"
+[master 2abf2b1] Merge changes from GitHub
+```
+
+Now I can push the changes to GitHub: 
+
+
+```bash
+$ git push origin master
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 697 bytes, done.
+Total 6 (delta 2), reused 0 (delta 0)
+To https://github.com/naraehan/languages.git
+   dabb4c8..2abf2b1  master -> master
+```
+
+
+Git’s ability to resolve conflicts is very useful, but conflict resolution costs time and effort, and can introduce errors if conflicts are not resolved correctly. If you find yourself resolving a lot of conflicts in a project, consider these technical approaches to reducing them:
+
+* Pull from upstream more frequently, especially before starting new work
+* Use topic branches to segregate work, merging to master when complete
+* Make smaller more atomic commits
+* Where logically appropriate, break large files into smaller ones so that it is less likely that two authors will alter the same file simultaneously
+
+Conflicts can also be minimized with project management strategies:
+
+* Clarify who is responsible for what areas with your collaborators
+* Discuss what order tasks should be carried out in with your collaborators so that tasks expected to change the same lines won’t be worked on simultaneously
+* If the conflicts are stylistic churn (e.g. tabs vs. spaces), establish a project convention that is governing. 
 
 
 
 ## Hands-on Group Work 
-... this is when we work together as a group on a practice GitHub repo
+
+Time to practice! Let's work together as a group on this GitHub repository: https://github.com/mcdonn/lsa2019-languages-exercise.  
+
+
 
 
