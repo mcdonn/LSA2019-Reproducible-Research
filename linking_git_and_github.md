@@ -81,10 +81,125 @@ Go ahead add another Zulu language fact to `zulu.txt`: it has about 10 million s
 
 
 ## Collaborating
-http://swcarpentry.github.io/git-novice/08-collab/index.html
-... probably should do a collaboration demo with a real github repo
+
+Now that I have the repository living online, I can have collaborators.  But what happens when multiple people work on the same repo? Let's find out. First, I will add Brad as a collaborator of my "language" repo. I go to the GitHub repo, click the settings button on the right, then select Collaborators, and enter Brad's username.
+
+
+Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then clones the repo to his laptop and goes to work... He adds a new file 'japanese.txt', which he pushes to GitHub repo.  
+
+That means the GitHub repo is more up-to-date than my own local repo on my laptop! What to do? The key is **pull**. Now that the remote repo can be ahead of mine, I need to have `pull` as an important first step of my workflow. 
+
+```bash
+$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/naraehan/languages
+ * branch            master     -> FETCH_HEAD
+Updating 9272da5..29aba7c
+Fast-forward
+ japanese.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 japanese.txt
+```
+
+Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on GitHub) are back in sync.
+
+
+> ### A Basic Collaborative Workflow
+>
+> In practice, it is good to be sure that you have an updated version of the
+> repository you are collaborating on, so you should `git pull` before making
+> our changes. The basic collaborative workflow would be:
+>
+> * update your local repo with `git pull origin master`,
+> * make your changes and stage them with `git add`,
+> * commit your changes with `git commit -m`, and
+> * upload the changes to GitHub with `git push origin master`
+>
+> It is better to make many commits with smaller changes rather than
+> of one commit with massive changes: small commits are easier to
+> read and review.
+
 
 
 ## Conflicts
 http://swcarpentry.github.io/git-novice/09-conflict/index.html
+
+As soon as people can work in parallel, they'll likely step on each other's
+toes.  Version control helps us manage these conflicts by giving us tools to
+resolve overlapping changes.
+
+To see how we can resolve conflicts, we must first create one.  The file
+`zulu.txt` currently looks like this in both partners' copies of our `languages`
+repository:
+
+```bash
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
+has about 10 million speakers
+```
+
+Suppose Brad and I are working on the same file. Brad adds the line "a close relative of Xhosa", while I add "one of South Africa's official languages". After adding and committing, I try then to push:
+
+```bash
+$ git push origin master
+To https://github.com/naraehan/languages.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/naraehan/languages.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Merge the remote changes (e.g. 'git pull')
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+What happened? Turns out Brad had pushed his change in the meantime, therefore my local copy is in conflict. An inllustration:
+
+<img src="http://swcarpentry.github.io/git-novice/fig/conflict.svg">
+
+Git rejects the push because it detects that the remote repository has new updates that have not been incorporated into the local branch. What we have to do is pull the changes from GitHub, merge them into the copy we’re currently working in, and then push that. Let’s start by pulling:
+
+```bash
+$ git pull origin master
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1)
+Unpacking objects: 100% (3/3), done.
+From https://github.com/naraehan/languages
+ * branch            master     -> FETCH_HEAD
+Auto-merging mars.txt
+CONFLICT (content): Merge conflict in zulu.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+The git pull command updates the local repository to include those changes already included in the remote repository. After the changes from remote branch have been fetched, Git detects that changes made to the local copy overlap with those made to the remote repository, and therefore refuses to merge the two versions to stop us from trampling on our previous work. The conflict is marked in in the affected file:
+
+```bash
+$ cat zulu.txt
+belongs to the Bantu language family
+spoken in South Africa
+word order: SVO
+has about 10 million speakers
+<<<<<<< HEAD
+one of South Africa's official languages
+=======
+a close relative of Xhosa
+>>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
+```
+
+Our change is preceded by `<<<<<<< HEAD`. Git has then inserted `=======` as a separator between the conflicting changes and marked the end of the content downloaded from GitHub with `>>>>>>>`. (The string of letters and digits after that marker identifies the commit we’ve just downloaded.)
+
+It is now up to us to edit this file to remove these markers and reconcile the changes. We can do anything we want: keep the change made in the local repository, keep the change made in the remote repository, write something new to replace both, or get rid of the change entirely. Let’s replace both so that the file looks like this:
+
+
+
+
+
+
+## Hands-on Group Work 
+... this is when we work together as a group on a practice GitHub repo
+
 
