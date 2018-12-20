@@ -41,7 +41,7 @@ Participants will be required to bring laptop computers to the workshop running 
 | Time | Topic | Presenters |
 | --- | --- | --- |
 | 9:00 - 9:15 | Introductions | |
-| 9:15 - 9:30 | [Overview of workshop](/LSA2019-Reproducible-Research/slides/intro_workshop.html) | Brad | 
+| 9:15 - 9:30 | [Overview of workshop](https://mcdonn.github.io/LSA2019-Reproducible-Research/slides/intro_workshop.html) | Brad | 
 | 9:30 - 10:45 | [Introduction to git](intro_to_git.md) | Na-Rae |
 | **10:45 - 11:00** | **Break** | |
 | 11:00 - 12:30 | [Linking git and GitHub](linking_git_and_github.md) | Na-Rae, Brad |
