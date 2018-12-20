@@ -119,7 +119,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 ## Tracking Changes
 
-
+<!-- 
 First let's make sure we're still in the right directory.
 You should be in the `languages` directory.
 
@@ -127,6 +127,7 @@ You should be in the `languages` directory.
 $ pwd
 /home/naraehan/Desktop/languages
 ```
+-->
 
 
 Let's create a file called `zulu.txt` that contains some notes
@@ -241,9 +242,11 @@ the commit's author,
 when it was created, and the log message Git was given when the commit was created.
 
 
-Now suppose Prof. Higgins adds more information to the file.
+Now suppose Prof. Higgins adds more information to the file:
+<!--
 (Again, we'll edit with `nano` and then `cat` the file to show its contents;
 you may use a different editor, and don't need to `cat`.)
+-->
 
 ```bash
 $ nano zulu.txt
@@ -305,7 +308,7 @@ If we break it down into pieces:
     In particular,
     the `+` marker in the first column shows where we added a line.
 
-After reviewing our change, it's time to commit it:
+After reviewing our change, we go for committing:
 
 ```bash
 $ git commit -m "add region information"
@@ -322,7 +325,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Whoops:
 Git won't commit because we didn't use `git add` first.
-Let's fix that:
+Let's fix that. We add *and then* commit:
 
 ```bash
 $ git add zulu.txt
@@ -342,12 +345,16 @@ but *not* commit some of our work drafting the conclusion
 (which we haven't finished yet).
 
 To allow for this,
-Git has a special *staging area*
+Git has a special **staging area**
 where it keeps track of things that have been added to
-the current **changeset** 
-but not yet committed.
+the current **changeset** but not yet committed. 
+If you think of Git as taking snapshots of changes over the life of a project,
+`git add` specifies *what* will go in a snapshot
+(putting things in the staging area),
+and `git commit` then *actually takes* the snapshot, and
+ makes a permanent record of it (as a commit). An illustration: 
 
-
+<!-- 
 > ### Staging Area
 >
 > If you think of Git as taking snapshots of changes over the life of a project,
@@ -361,6 +368,7 @@ but not yet committed.
 > However, it's almost always better to
 > explicitly add things to the staging area, because you might
 > commit changes you forgot you made. 
+-->
 
 <img src="http://swcarpentry.github.io/git-novice/fig/git-committing.svg">
 
@@ -408,7 +416,7 @@ There is no output!
 As far as Git can tell,
 there's no difference between what it's been asked to save permanently
 and what's currently in the directory.
-However, if we do this:
+However, if we use the `--staged` flag:
 
 ```bash
 $ git diff --staged
@@ -481,7 +489,7 @@ $ cat zulu.txt
 belongs to the Bantu language family
 spoken in South Africa
 word order: SVO
-a close relative of Danish
+a close relative of Spanish
 ```
 
 Now, let's see what we get.
@@ -496,7 +504,7 @@ index b36abfd..0848c8d 100644
  belongs to the Bantu language family
  spoken in South Africa
  word order: SVO
-+a close relative of Danish
++a close relative of Spanish
 ```
 
 which is the same as what you would get if you leave out `HEAD`.  The
@@ -521,7 +529,7 @@ index df0654a..b36abfd 100644
  belongs to the Bantu language family
 +spoken in South Africa
 +word order: SVO
-+a close relative of Danish
++a close relative of Spanish
 ```
 
 We could also use `git show` which shows us what changes we made at an older commit as well as the commit message, rather than the _differences_ between a commit and our working directory that we see by using `git diff`.
@@ -532,7 +540,7 @@ commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
-    start notes on zulu as a base
+    start notes on zulu
 
 diff --git a/zulu.txt b/zulu.txt
 new file mode 100644
@@ -551,6 +559,7 @@ so `HEAD~1`
 means "the previous commit",
 while `HEAD~123` goes back 123 commits from where we are now.
 
+<!-- 
 We can also refer to commits using
 those long strings of digits and letters
 that `git log` displays.
@@ -571,16 +580,16 @@ index df0654a..93a3e13 100644
  belongs to the Bantu language family
 +spoken in South Africa
 +word order: SVO
-+a close relative of Danish
++a close relative of Spanish
 ```
+-->
 
 All right! So
 we can save changes to files and see what we've changed—now how
 can we restore older versions of things?
 Let's suppose we change our mind about the last update to
-`zulu.txt` (the "ill-considered change").
-
-`git status` now tells us that the file has been changed,
+`zulu.txt`, about its relation to Spanish, which turns out incorrect. 
+Checking `git status` tells us that the file has been changed,
 but those changes haven't been staged:
 
 ```bash
@@ -596,7 +605,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 We can put things back the way they were
-by using `git checkout`:
+by simply using `git checkout`:
 
 ```bash
 $ git checkout HEAD zulu.txt
@@ -636,7 +645,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 
-Notice that the changes are on the staged area.
+Notice that the changes are on the staging area.
 Again, we can put things back the way they were
 by using `git checkout`:
 
