@@ -100,7 +100,7 @@ Fast-forward
 That "**pulls**" the changes in the GitHub repo and merges them onto my local repo. The file `japanese.txt` was entirely new to my local repo, and all Git had to do was copy it over. Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on GitHub) are back in sync.
 
 
-<center><table width=80% border=1 bordercolor=blue style="padding:10px"><tr><td> 
+<center><table style="padding:10px; border: 1px solid dodgerblue; width: 90%;"><tr><td> 
 <h3>A Basic Collaborative Workflow</h3>
 
  When working together, it is a good practice to make sure that you have an updated version of the
@@ -111,7 +111,7 @@ That "**pulls**" the changes in the GitHub repo and merges them onto my local re
  * commit your changes with `git commit -m`, and
  * upload the changes to GitHub with `git push origin master`
 
-In between each step, you should use `git status`, `git diff`, etc. frequently to verify changes and orient yourself. 
+In between each step, you should use `git status`, `git diff`, `git show`, `git log`, etc. frequently to verify changes and orient yourself. 
 </td></tr></table></center>
 
 
