@@ -100,14 +100,14 @@ Fast-forward
 That "**pulls**" the changes in the GitHub repo and merges them onto my local repo. The file `japanese.txt` was entirely new to my local repo, and all Git had to do was copy it over. Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on GitHub) are back in sync.
 
 
-<center><table style="padding:10px; border: 1px solid dodgerblue; width: 90%;"><tr><td> 
+<center><table width=80% border=1 bordercolor=cyan style="padding:10px"><tr><td> 
 <h3>A Basic Collaborative Workflow</h3>
 
  When working together, it is a good practice to make sure that you have an updated version of the
  repository: you should get into the habit of using `git pull` before starting work. The basic collaborative workflow therefore would be:
 
  * update your local repo with `git pull origin master`,
- * make your changes and stage them with `git add`,> 
+ * make your changes and stage them with `git add`,
  * commit your changes with `git commit -m`, and
  * upload the changes to GitHub with `git push origin master`
 
