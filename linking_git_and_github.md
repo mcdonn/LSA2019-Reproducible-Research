@@ -21,25 +21,23 @@ The materials below have been adapted from the excellent lessons by the Software
 
 
 Version control really comes into its own when we begin to collaborate with
-other people. Systems like Git allow us to move work between any two repositories.  In
-practice, though, it's easiest to use one copy as a central hub, and to keep it
-on the web rather than on someone's laptop.  Most programmers use hosting
+other people. Systems like Git allow us to sync up work between any two repositories.  In
+popular use cases, one copy operates as a central hub: most programmers use hosting
 services like [GitHub](https://github.com) to hold those master copies. 
+Even if you are working by yourself, having a GitHub repository is an excellent backup strategy. 
 
-Let's start by sharing the changes we've made to our current project with the
-world.  Log in to GitHub, then click on the icon in the top right corner to
-create a new repository:
+Let's start by setting up your `languages` project with your own GitHub repository.  Log in to GitHub, then click on the icon in the top right corner to create a new repository:
 
-<img src="img/github_repo1.png" width=240px border=1px>
+<img src="img/github_repo1.png" width=240px style="margin:0px 10px 10px 10px">
 
-Name your repository "languages", and then click "Create Repository".  As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository. 
+Name your repository "languages", and then click "Create Repository". As soon as the repository is created, GitHub displays a page with a URL and some information on how to configure your local repository. 
 
 The next step is to connect the two repositories. We do this by making the GitHub repository a **remote** for the local repository. The home page of the repository on GitHub includes its web address. Click on the clipboard icon to copy it:
 
-<img src="img/github_repo2.png" border=1px>
+<img src="img/github_repo3.png" width=720px style="margin:0px 10px 20px 10px">
 
 
-Then, return to your "languages" directory in command line, and execute:  
+Then, return to your "languages" directory in command line, and execute `git remote add origin ...`:  
 
 ```bash
 $ git remote add origin https://github.com/naraehan/languages.git
@@ -70,7 +68,8 @@ That "**pushes**" the changes in your local repo out to the GitHub repo, thereby
    1. `git commit -m "a message"`
    1. `git push origin master` 
 
-Go ahead add another Zulu language fact to `zulu.txt`: it has about 10 million speakers. You should follow the workflow above. 
+   
+It's your time to try: go ahead add another Zulu language fact to `zulu.txt`: it has about 10 million speakers. You should follow the workflow above. 
 
 
 
@@ -79,7 +78,7 @@ Go ahead add another Zulu language fact to `zulu.txt`: it has about 10 million s
 Now that I have the repository living online, I can have collaborators.  But what happens when multiple people work on the same repo? Let's find out. First, I will add Brad as a collaborator of my "languages" repo. I go to the GitHub repo, click the settings button on the right, then select Collaborators, and enter Brad's username.
 
 
-Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then **clones** the repo to his laptop (more on this later) and goes to work... He adds a new file 'japanese.txt', which he pushes to the GitHub repo.  
+Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then **clones** the repo onto his laptop (more on this later) and goes to work... He adds a new file `japanese.txt`, which he pushes to the GitHub repo.  
 
 That means the GitHub repo is more up-to-date than my own local repo on my laptop! What to do? The key is **pull**. Now that the remote repo can be ahead of my local copy, I need to have `pull` as an important first step of my workflow: 
 
@@ -98,7 +97,7 @@ Fast-forward
  create mode 100644 japanese.txt
 ```
 
-That "**pulls**" the changes in the GitHub repo and merges them onto my local repo. Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on GitHub) are back in sync.
+That "**pulls**" the changes in the GitHub repo and merges them onto my local repo. The file `japanese.txt` was entirely new to my local repo, and all Git had to do was copy it over. Now the three repositories (Na-Rae's local, Brad’s local, and Na-Rae’s on GitHub) are back in sync.
 
 
 > ### A Basic Collaborative Workflow
@@ -167,7 +166,7 @@ CONFLICT (content): Merge conflict in zulu.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-OK, so that means... `pull` failed? Actually, it only succeeded half-way. `pull` is in fact composed of two steps: **fetching** and **merging**, and it failed at the latter step. After the changes from remote branch have been **fetched**, Git detects that changes I made to my local copy overlap with those made to the remote repository, and therefore refuses to **merge** the two versions to stop me from trampling on our previous work. Git then alters the affected file to mark the conflict: 
+OK, so that means... `pull` failed? Actually, it only succeeded half-way. `pull` in fact consists of two steps: **fetching** and **merging**, and it failed at the latter step. After the changes from remote branch have been **fetched**, Git detects that changes I made to my local copy overlap with those made to the remote repository, and therefore refuses to **merge** the two versions to stop me from trampling on our previous work. Git then alters the affected file to mark the conflict: 
 
 ```bash
 $ cat zulu.txt
@@ -218,7 +217,7 @@ $ git commit -m "Merge changes from GitHub"
 [master 2abf2b1] Merge changes from GitHub
 ```
 
-Am I done? Not remotely (pun intended). Now my local repository is most up-to-date, with `zulu.txt` containing both of our new lines: I need to push the changes out to the GitHub remote repo via `git push`:   
+Am I done? Not remotely (pun intended). My local repository is looking good now, with `zulu.txt` containing both of our new lines. But I still need to push the changes out to the GitHub remote repo via `git push`: 
 
 
 ```bash
@@ -237,8 +236,8 @@ Finally my local repo and the remote GitHub repo are in sync, so the job is done
 
 Git’s ability to resolve conflicts is very useful, but conflict resolution costs time and effort, and can introduce errors if conflicts are not resolved correctly. If you find yourself resolving a lot of conflicts in a project, consider these technical approaches to reducing them:
 
-* Pull from upstream more frequently, especially before starting new work
-* Use topic branches to segregate work, merging to master when complete
+* Pull more frequently, especially before starting new work
+* Use topic branches to segregate work, merging to master when complete (Note: we did not cover **branches**)
 * Make smaller more atomic commits
 * Where logically appropriate, break large files into smaller ones so that it is less likely that two authors will alter the same file simultaneously
 
@@ -246,7 +245,7 @@ Conflicts can also be minimized with project management strategies:
 
 * Clarify who is responsible for what areas with your collaborators
 * Discuss what order tasks should be carried out in with your collaborators so that tasks expected to change the same lines won’t be worked on simultaneously
-* If the conflicts are stylistic churn (e.g. tabs vs. spaces), establish a project convention that is governing. 
+* If the conflicts are stylistic churn (e.g. tabs vs. spaces, capitalization), establish a project convention that is governing. 
 
 
 
