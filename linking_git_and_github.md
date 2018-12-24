@@ -1,9 +1,3 @@
-
-... will be heavily borrowing from Software Carpentry's lessons http://swcarpentry.github.io/git-novice/. The files on GitHub: https://github.com/swcarpentry/git-novice/tree/gh-pages/_episodes
-
-... and also my class stuff: http://www.pitt.edu/~naraehan/ling1340/
-
-
 [Back to workshop home](README.md)
 
 # Linking Git and GitHub
