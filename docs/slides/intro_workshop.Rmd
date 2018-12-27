@@ -1,11 +1,7 @@
 ---
 title: "Tools for Reproducible Research in Linguistics"
 subtitle: "LSA 2019"
-author: "Bradley McDonnell^1^, Na-Rae Han^2^, Eve Koller^1^
-<br/>
-<br/>
-^1^University of Hawai‘i at Mānoa<br/> 
-^2^University of Pittsburg"
+author: "Bradley McDonnell^1^, Na-Rae Han^2^, Eve Koller^1^ <br/> <br/> ^1^University of Hawai‘i at Mānoa<br/> ^2^University of Pittsburg"
 date: "2019/01/03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -16,12 +12,44 @@ output:
       countIncrementalSlides: false
 ---
 
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
+```{r, load_refs, echo=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = "authoryear", 
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE)
+rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
+```
+
+
 ---
-# Introductions
+# Introduction & Introductions
+
+ 
+
+---
+# Who are we?
+
+1. Brad McDonnell
+  
+2. Na-Rae Han
+
+3. Eve Koller
+
+---
+# Why are we offering this workshop? 
+
+**Purpose:** Increase literacy 
+
+---
+# Who are you?
 
 ## Share the following:
 
@@ -34,20 +62,36 @@ options(htmltools.dir.version = FALSE)
 
 # What is Reproducible Research?
 
-Reproducible research is ... 
+[...] *reproducibility* [...] in research means that the data on which publications are based are made available so that other scientists could ostensibly verify the results for themselves.
+
+`r Citep(rrBib, "gawneforthcomingreflections")`
 
 ---
 
-# Reasons for reproducible research
+class: inverse, middle, center
 
-  1. 
-  1. 
-  1. 
+# What are some reasons for practicing reproducible research?
+
 
 ---
-
 
 # Tools
+
+Reproducible research is increasingly possible with the development of new tools.
+
+1. `git` allows us to keep track of the changes we make to code, data, etc.
+2. GitHub allows us 
+  - to keep track of these changes while collaborating with others,
+  - share research with others
+3. RStudio and Jyputer notebooks allows us ...  
+
+
+
+
+???
+
+The means to make research reproducible 
+
  
 
 ---
@@ -93,10 +137,21 @@ Reproducible research is ...
 ]
 ---
 
+# References
+
+
+```{r, 'refs', results='asis', echo=FALSE}
+PrintBibliography(rrBib, start = 1, end = 2)
+```
+
+
+--- 
+
 class: inverse, middle, center
 
 # Questions?
 
 ---
+
 
 
