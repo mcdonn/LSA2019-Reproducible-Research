@@ -30,6 +30,9 @@ rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
 
 
 ---
+
+class: inverse, middle, center
+
 # Introduction & Introductions
 
  
@@ -37,16 +40,30 @@ rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
 ---
 # Who are we?
 
-1. Brad McDonnell
+- Brad McDonnell
   
-2. Na-Rae Han
+- Na-Rae Han
 
-3. Eve Koller
+- Eve Koller
 
 ---
 # Why are we offering this workshop? 
 
-**Purpose:** Increase literacy 
+Part of larger project (NSF SMA 1745249) to increase data science literacy for all of linguistics. 
+
+  1. Several Workshops: 
+    - 2018, 2019 LSA Annual Meeting 
+    - 2019 LSA Linguistic Institute [Wednesday Workshops](https://lsa2019.ucdavis.edu/wednesday-workshops/)
+  1. Handbook for Linguistic Data Managment (MIT Press Open)
+    - ed. by Andrea Berez-Kroeker, Bradley McDonnell, Eve Koller, Lauren Collister
+
+
+.footnote[
+<img src="intro_workshop_files/nsf-logo.png" style="width: 15%" align="left"/>  
+
+This material is based upon work supported by the National Science Foundation under grant SMA-1745249 to the University of Hawai‘i at Mānoa. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+]
+
 
 ---
 # Who are you?
@@ -62,9 +79,25 @@ rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
 
 # What is Reproducible Research?
 
-[...] *reproducibility* [...] in research means that the data on which publications are based are made available so that other scientists could ostensibly verify the results for themselves.
+"[...] *reproducibility* [...] in research means that the data on which publications are based are made available so that other scientists could ostensibly verify the results for themselves."
 
-`r Citep(rrBib, "gawneforthcomingreflections")`
+`r Citep(rrBib, "gawne2019reflections", after=": 21")`
+
+"The idea [of reproducible research] is the final product of research is not only the paper itself, but also the full computational environment used to produce the results in the paper such as the code and data necessary for reproduction of the results..."
+
+
+`r TextCite(rrBib, "xie2015dynamic", after=": 5")`
+in discussion of `r TextCite(rrBib, "fomel2009guest")`
+
+.footnote[
+**Note:** *Reproducibility* differs from *replicability*, "in which the steps of a research project are replicated by another scientist, yielding new data which can confirm or contradict previous data" `r Citep(rrBib, "gawne2019reflections", after=": 21")`.
+
+\*For many types of linguistic research, *replication* is not possible.
+]
+---
+
+
+
 
 ---
 
@@ -73,17 +106,26 @@ class: inverse, middle, center
 # What are some reasons for practicing reproducible research?
 
 
+???
+
+- For science to be trustworthy
+- Allows us to confirm previous analyses
+- Allows us to build upon others' analyses 
+- Decreases the chances of copy/past errors
+- Allows us to focus more time on the research and not tedious tasks
+
+
 ---
 
 # Tools
 
-Reproducible research is increasingly possible with the development of new tools.
+Reproducible research is increasingly possible with the proliferation of tools.
 
-1. `git` allows us to keep track of the changes we make to code, data, etc.
-2. GitHub allows us 
+1. `git`" allows us to keep track of the changes we make to code, data, etc.
+2. `GitHub`: allows us 
   - to keep track of these changes while collaborating with others,
   - share research with others
-3. RStudio and Jyputer notebooks allows us ...  
+3. RStudio and Jyputer notebooks allows us weave together 
 
 
 
@@ -122,7 +164,7 @@ The means to make research reproducible
 # Summary
 
 .pull-left[
-## What we're teaching...
+### What we're teaching...
 
   1. git
   1. GitHub
@@ -131,7 +173,7 @@ The means to make research reproducible
 ]
 
 .pull-right[
-## What we're ***not*** teaching...
+### What we're ***not*** teaching...
   1. R
   1. Python
 ]
