@@ -23,12 +23,12 @@ The aim of this workshop, then, is to provide a conceptual foundation for reprod
 
 By the end of the workshop, participants will be able to: 
 
-- Initiate `git` repo using the command line
-- Use basic `git` commands 
-- Create a repository on GitHub
-- Invite collaborators
-- Use Markdown with Python in Jupyter Notebooks
-- Integrate R code and Markdown for knitr documents
+- Initiate git repo using the command line
+- Use basic `git` commands (e.g., commit, status)
+- Create a repo on GitHub
+- Work collaboratively on GitHub Repo
+- Integrate Markdown and Python in Jupyter Notebooks
+- Integrate R code and Markdown for dynamic (`knitr`) documents
 
 ## Participants
 This workshop is primarily aimed at early- and mid-career researchers, but will be accessible to both graduate students and senior researchers. Basic knowledge of either R or Python will be very beneficial but is not required. Participants will not be asked to write their own code; exercises will contain the necessary Python and R code. 
