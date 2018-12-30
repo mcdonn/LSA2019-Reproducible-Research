@@ -1,8 +1,8 @@
 ---
-title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+title: "Dynamic Documents in RStudio"
+subtitle: "LSA 2019"
+author: "Bradley McDonnell<br/>University of Hawai‘i at Mānoa"
+date: "2019/01/03 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -16,14 +16,25 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
 
-???
+# Dynamic documents
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+- To my knoweledge term coined by Yihui Xie for the R package `knitr` based on earlier versions of `Sweave`
+- `knitr`allows us to create documents in various formats (e.g., LateX, Markdown) with various outputs (HTML slides, `Shiny` apps, PDF documents), all of which combines Markup and executable code.
+
 
 ---
 class: center, middle
+
+# A basic example
+
+???
+
+Go to an example and open it up.
+
+
+---
+
 
 # xaringan
 

@@ -28,7 +28,6 @@ BibOptions(check.entries = FALSE,
 rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
 ```
 
-
 ---
 
 class: inverse, middle, center
@@ -92,7 +91,7 @@ in discussion of `r TextCite(rrBib, "fomel2009guest")`
 .footnote[
 **Note:** *Reproducibility* differs from *replicability*, "in which the steps of a research project are replicated by another scientist, yielding new data which can confirm or contradict previous data" `r Citep(rrBib, "gawne2019reflections", after=": 21")`.
 
-\*For many types of linguistic research, *replication* is not possible.
+\*For many types of linguistic research, *replication* is simply not possible.
 ]
 ---
 
@@ -122,10 +121,10 @@ class: inverse, middle, center
 Reproducible research is increasingly possible with the proliferation of tools.
 
 1. git allows us to keep track of the changes we make to code, data, etc.
-2. GitHub: allows us 
+2. GitHub allows us 
   - to keep track of these changes while collaborating with others,
   - share research with others
-3. RStudio and Jyputer notebooks allows us weave together code, code output, visulization, data, analysis, and documentation.
+3. RStudio and Jyputer notebooks allow us weave together code, code output, visulization, data, analysis, and documentation.
 
 
 ???
@@ -138,6 +137,29 @@ The means to make research reproducible
 
 # Goals of the workshop
 
+1. Use basic `git` commands (e.g., commit, status)
+1. Create a repo on GitHub
+1. Work collaboratively on GitHub Repo
+1. Either...
+  - Integrate Markdown and Python in Jupyter Notebooks
+  - Integrate R code and Markdown for dynamic (`knitr`) documents
+
+---
+
+.pull-left[
+### What we're teaching...
+
+  1. git
+  1. GitHub
+  1. Jupyter Notebooks
+  1. RStudio
+]
+
+.pull-right[
+### What we're ***not*** teaching...
+  1. R
+  1. Python
+]
 
 ---
 
@@ -159,24 +181,6 @@ The means to make research reproducible
 
 ---
 
-# Summary
-
-.pull-left[
-### What we're teaching...
-
-  1. git
-  1. GitHub
-  1. Jupyter Notebooks
-  1. RStudio
-]
-
-.pull-right[
-### What we're ***not*** teaching...
-  1. R
-  1. Python
-]
----
-
 # References
 
 
@@ -190,6 +194,7 @@ PrintBibliography(rrBib, start = 1, end = 2)
 class: inverse, middle, center
 
 # Questions?
+
 
 ---
 
