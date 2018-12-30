@@ -185,18 +185,14 @@ The means to make research reproducible
 
 
 ```{r, 'refs', results='asis', echo=FALSE}
-PrintBibliography(rrBib, start = 1, end = 2)
+PrintBibliography(rrBib)
 ```
 
 
 --- 
 
+---
+
 class: inverse, middle, center
 
 # Questions?
-
-
----
-
-
-
