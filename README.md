@@ -41,12 +41,12 @@ Participants will be required to bring laptop computers to the workshop running 
 | Time | Topic | Presenters |
 | --- | --- | --- |
 | 9:00 - 9:15 | Introductions | |
-| 9:15 - 9:30 | [Overview of workshop](https://mcdonn.github.io/LSA2019-Reproducible-Research/slides/intro_workshop.html) | Brad | 
+| 9:15 - 9:30 | [Overview of workshop](https://mcdonn.github.io/LSA2019-Reproducible-Research/intro/intro_workshop.html) | Brad | 
 | 9:30 - 10:45 | [Introduction to git](intro_to_git.md) | Na-Rae |
 | **10:45 - 11:00** | **Break** | |
 | 11:00 - 12:30 | [Linking git and GitHub](linking_git_and_github.md) | Na-Rae, Brad |
 | **12:30 - 1:30** |  **Lunch** | |
-| 1:30 - 1:45 | RStudio with R demo  | Brad |
+| 1:30 - 1:45 | [RStudio with R demo](https://mcdonn.github.io/LSA2019-Reproducible-Research/dynamic_docs/dynamic_docs.html)  | Brad |
 | 1:45 - 2:00 | [Jupyter Notebooks with Python demo](jupyter_notebook_python_demo.ipynb)  | Na-Rae |
 | 2:00 - 3:15 | Break out groups with RStudio and [Jupyter Notebooks](jupyter_notebook_python_demo.ipynb) | |
 | 3:15 - 3:30 | Concluding remarks | |
