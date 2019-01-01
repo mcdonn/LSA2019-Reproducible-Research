@@ -1,0 +1,66 @@
+---
+title: "A basic example"
+subtitle: "Besemah stress"
+author: "Bradley McDonnell"
+date: "12/29/2018"
+output: html_document
+bibliography: pse-stress.bib
+---
+
+<!-- Commenting is done via regular HTML tags -->
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r include=FALSE, eval=require('tidyverse'), comment="#", message=FALSE}
+
+library(tidyverse)
+
+# Loading the dataframe
+pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                )
+                                      
+
+```
+
+# Introduction
+Besemah Stress ... 
+
+[see @, pp. 33-35; also @smith04, ch. 1]
+
+# Acoustic correlates of stress
+
+## Duration
+
+```{r duration}
+# A simple boxplot of intensity
+dur <- ggplot(pse_stress, aes(Position, Duration))
+dur + geom_boxplot() + facet_grid(~Final)
+```
+
+## Intensity
+
+```{r intensity}
+# A simple boxplot of intensity
+int <- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot() + facet_grid(~Final)
+```
+
+## Pitch
+
+```{r pitch}
+# A simple boxplot of intensity
+f0 <- ggplot(pse_stress, aes(Position, f0.4))
+f0 + geom_boxplot() + facet_wrap(~Participant)
+```
+
+# Conclusion
