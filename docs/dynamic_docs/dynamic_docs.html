@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 # Dynamic Documents in RStudio
 ## LSA 2019
 ### Bradley McDonnell<br/>University of Hawai‘i at Mānoa
-### 2019/01/03 (updated: 2018-12-30)
+### 2019/01/03 (updated: 2018-12-31)
 
 ---
 
@@ -26,9 +26,138 @@ class: center, middle, inverse, title-slide
 
 - To my knoweledge term coined by Yihui Xie for the R package `knitr` based on earlier versions of `Sweave`
 - `knitr`allows us to create documents in various formats (e.g., LateX, Markdown) with various outputs (HTML slides, `Shiny` apps, PDF documents), all of which combines Markup and executable code.
+- In the breakout section, we'll primarily work with **RMarkdown**, an *R-flavor* of traditional Markdown.
+  - I will show one example of `knitr` with LaTeX
+
+![](https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/b739c/lesson-images/rmarkdownflow.png)
+
+---
+
+class: center, middle
+
+&lt;iframe src="https://player.vimeo.com/video/178485416?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" width="640" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/178485416"&gt;What is R Markdown?&lt;/a&gt; from &lt;a href="https://vimeo.com/rstudioinc"&gt;RStudio, Inc.&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 
 
 ---
+
+# Benefits &amp; drawbacks of RMarkdown
+
+
+.pull-left[
+- It's simple. 
+- It's portable
+- 
+]
+
+.pull-right[
+- Few native formatting options
+  - e.g., interlinear glossed examples not straightforward
+]
+
+---
+
+
+# Breaking down the components of a dynamic document with RMarkdown
+
+Dynamic documents are composed of: 
+
+1. YAML header: Contains metadata for the document
+2. R code chunks
+3. Text
+
+Let's break down the YAML header and R code chunks...
+
+---
+
+# YAML header
+The YAML header contains... 
+  1. **metadata**
+    - author
+    - title 
+    - date
+  1. **output formats**
+    - HTML
+    - Markdown
+    - PDF
+    - Word
+    
+Here's a basic example...
+
+```yaml
+---
+title: "A basic example"
+author: "Bradley McDonnell"
+date: "12/29/2018"
+output: html_document
+---
+```
+
+---
+
+# YAML header
+
+The YAML header can be quite complicated.
+- The `output` can contain a number of options (which is quite helpful!). 
+
+
+
+```yaml
+---
+title: "Dynamic Documents in RStudio"
+subtitle: "LSA 2019"
+author: "Bradley McDonnell&lt;br/&gt;University of Hawai‘i at Mānoa"
+date: "2019/01/03 (updated: 2018-12-31)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
+
+---
+
+# Code chunks
+
+- Code chunks are where we place the R code that we want to execute.
+
+
+````markdown
+The plot below shows a slight increase in intensity in the final syllable of the word. 
+
+```{r boxplot, echo=TRUE, eval=require('tidyverse'), comment="#", message=FALSE}
+
+library(tidyverse)
+
+# Loading the dataframe
+pse_stress &lt;- read_tsv("data/pse-stress-simplified.csv") %&gt;% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                )
+                                      
+# A simple boxplot of intensity
+dur &lt;- ggplot(pse_stress, aes(Position, Intensity))
+dur + geom_boxplot()
+```
+````
+
+---
+
+# Code chunks
+
+The plot below shows a slight increase in intensity in the final syllable of the word. 
+
+![](dynamic_docs_files/figure-html/boxplot-1.png)&lt;!-- --&gt;
+
+---
+
 class: center, middle
 
 # A basic example

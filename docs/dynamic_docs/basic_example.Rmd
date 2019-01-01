@@ -1,17 +1,33 @@
 ---
 title: "A basic example"
+subtitle: "Besemah stress"
 author: "Bradley McDonnell"
 date: "12/29/2018"
 output: html_document
 ---
 
+<!-- Commenting is done via regular HTML tags -->
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r dataset, include=FALSE}
+
+```{r include=FALSE, eval=require('tidyverse'), comment="#", message=FALSE}
+
 library(tidyverse)
-wals_200_sample <- read_tsv("~/LSA2019-Reproducible-Research/data/wals_200_syncretism.csv")
+
+# Loading the dataframe
+pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                )
+                                      
 
 ```
 
