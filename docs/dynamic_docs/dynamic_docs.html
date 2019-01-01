@@ -151,8 +151,8 @@ pse_stress &lt;- read_tsv("data/pse-stress-simplified.csv") %&gt;%
                                 )
                                       
 # A simple boxplot of intensity
-dur &lt;- ggplot(pse_stress, aes(Position, Intensity))
-dur + geom_boxplot()
+int &lt;- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot()
 ```
 ````
 
@@ -181,8 +181,8 @@ The plot below shows a slight increase in intensity in the final syllable of the
 ```{r boxplot, echo=FALSE, comment="#", message=FALSE, fig.height=6}
 
 # A simple boxplot of intensity
-dur &lt;- ggplot(pse_stress, aes(Position, Intensity))
-dur + geom_boxplot()
+int &lt;- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot()
 
 ```
 ````

@@ -146,8 +146,8 @@ pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>%
                                 )
                                       
 # A simple boxplot of intensity
-dur <- ggplot(pse_stress, aes(Position, Intensity))
-dur + geom_boxplot()
+int <- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot()
 ```
 ````
 
@@ -173,8 +173,8 @@ pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>%
                                 )
                                       
 # A simple boxplot of intensity
-dur <- ggplot(pse_stress, aes(Position, Intensity))
-dur + geom_boxplot()
+int <- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot()
 ```
 
 ---
@@ -193,8 +193,8 @@ dur + geom_boxplot()
 `r ''````{r boxplot, echo=FALSE, comment="#", message=FALSE, fig.height=6}
 
 # A simple boxplot of intensity
-dur <- ggplot(pse_stress, aes(Position, Intensity))
-dur + geom_boxplot()
+int <- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot()
 
 ```
 ````

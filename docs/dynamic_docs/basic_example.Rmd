@@ -4,6 +4,7 @@ subtitle: "Besemah stress"
 author: "Bradley McDonnell"
 date: "12/29/2018"
 output: html_document
+bibliography: pse-stress.bib
 ---
 
 <!-- Commenting is done via regular HTML tags -->
@@ -31,22 +32,35 @@ pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>%
 
 ```
 
-## R Markdown
+# Introduction
+Besemah Stress ... 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+[see @, pp. 33-35; also @smith04, ch. 1]
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+# Acoustic correlates of stress
 
-```{r cars}
-summary(cars)
+## Duration
+
+```{r duration}
+# A simple boxplot of intensity
+dur <- ggplot(pse_stress, aes(Position, Duration))
+dur + geom_boxplot() + facet_grid(~Final)
 ```
 
-## Including Plots
+## Intensity
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r intensity}
+# A simple boxplot of intensity
+int <- ggplot(pse_stress, aes(Position, Intensity))
+int + geom_boxplot() + facet_grid(~Final)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Pitch
+
+```{r pitch}
+# A simple boxplot of intensity
+f0 <- ggplot(pse_stress, aes(Position, f0.4))
+f0 + geom_boxplot() + facet_wrap(~Participant)
+```
+
+# Conclusion
