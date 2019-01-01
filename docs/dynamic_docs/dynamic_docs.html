@@ -14,10 +14,16 @@ class: center, middle, inverse, title-slide
 # Dynamic Documents in RStudio
 ## LSA 2019
 ### Bradley McDonnell<br/>University of Hawai‘i at Mānoa
-### 2019/01/03 (updated: 2018-12-31)
+### 2019/01/03 (updated: 2019-01-01)
 
 ---
 
+
+&lt;style&gt;
+code.md{
+  font-size: 10pt;
+}
+&lt;/style&gt;
 
 
 
@@ -45,14 +51,19 @@ class: center, middle
 
 
 .pull-left[
-- It's simple. 
+- It's simple
 - It's portable
-- 
+- Produces reproducible documents
+- Outputs to various static and dynamic formats
+- ...
 ]
 
 .pull-right[
 - Few native formatting options
   - e.g., interlinear glossed examples not straightforward
+- Yet another flavor of Markdown
+- Not widely used in linguistics
+- ...
 ]
 
 ---
@@ -62,11 +73,9 @@ class: center, middle
 
 Dynamic documents are composed of: 
 
-1. YAML header: Contains metadata for the document
+1. YAML header
 2. R code chunks
 3. Text
-
-Let's break down the YAML header and R code chunks...
 
 ---
 
@@ -98,7 +107,7 @@ output: html_document
 # YAML header
 
 The YAML header can be quite complicated.
-- The `output` can contain a number of options (which is quite helpful!). 
+- The `output` can contain a number of options (which can be quite helpful!). 
 
 
 
@@ -107,7 +116,7 @@ The YAML header can be quite complicated.
 title: "Dynamic Documents in RStudio"
 subtitle: "LSA 2019"
 author: "Bradley McDonnell&lt;br/&gt;University of Hawai‘i at Mānoa"
-date: "2019/01/03 (updated: 2018-12-31)"
+date: "2019/01/03 (updated: 2019-01-01)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -122,13 +131,12 @@ output:
 
 # Code chunks
 
-- Code chunks are where we place the R code that we want to execute.
+- Code chunks contain the R code that we want to execute.
 
-
-````markdown
+````md
 The plot below shows a slight increase in intensity in the final syllable of the word. 
 
-```{r boxplot, echo=TRUE, eval=require('tidyverse'), comment="#", message=FALSE}
+```{r boxplot, echo=TRUE, comment="#", message=FALSE, fig.height=6}
 
 library(tidyverse)
 
@@ -148,6 +156,7 @@ dur + geom_boxplot()
 ```
 ````
 
+
 ---
 
 # Code chunks
@@ -158,9 +167,48 @@ The plot below shows a slight increase in intensity in the final syllable of the
 
 ---
 
+# Anatomy of a code chunk
+
+- Code chunks are marked by ` ``` ` at the start and end of the chunk.
+- Followed by the specification of the programming language, 
+  - `r` or `{r}` in our case
+  - Optionally followed by a name for the code chunk, and
+  - many options for how the code chunk is treated. 
+- Finally, the code itself!
+
+
+````markdown
+```{r boxplot, echo=FALSE, comment="#", message=FALSE, fig.height=6}
+
+# A simple boxplot of intensity
+dur &lt;- ggplot(pse_stress, aes(Position, Intensity))
+dur + geom_boxplot()
+
+```
+````
+
+**Note it's also possible to set Global Options that apply to all code chunks.**
+
+````markdown
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+```
+````
+
+---
+
+# Text
+
+- The text would ideally be R Markdown...
+  - but it's possible to also use LaTeX
+- Or it's possible to mix in HTML formatting
+  - and/or LaTeX code in with R Markdown
+
+---
+
 class: center, middle
 
-# A basic example
+# Questions?
 
 ???
 
