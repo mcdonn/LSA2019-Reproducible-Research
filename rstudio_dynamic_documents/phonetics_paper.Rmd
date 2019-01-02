@@ -1,10 +1,10 @@
 ---
 title: "Besemah stress"
-subtitle: "A basic example"
 author: "Bradley McDonnell"
 date: "12/29/2018"
-output: html_document
+subtitle: A basic example
 bibliography: bib/besemah-stress.bib
+output: html_document
 ---
 
 
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r data, eval=require('tidyverse'), comment="#"}
+```{r data}
 
 # Loading libraries
 library(tidyverse)
@@ -38,6 +38,10 @@ pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>%
                                 Final = fct_recode(Final),
                                 Participant = fct_recode(Participant)
                                 )
+                          
+                        
+head(pse_stress)
+
 ```
 
 <!--- TASK: You'll notice that the code and a message are printed
@@ -50,8 +54,8 @@ pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>%
 --->
 
 
-# Introduction[^1]
-There has been much disagreement over the status of word-level stress in the languages of western Indonesia, particularly in regards to well-known varieties of Malay, such as Standard Indonesian [@vanzanten2003status]. Word-level stress has been claimed to fall predictably on the penultimate syllable unless it contains a schwa in which case it falls on the ultima [@adisasmito1996phonetic]. However, since the late 1990s, an increasing number of studies have questioned this position for Standard Indonesian [@vanzanten2004word], and more recent studies have pointed out the complications associated with studies of Standard Indonesian due to significant influence from substrate languages like Javanese [@goedemans2007stress].
+# Introduction
+There has been much disagreement over the status of word-level stress in the languages of western Indonesia, particularly in regards to well-known varieties of Malay, such as Standard Indonesian [@vanzanten2003status].[^1] Word-level stress has been claimed to fall predictably on the penultimate syllable unless it contains a schwa in which case it falls on the ultima [@adisasmito1996phonetic]. However, since the late 1990s, an increasing number of studies have questioned this position for Standard Indonesian [@vanzanten2004word], and more recent studies have pointed out the complications associated with studies of Standard Indonesian due to significant influence from substrate languages like Javanese [@goedemans2007stress].
 
 [^1]: Text from this example is lifted directly from McDonnell & Turnbull (2018).
 
@@ -144,8 +148,6 @@ There were four experimental blocks that combined the possible combinations of i
 
 All recordings were made on a Marantz PMD-670 solid state recorder with a sampling frequency of 48kHz and stored as wav files. The participant was recorded on the left channel with a Shure WH-30 headset microphone while the confederate was recorded on the right channel with a Shure SM10A headset microphone.
   
-  Because Besemah does not have a standard orthography, participants were first asked to read example sentences with each of the 12 target words in context. This ensures that the speakers knew how to read each of the target words and understood their meanings. Participants were then introduced to the information gap task and asked to practice each of the four blocks with eight filler words for each condition. Participants then began the task, which took 20 to 30 minutes.
-  
   Each target word was repeated four times for each of the four blocks (12 words $\times$ 4 repetitions $\times$ 4 blocks = 192 tokens). The presentation of these words was randomized and the presentation of each block was also randomized. 
   
 
@@ -157,42 +159,112 @@ All recordings were made on a Marantz PMD-670 solid state recorder with a sampli
 This section takes a preliminary look at the acoustic correlates of stress in Besemah. 
 
 ## Duration
-Duration in the final syllable appears to be longer compared to duration of the first syllable.
+Duration in the final syllable appears to be longer compared to duration of the penultimate syllable. It is noteworthy, however, that while duration may be the most robust correlate for stress, it is confounded with word-final lengthening. 
 
 <!--TASK: Adjusting figures
 
-1. Change the dimensions of the Figure below.
+1. Change the dimensions of the Figure below, its width is a bit too long.
 2. Supress the code from being displayed above the text.
+3. Align the plot in the center.
 
 -->
 
 ```{r duration}
 # A simple boxplot of intensity
 dur <- ggplot(pse_stress, aes(Position, Duration))
-dur + geom_boxplot() + coord_flip()
+dur + geom_boxplot() + coord_flip() + scale_x_discrete(limits = rev(levels(pse_stress$Position)))
 ```
 
-As expected, when the word is in the final position in the sentence, the duration is longer.  
+As expected, when the word is in the final position in the sentence, the duration is longer in the ultimae. The penult appears to be fairly similar whether or not the word is sentence final or not.   
 
 ```{r duration-final}
 # A simple boxplot of intensity
 dur <- ggplot(pse_stress, aes(Position, Duration))
-dur + geom_boxplot() + facet_wrap(~Final, ncol = 1) + coord_flip()
+dur + geom_boxplot() + facet_wrap(~Final, ncol = 1) + coord_flip() + scale_x_discrete(limits = rev(levels(pse_stress$Position)))
 ```
 
-The table below demonstrates the mean duration for each of the six participants in both sentence final and sentence medial positions. 
+The fairly simple table below shows the mean duration for penult and final syllables. It is clear that the ultima is longer. 
 
-```{r duration-mean, result='asis'}
+
+```{r dur-mean}
+pse_stress %>% 
+  group_by(Position) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable()
+```
+
+<!-- Task 
+
+1. Delete the comment tag above to see a table with nicer formatting.
+
+2. What happens now when you try to knit the document to a Word document?
+    
+3. Try running it again with "always_allow_html: yes" in the YAML header.
+
+#```{r dur-mean-nice}
+ pse_stress %>% 
+  group_by(Position) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable(format = 'html') %>%
+  kable_styling(full_width = FALSE)
+#```
+
+-->
+
+This next table is a bit more complicated and presents the mean duration of each syllable in sentence final and sentence medial position. 
+
+<!-- TASK
+
+1. Delete the comment tags to see a more complex, but nice looking table
+
+# ```{r dur-mean-fin}
+pse_stress %>% 
+  group_by(Position, Final) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable(format = 'html') %>%
+  kable_styling(full_width = FALSE) %>%
+  collapse_rows(columns = 1, valign = "middle")
+# ```
+
+-->
+
+This more complex table below demonstrates the mean duration for each of the six participants in both sentence final and sentence medial positions. 
+
+<!-- TASK
+
+1. Delete the comment tags to see a more complex, but nice looking table
+
+
+#```{r dur-means-peaker}
 pse_stress %>% 
   group_by(Participant, Final, Position) %>%
   summarize(Duration = round(mean(Duration), 3)) %>%
   kable(format = 'html') %>%
   kable_styling(full_width = FALSE) %>%
-  column_spec(1, bold = T) %>%
-  collapse_rows(columns = 1:2, valign = "middle")
-```
+  column_spec(1, bold = T)
+#```
+
+-->
+
+
+<!-- TASK
+
+1. Using the code from the table above "dur-mean-fin" above, can you figure out a way how to get rid of the redudant values in columns 1 and 2? 
+
+2. Below create another table that includes focus instead of sentence position.
+-->
 
 ## Intensity
+
+<!-- TASK
+
+1. Create a simple plot of the syllable position and intensity. 
+2. Align it in the center, but make it bigger than the other plots. 
+3. Add a little text that describes the plot. 
+
+-->
+
+The interaction between sentence position and intensity is very similar across speakers. Speakers show the same pattern: the ultima is more intense when it is in non-final sentence position. 
 
 ```{r intensity}
 # A simple boxplot of intensity
@@ -200,17 +272,49 @@ int <- ggplot(pse_stress, aes(Position, Intensity, fill=Final))
 int + geom_boxplot() + facet_wrap(~Participant)
 ```
 
+<!-- TASK
+
+1. This plot is a bit tricky to read, can you change it so that the syllable positions within the word are next two each other? 
+2. Adjust options so that the plot spans the length of the document. 
+3. Make a table that has the same values as the duration table above: speaker, sentence position, and mean intensity. 
+
+-->
+
 
 ## Pitch
 
-```{r pitch}
-# A simple boxplot of intensity
-f0 <- ggplot(pse_stress, aes(Position, F0, fill=Final))
-f0 + geom_boxplot() + facet_wrap(~Participant)
-```
+<!-- TASK
+
+1. Make several pitch plots based on the plots above. Add some discussion of the pitch plots.
+2. Make a table of pitch with sentence position, and mean f0.
+3. Again make a table that has speaker, sentence position, and mean f0. 
+
+-->
 
 
 # Conclusion
 There are some interesting data here, but we cannot conclude much at this point. 
+
+<!-- TASK
+
+Did it bother you that "final" is before "non-final"? It'd be more intuitive if it was the other way around, right? 
+
+Copy the text below and replace it when you loaded the dataframe above. The line "Final = fct_relevel(Final, "non-final", "final")" changes the order of the factors and this changes it throughout the document. Easy as that!
+
+
+# Loading the dataframe
+pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                Participant = fct_recode(Participant), 
+                                Final = fct_relevel(Final, "non-final", "final")
+                                )
+
+ 
+-->
 
 # References

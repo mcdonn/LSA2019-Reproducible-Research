@@ -3,8 +3,8 @@ title: "The Typology of Causative-Applicative Syncretism"
 author: "Bradley McDonnell"
 date: "1/1/2019"
 output: 
-  ioslides_presentation:
-    widescreen: true
+  ioslides_presentation: 
+    incremental: true
 bibliography: bib/causative-applicative.bib
 ---
 
@@ -55,19 +55,42 @@ pal2 <- colorFactor(palette = wes_palette(name = "Zissou1")[c(5)],
 
 ## Goals
 
->1. An overview of causatives and applicatives in the world's languages.
->1. Worldwide distribution of causative-applicative syncretism.
->     - Distribution within a subset of the WALS 200 sample.
->1. Challenges & prospects creating a typology of causative-applicative syncretism.
+1. An overview of causatives and applicatives in the world's languages.
+1. Worldwide distribution of causative-applicative syncretism.
+     - Distribution within a subset of the WALS 200 sample.
+1. Challenges & prospects creating a typology of causative-applicative syncretism.
 
 <!-- Task 
 Try to add > before each, item in the list above... what happens?  
+
+Delete them and then add... 
+    
+    incremental: true
+
+    below this command
+    
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+
+This means that all bullet points are incremental.
+
+You can also adjust the speed of the slides just below the "incremental: true"...
+
+    transition: slower 
+
+You can also make it "faster".
+
 -->
 
-## Causatives{.flexbox .vcenter}
+## Causatives 
 
 
-## WALS map for causatives [@song2013nonperiphrastic]
+
+
+
+
+## WALS map for causatives 
 
 ```{r eval=require('leaflet'), echo=FALSE}
 causative_map <- wals_200_caus_appl %>%
@@ -94,6 +117,7 @@ causative_map <- wals_200_caus_appl %>%
   )
 causative_map
 ```
+### [@song2013nonperiphrastic]
 
 ## Causatives 
 
@@ -116,7 +140,7 @@ row_spec(0, font_size = 30)
 ## Applicatives
 
 
-## WALS map for applicatives [@polinsky2013applicative]
+## WALS map for applicatives 
 
 ```{r appl-map}
 applicative_map <- wals_200_caus_appl %>%
@@ -143,9 +167,14 @@ applicative_map <- wals_200_caus_appl %>%
   )
 applicative_map
 ```
+###[@polinsky2013applicative]
 
+<!--
+1. Add a new slide with the title "Geographical distribution"
+2. Include a list of where applicative occur and do not occur
+-->
 
-## Applicatives totals
+## Applicatives totals 
 
 ```{r, echo=FALSE}
 wals_200_caus_appl %>%
@@ -186,6 +215,12 @@ caus_appl_table %>%
 
 
 ## Causative & Applicatives
+
+<!-- TASK 
+
+Add {.smaller} after the slide heading above.
+
+-->
 
 ```{r caus-apple-df, include = FALSE}
 caus_appl_table_df <- caus_appl_table %>%
@@ -257,12 +292,19 @@ For another style of slides using R Markdown, see `xaringan` <https://github.com
 
 If you are interested in bibliographies see <https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
 
+----
+
 If you want to number tables, see: 
 <https://www.r-bloggers.com/r-markdown-how-to-number-and-reference-tables/>
 
 If you wanted to look at potential article templates: 
 <https://github.com/rstudio/rticles>
 
-=======
->>>>>>> 63e4a44399bb48695ec9d1dbd19da4f6f5d955b5
+Some other table options in R Markdown: 
+<https://davidgohel.github.io/flextable/index.html>
+
+Tips for using knitr and R Markdown with Word (.docx) files
+<https://rmarkdown.rstudio.com/articles_docx.html>
+
+
 ## References
