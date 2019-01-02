@@ -53,7 +53,7 @@ Intead of cloning the repo, I recommend downloading the repo and moving the foll
 
 You need to install the following packages: 
 
-`install.packages(tidyverse,knitr,kableExtra,leaflet,wesanderson)`
+`install.packages("tidyverse", "knitr", "kableExtra", "leaflet", "wesanderson")`
 
 
 <center>
