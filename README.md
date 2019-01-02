@@ -48,7 +48,7 @@ Participants will be required to bring laptop computers to the workshop running 
 | **12:30 - 1:30** |  **Lunch** | |
 | 1:30 - 1:45 | [RStudio with R demo](https://mcdonn.github.io/LSA2019-Reproducible-Research/dynamic_docs/dynamic_docs.html)  | Brad |
 | 1:45 - 2:00 | [Jupyter Notebooks with Python demo](jupyter_notebook_python_demo.ipynb)  | Na-Rae |
-| 2:00 - 3:15 | Break out groups with RStudio and [Jupyter Notebooks](jupyter_notebook_python_demo.ipynb) | |
+| 2:00 - 3:15 | Break out groups with [RStudio](rstudio_dynamic_documents/README.md) and [Jupyter Notebooks](jupyter_notebook_python_demo.ipynb) | |
 | 3:15 - 3:30 | Concluding remarks | |
 
 
