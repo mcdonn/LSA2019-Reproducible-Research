@@ -260,7 +260,10 @@ If you are interested in bibliographies see <https://rmarkdown.rstudio.com/autho
 If you want to number tables, see: 
 <https://www.r-bloggers.com/r-markdown-how-to-number-and-reference-tables/>
 
+<<<<<<< HEAD
 If you wanted to look at potential article templates: 
 <https://github.com/rstudio/rticles>
 
+=======
+>>>>>>> 63e4a44399bb48695ec9d1dbd19da4f6f5d955b5
 ## References
