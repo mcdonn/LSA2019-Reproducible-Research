@@ -41,7 +41,6 @@ We will connect RStudio and GitHub using an SSH key, so that you do not have ent
 
 You now have a new project file, and can `pull`, `commit` and `push` changes to your GitHub repo using the `git` tab in pane in the upper right corner.  
 
-
 # Exercises 
 These exercises contain some sample data from a phonetics study and a typological study. The exercises purposely use rather simple r code. The goal of the exercises is for you to feel comfortable using R Markdown and dynamic documents with `knitr`.
 
@@ -52,13 +51,20 @@ Intead of cloning the repo, I recommend downloading the repo and moving the foll
 - bib/
 - data/ 
 
-You can rely on [this very handy cheatsheet for R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
+You need to install the following packages: 
 
-## Exercise 1: Besemah Stress
+`install.packages(tidyverse,knitr,kableExtra,leaflet,wesanderson)`
+
+
+<center>
+### You can rely on [this very handy cheatsheet for R Markdown](https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf).
+</center>
+
+## [Exercise 1: Besemah Stress](phonetics_paper.Rmd)
 This is a very basic example of a dynamic document. First, use the `knit` command to compile the document. Then, read through the document and look out for commented sections in between \<!-- and -->. For each of these, I list different tasks to complete throughout the document. I'll be walking around to help you complete these tasks. 
 
 
-## Exercise 2: Typology of causatives and applicatives
+## [Exercise 2: Typology of causatives and applicatives](typology_paper.Rmd)
 This is a very basic example of a slides using `knitr` and R Markdown. Again, first use the `knit` command to compile the document. Then, read through the document and look out for commented sections in between \<!-- and -->. For each of these, I list different tasks to complete throughout the document. I'll be walking around to help you complete these tasks.
 
 ## Exercise 3: Experimenting on your own
