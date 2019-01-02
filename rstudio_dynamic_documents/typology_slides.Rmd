@@ -257,4 +257,7 @@ For another style of slides using R Markdown, see `xaringan` <https://github.com
 
 If you are interested in bibliographies see <https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
 
+If you want to number tables, see: 
+<https://www.r-bloggers.com/r-markdown-how-to-number-and-reference-tables/>
+
 ## References
