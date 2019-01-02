@@ -57,7 +57,7 @@ pal2 <- colorFactor(palette = wes_palette(name = "Zissou1")[c(5)],
 
 >1. An overview of causatives and applicatives in the world's languages.
 >1. Worldwide distribution of causative-applicative syncretism.
->    - Distribution within a subset of the WALS 200 sample.
+>     - Distribution within a subset of the WALS 200 sample.
 >1. Challenges & prospects creating a typology of causative-applicative syncretism.
 
 <!-- Task 
