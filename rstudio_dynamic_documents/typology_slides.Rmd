@@ -8,7 +8,8 @@ output:
 bibliography: bib/causative-applicative.bib
 ---
 
-<!--TASK: 
+
+<!--TASK
 
 1. Knit slides to see what they look like. Then change...
 
@@ -119,6 +120,12 @@ causative_map
 ```
 ### [@song2013nonperiphrastic]
 
+
+<!--
+1. Add a new slide with the title "Geographical distribution"
+2. Include a list of where applicatives occur and do not occur
+-->
+
 ## Causatives 
 
 ```{r caus-table}
@@ -171,7 +178,7 @@ applicative_map
 
 <!--
 1. Add a new slide with the title "Geographical distribution"
-2. Include a list of where applicative occur and do not occur
+2. Include a list of where applicatives occur and do not occur
 -->
 
 ## Applicatives totals 
@@ -263,7 +270,7 @@ syncretism_map
 
 ## Causative-applicative syncretism
 
-```{r, echo=FALSE}
+```{r sync-table}
 wals_200_syncretism %>%
   group_by(syncretism) %>%
   summarize(n=n()) %>%
@@ -277,6 +284,7 @@ wals_200_syncretism %>%
   kable_styling(bootstrap_options = "striped", font_size = 30) %>%
   row_spec(0, font_size = 30)
 ```
+
 
 ---- 
 
