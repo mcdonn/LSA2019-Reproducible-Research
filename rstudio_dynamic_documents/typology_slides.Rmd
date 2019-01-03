@@ -38,8 +38,12 @@ library(knitr) # for tables
 library(kableExtra) # for tables
 
 ## Load datasets
-wals_200_caus_appl <- read_tsv("data/wals_200_caus_appl.csv")
-wals_200_syncretism <- read_tsv("data/wals_200_syncretism.csv")
+wals_200_caus_appl <- read_tsv("data/wals_200_caus_appl.csv") %>%
+                              mutate(causative_111a = fct_recode(causative_111a), 
+                                     applicative_109a = fct_recode(applicative_109a)
+                                     )
+wals_200_syncretism <- read_tsv("data/wals_200_syncretism.csv") %>%
+                              mutate(syncretism = fct_recode(syncretism))
 
 ## Define colors for maps
 pal <- colorFactor(palette = wes_palette(name = "Zissou1")[c(2,5)],
