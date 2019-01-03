@@ -10,7 +10,7 @@
 ## Instructors
 * **Bradley McDonnell**, University of Hawai‘i at Mānoa (<mcdonn@hawaii.edu>)
 * [**Na-Rae Han**](http://www.pitt.edu/~naraehan/), University of Pittsburgh (<naraehan@pitt.edu>)
-* **Eve Koller**, University of Hawai‘i at Mānoa (<ekoller@hawaii.edu>)
+* [**Eve Okura Koller**](https://evekoller.com/), University of Hawai‘i at Mānoa (<ekoller@hawaii.edu>)
 
 
 ## Workshop Description
