@@ -1,0 +1,320 @@
+---
+title: "Besemah stress"
+author: "Bradley McDonnell"
+date: "12/29/2018"
+subtitle: A basic example
+bibliography: bib/besemah-stress.bib
+output: html_document
+---
+
+
+<!-- Commenting is done via regular HTML tags. Comments will contain different tasks throughout this paper -->
+
+<!-- TASK:
+1. Change the output of this document to a PDF file, a Word/ Open Office file.
+2. Are there different ways to acheive this end.
+-->
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r data}
+
+# Loading libraries
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+# Loading the dataframe
+pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                Participant = fct_recode(Participant)
+                                )
+                          
+                        
+head(pse_stress)
+
+```
+
+<!--- TASK: You'll notice that the code and a message are printed
+
+1. Add an option to the code chunk to supress the message. 
+2. Add an option to the code chunk to suppress the code entirely.
+3. Do you need both options if you want to supress both?
+
+
+--->
+
+
+# Introduction
+There has been much disagreement over the status of word-level stress in the languages of western Indonesia, particularly in regards to well-known varieties of Malay, such as Standard Indonesian [@vanzanten2003status].[^1] Word-level stress has been claimed to fall predictably on the penultimate syllable unless it contains a schwa in which case it falls on the ultima [@adisasmito1996phonetic]. However, since the late 1990s, an increasing number of studies have questioned this position for Standard Indonesian [@vanzanten2004word], and more recent studies have pointed out the complications associated with studies of Standard Indonesian due to significant influence from substrate languages like Javanese [@goedemans2007stress].
+
+[^1]: Text from this example is lifted directly from McDonnell & Turnbull (2018).
+
+The present study is designed to tease apart different factors relating to prosodic prominence in Besemah. It does so by investigating the realization of common acoustic correlates of stress (f$_0$, duration, intensity, and spectral tilt) within target words that vary in their sentence position (sentence-medial vs. sentence-final position) and information status ('in focus' vs. 'out of focus').
+
+## Besemah word level stress
+Like many of the languages of western Indonesia, Besemah has received little attention since the Dutch colonial period [@mcdonnell2008conservative]. The only study of Besemah prosody tentatively concluded that word-level stress in Besemah falls on the final syllable of the word and is cued by increased intensity [@mcdonnell2016acoustic]. However, there are several complications to this analysis, and word-level stress appears to be affected by the presence of final L boundary tones.
+  
+
+# Methods
+This section describe the methodology used in this study.
+
+## Design
+Target words were collected using an information gap task. This task involved two talkers: a confederate who asked questions and a naive participant who answered them. They sat facing each other, each able to see only their own laptop screen. Both the confederate and participant could see a question on the top of the screen that the confederate was to ask, but only the participant's screen displayed the answer.The task was for the confederate to ask the question and the participant to provide an answer in a complete sentence modeled upon the question. The confederate then circled the answer on the paper. One female native speaker of Besemah acted as the confederate for all participants.
+  
+## Materials
+Question-answer pairs were constructed which varied in information status (target word 'in focus' or 'out of focus') and sentence position (target word sentence-medial or sentence-final). The type and structure of the question depended upon the combination of its sentence position and information status. Question type differed based upon whether the target word was 'in focus' or 'out of focus'.[^2] The sentence position simply altered the shape of the question so that the target word would occur in sentence-medial or sentence-final position. The table below presents example question-answer pairs for the 'in focus' condition. In this table the target word *susu* 'milk' is used as an example and displayed in boldface.    
+
+[^2]: 'Focus', as a term of art in linguistics, is fraught with definitional difficulties. In our 'in focus' condition,   the target word is the answer to the current question under discussion [@roberts2012]. In the 'out of focus' condition, on the other hand, the target word is given, not new [@schwarzschild1999]. This definition may not match exactly with the definitions used by other researchers, and we invite the reader to mentally substitute their favorite terms that fit their proclivities if they are so inclined.
+  
+|**Position** |       |    **Question/Answer**                    |  
+|-------------|-------|-------------------------------------------|
+|    final    | Q:    |  *Sebelah kanan kate ape?*                |
+|             |       | 'On the right side is what word?'         |
+|             | A:    | *Sebelah kanan kate **susu**.*            |
+|             |       | 'On the right side is **milk**.'          |
+|    medial   | Q:    | *Kate ape sebelah kanan?*                 |
+|             |       | 'What word is on the right side?'         |
+|             | A:    | *Kate* ***susu*** *sebelah kanan.*        |
+|             |       | 'The word **milk** is on the right side.'||
+
+Table: Information status condition
+
+  For stimuli that seek to collect target words that are 'out of focus', the confederate asked a different set of questions. Examples are shown in the table below. Unlike the 'in focus' condition, the same target word was mentioned four times in immediately preceding turns. This mentioning of the target word served to keep the word as discourse-given and thus 'out of focus'. Further, each time the word appeared for the first time in a block it was introduced by asking the question *Titu kate ape?* 'What word is this?'. The target word in this question is 'in focus' in this utterance and not considered in the analysis. However, this allowed the confederate to ask questions about the target word without it being 'in focus'. Thus, the subsequent repetitions of the target word ask where the target word appears on the screen, the top, bottom, left or right side. In these four questions, the target word is 'out of focus' while the word describing its position is 'in focus'. This table presents example question-answer pairs for the 'out of focus' condition. 
+
+<!--Task: Turn the text below into a table with three columns.
+
+1. The first and second columns should be right aligned. 
+2. The third column should be left aligned. 
+3. The elements in the second column should be bolded.
+4. The Besemah sentences in the third column should be italized.
+5. The word susu in the Besemah sentences and the word milk in the free translations should be bold and bold italics, respectively.
+
+ Position   |       | Question/Answer                     
+    final   | Q:    | Sebelah mane kate susu?
+            |       | 'Which side is the word \textbf{milk} on?'
+            | A:    | Sebelah bawah kate susu.
+            |       | 'On the left side is the word \textbf{milk}.'
+    medial  | Q:    |  \textit{Kate \textbf{susu} sebelah mane?}
+            |       | 'The word \textbf{milk} is on which side?'
+            | A:    | \textit{Kate \textbf{susu} sebelah kidau}.
+            |       | 'The word \textbf{milk} is on the left side.'
+
+-->
+
+The twelve target words are shown in the table below. Syllables in Besemah are maximally CVC with some restrictions on the coda consonants and words are most commonly bisyllabic. The words feature all four phonotactically legal combinations of light (CV) and heavy (CVC) syllables. Each of the four vowels /i, u, a, ə/ was present and matched in both syllables to allow for easier intra-word comparisons. Phonotactically, the high vowels /i, u/ show no restrictions, but /a/ does not occur word-finally and /ə/ does not occur in final closed syllables.
+
+
+
+|**Phoneme**| **Word** |                |
+|-----------|----------|----------------|
+| /i/       | /titi/   | 'to cross over'|
+|           | /pipis/  | 'to pulverize' |
+|           | /tʃiŋki/ | 'must have'    |
+|           | /sintiŋ/ | 'crooked'      |
+| /u/       | /susu/   | 'milk'         |
+|           | /tutus/  | 'to pound'     |
+|           | /tuŋku/  | 'hearth'       |
+|           | /tuntun/ | 'to watch'     |
+| /a/       | ---      |                | 
+|           | /tatap/  | 'to touch'     |
+|           | ---      |                |
+|           | /pantas/ | 'to be fitting'|
+| /ə/       | /tʃətə/  | 'to be exact'  |
+|           | ---      |                |
+|           | /təmpə/  | 'to forge'     |
+|           | ---      |                | 
+
+Table: Target words used in constructing question-answer pairs.
+
+
+## Procedure
+There were four experimental blocks that combined the possible combinations of information status and sentence position: 
+
+- Block A: sentence-medial, 'in focus'
+- Block B: sentence-final, 'in focus'
+- Block C: sentence-medial, 'out of focus'
+- Block D: sentence-final, 'in focus'
+
+
+All recordings were made on a Marantz PMD-670 solid state recorder with a sampling frequency of 48kHz and stored as wav files. The participant was recorded on the left channel with a Shure WH-30 headset microphone while the confederate was recorded on the right channel with a Shure SM10A headset microphone.
+  
+  Each target word was repeated four times for each of the four blocks (12 words $\times$ 4 repetitions $\times$ 4 blocks = 192 tokens). The presentation of these words was randomized and the presentation of each block was also randomized. 
+  
+
+## Participants
+  The experiment was conducted by the first author over several days in March~2015 in the Besemah village of Karang Tanding. The experiment was conducted entirely in Besemah with no interlanguage. The six female participants in this study are native speakers of Besemah and reside in or near the village of Karang Tanding in South Sumatra province. They range in 
+  age from 19 to 30 years old.
+
+# Acoustic correlates of stress
+This section takes a preliminary look at the acoustic correlates of stress in Besemah. 
+
+## Duration
+Duration in the final syllable appears to be longer compared to duration of the penultimate syllable. It is noteworthy, however, that while duration may be the most robust correlate for stress, it is confounded with word-final lengthening. 
+
+<!--TASK: Adjusting figures
+
+1. Change the dimensions of the Figure below, its width is a bit too long.
+2. Supress the code from being displayed above the text.
+3. Align the plot in the center.
+
+-->
+
+```{r duration}
+# A simple boxplot of intensity
+dur <- ggplot(pse_stress, aes(Position, Duration))
+dur + geom_boxplot() + coord_flip() + scale_x_discrete(limits = rev(levels(pse_stress$Position)))
+```
+
+As expected, when the word is in the final position in the sentence, the duration is longer in the ultimae. The penult appears to be fairly similar whether or not the word is sentence final or not.   
+
+```{r duration-final}
+# A simple boxplot of intensity
+dur <- ggplot(pse_stress, aes(Position, Duration))
+dur + geom_boxplot() + facet_wrap(~Final, ncol = 1) + coord_flip() + scale_x_discrete(limits = rev(levels(pse_stress$Position)))
+```
+
+The fairly simple table below shows the mean duration for penult and final syllables. It is clear that the ultima is longer. 
+
+
+```{r dur-mean}
+pse_stress %>% 
+  group_by(Position) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable()
+```
+
+<!-- Task 
+
+1. Delete the comment tag above to see a table with nicer formatting.
+
+2. What happens now when you try to knit the document to a Word document?
+    
+3. Try running it again with "always_allow_html: yes" in the YAML header.
+
+#```{r dur-mean-nice}
+ pse_stress %>% 
+  group_by(Position) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable(format = 'html') %>%
+  kable_styling(full_width = FALSE)
+#```
+
+-->
+
+This next table is a bit more complicated and presents the mean duration of each syllable in sentence final and sentence medial position. 
+
+<!-- TASK
+
+1. Delete the comment tags to see a more complex, but nice looking table
+
+# ```{r dur-mean-fin}
+pse_stress %>% 
+  group_by(Position, Final) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable(format = 'html') %>%
+  kable_styling(full_width = FALSE) %>%
+  collapse_rows(columns = 1, valign = "middle")
+# ```
+
+-->
+
+This more complex table below demonstrates the mean duration for each of the six participants in both sentence final and sentence medial positions. 
+
+<!-- TASK
+
+1. Delete the comment tags to see a more complex, but nice looking table
+
+
+#```{r dur-means-peaker}
+pse_stress %>% 
+  group_by(Participant, Final, Position) %>%
+  summarize(Duration = round(mean(Duration), 3)) %>%
+  kable(format = 'html') %>%
+  kable_styling(full_width = FALSE) %>%
+  column_spec(1, bold = T)
+#```
+
+-->
+
+
+<!-- TASK
+
+1. Using the code from the table above "dur-mean-fin" above, can you figure out a way how to get rid of the redudant values in columns 1 and 2? 
+
+2. Below create another table that includes focus instead of sentence position.
+-->
+
+## Intensity
+
+<!-- TASK
+
+1. Create a simple plot of the syllable position and intensity. 
+2. Align it in the center, but make it bigger than the other plots. 
+3. Add a little text that describes the plot. 
+
+-->
+
+The interaction between sentence position and intensity is very similar across speakers. Speakers show the same pattern: the ultima is more intense when it is in non-final sentence position. 
+
+```{r intensity}
+# A simple boxplot of intensity
+int <- ggplot(pse_stress, aes(Position, Intensity, fill=Final))
+int + geom_boxplot() + facet_wrap(~Participant)
+```
+
+<!-- TASK
+
+1. This plot is a bit tricky to read, can you change it so that the syllable positions within the word are next two each other? 
+2. Adjust options so that the plot spans the length of the document. 
+3. Make a table that has the same values as the duration table above: speaker, sentence position, and mean intensity. 
+
+-->
+
+
+## Pitch
+
+<!-- TASK
+
+1. Make several pitch plots based on the plots above. Add some discussion of the pitch plots.
+2. Make a table of pitch with sentence position, and mean f0.
+3. Again make a table that has speaker, sentence position, and mean f0. 
+
+-->
+
+
+# Conclusion
+There are some interesting data here, but we cannot conclude much at this point. 
+
+<!-- TASK
+
+Did it bother you that "final" is before "non-final"? It'd be more intuitive if it was the other way around, right? 
+
+Copy the text below and replace it when you loaded the dataframe above. The line "Final = fct_relevel(Final, "non-final", "final")" changes the order of the factors and this changes it throughout the document. Easy as that!
+
+
+# Loading the dataframe
+pse_stress <- read_tsv("data/pse-stress-simplified.csv") %>% 
+                          mutate(Word = fct_recode(Word),
+                                Position = fct_recode(Position),
+                                Vowel = fct_recode(Vowel),
+                                Weight = fct_recode(Weight),
+                                Focus = fct_recode(Focus),
+                                Final = fct_recode(Final),
+                                Participant = fct_recode(Participant), 
+                                Final = fct_relevel(Final, "non-final", "final")
+                                )
+
+ 
+-->
+
+# References

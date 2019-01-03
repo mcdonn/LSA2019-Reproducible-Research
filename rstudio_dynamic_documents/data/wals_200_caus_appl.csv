@@ -1,0 +1,149 @@
+wals_code	name	latitude	longitude	genus	family	macroarea	applicative_109a	applicative_109b	causative_111a	combined_sample
+abk	Abkhaz	43.0833333333	41	Northwest Caucasian	Northwest Caucasian	Eurasia	yes	1 Instrument	yes	100
+aco	Acoma	34.9166666667	-107.583333333	Keresan	Keresan	North America	yes	4 No other roles (= Only benefactive)	NA	100
+aeg	Arabic (Egyptian)	30	31	Semitic	Afro-Asiatic	Africa	no	5 No applicative construction	yes	100
+ain	Ainu	43	143	Ainu	Ainu	Eurasia	yes	3 Instrument and locative	yes	200
+ame	Amele	-5.25	145.583333333	Madang	Trans-New Guinea	Papunesia	yes	4 No other roles (= Only benefactive)	yes	100
+apu	Apurinã	-9	-67	Purus	Arawakan	South America	no	5 No applicative construction	yes	100
+arm	Armenian (Eastern)	40	45	Armenian	Indo-European	Eurasia	no	5 No applicative construction	yes	200
+arp	Arapesh (Mountain)	-3.46666666667	143.166666667	Kombio-Arapesh	Torricelli	Papunesia	yes	2 Locative	NA	100
+asm	Asmat	-5.5	138.5	Asmat-Kamoro	Trans-New Guinea	Papunesia	yes	4 No other roles (= Only benefactive)	yes	100
+awp	Awa Pit	1.5	-78.25	Barbacoan	Barbacoan	South America	no	5 No applicative construction	yes	200
+bag	Bagirmi	11.6666666667	16	Bongo-Bagirmi	Central Sudanic	Africa	no	5 No applicative construction	no	100
+bkr	Batak (Karo)	3.25	98.25	Northwest Sumatra-Barrier Islands	Austronesian	Papunesia	yes	NA	yes	200
+bma	Berber (Middle Atlas)	33	-5	Berber	Afro-Asiatic	Africa	no	5 No applicative construction	yes	100
+brh	Brahui	28.5	67	Northern Dravidian	Dravidian	Eurasia	no	5 No applicative construction	yes	200
+brm	Burmese	21	96	Burmese-Lolo	Sino-Tibetan	Eurasia	no	5 No applicative construction	yes	100
+brs	Barasano	-0.166666666667	-70.6666666667	Tucanoan	Tucanoan	South America	no	5 No applicative construction	yes	100
+bsq	Basque	43	-3	Basque	Basque	Eurasia	no	5 No applicative construction	yes	100
+bur	Burushaski	36.5	74.5	Burushaski	Burushaski	Eurasia	yes	4 No other roles (= Only benefactive)	yes	100
+cah	Cahuilla	33.5	-116.25	California Uto-Aztecan	Uto-Aztecan	North America	yes	2 Locative	yes	200
+cha	Chamorro	13.45	144.75	Chamorro	Austronesian	Papunesia	yes	4 No other roles (= Only benefactive)	yes	100
+chk	Chukchi	67	-173	Northern Chukotko-Kamchatkan	Chukotko-Kamchatkan	Eurasia	yes	5 No applicative construction	yes	100
+ckr	Canela-Krahô	-6	-46	Ge-Kaingang	Macro-Ge	South America	no	5 No applicative construction	NA	100
+cmn	Comanche	33.5	-101.5	Numic	Uto-Aztecan	North America	yes	1 Instrument	yes	200
+cre	Cree (Plains)	54	-110	Algonquian	Algic	North America	yes	4 No other roles (= Only benefactive)	yes	100
+dag	Daga	-10	149.333333333	Dagan	Dagan	Papunesia	no	5 No applicative construction	NA	100
+dni	Dani (Lower Grand Valley)	-4.33333333333	138.833333333	Dani	Trans-New Guinea	Papunesia	yes	2 Locative	NA	100
+eng	English	52	0	Germanic	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+epe	Epena Pedee	3	-77	Choco	Choco	South America	yes	4 No other roles (= Only benefactive)	yes	200
+eve	Evenki	56	125	Tungusic	Altaic	Eurasia	no	5 No applicative construction	yes	200
+ewe	Ewe	6.33333333333	0.416666666667	Kwa	Niger-Congo	Africa	no	5 No applicative construction	no	200
+fij	Fijian	-17.8333333333	178	Oceanic	Austronesian	Papunesia	yes	2 Locative	yes	100
+fin	Finnish	62	25	Finnic	Uralic	Eurasia	no	5 No applicative construction	yes	100
+fre	French	48	2	Romance	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+geo	Georgian	42	44	Kartvelian	Kartvelian	Eurasia	yes	2 Locative	yes	100
+ger	German	52	10	Germanic	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+goo	Gooniyandi	-18.3333333333	126.333333333	Bunuban	Bunuban	Australia	no	5 No applicative construction	no	100
+grb	Grebo	5	-8	Kru	Niger-Congo	Africa	yes	1 Instrument	yes	100
+grk	Greek (Modern)	39	22	Greek	Indo-European	Eurasia	no	5 No applicative construction	no	100
+grw	Greenlandic (West)	64	-51	Eskimo	Eskimo-Aleut	Eurasia	yes	1 Instrument	yes	100
+gua	Guaraní	-26	-56	Tupi-Guaraní	Tupian	South America	no	5 No applicative construction	yes	100
+hau	Hausa	12	7	West Chadic	Afro-Asiatic	Africa	yes	2 Locative	yes	100
+heb	Hebrew (Modern)	31.5	34.8333333333	Semitic	Afro-Asiatic	Eurasia	no	5 No applicative construction	yes	100
+hin	Hindi	25	77	Indic	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+hix	Hixkaryana	-1	-59	Cariban	Cariban	South America	no	5 No applicative construction	yes	100
+hmo	Hmong Njua	28	105	Hmong-Mien	Hmong-Mien	Eurasia	no	5 No applicative construction	no	100
+hun	Hungarian	47	20	Ugric	Uralic	Eurasia	no	5 No applicative construction	yes	200
+hzb	Hunzib	42.1666666667	46.25	Avar-Andic-Tsezic	Nakh-Daghestanian	Eurasia	no	5 No applicative construction	yes	200
+igb	Igbo	6	7.33333333333	Igboid	Niger-Congo	Africa	yes	4 No other roles (= Only benefactive)	yes	200
+ika	Ika	10.6666666667	-73.75	Arhuacic	Chibchan	South America	yes	4 No other roles (= Only benefactive)	yes	200
+imo	Imonda	-3.33333333333	141.166666667	Border	Border	Papunesia	yes	4 No other roles (= Only benefactive)	NA	100
+ind	Indonesian	0	106	Malayo-Sumbawan	Austronesian	Papunesia	yes	4 No other roles (= Only benefactive)	yes	100
+ing	Ingush	43.1666666667	45.0833333333	Nakh	Nakh-Daghestanian	Eurasia	no	5 No applicative construction	yes	200
+irq	Iraqw	-4	35.5	Southern Cushitic	Afro-Asiatic	Africa	no	5 No applicative construction	yes	200
+jak	Jakaltek	15.6666666667	-91.6666666667	Mayan	Mayan	North America	yes	1 Instrument	yes	100
+jpn	Japanese	37	140	Japanese	Japanese	Eurasia	no	5 No applicative construction	yes	100
+juh	Ju|'hoan	-19	21	Ju-Kung	Kxa	Africa	yes	2 Locative	yes	200
+kay	Kayardild	-17.05	139.5	Tangkic	Tangkic	Australia	no	5 No applicative construction	yes	100
+ket	Ket	64	87	Yeniseian	Yeniseian	Eurasia	no	5 No applicative construction	yes	200
+kew	Kewa	-6.5	143.833333333	Engan	Trans-New Guinea	Papunesia	yes	4 No other roles (= Only benefactive)	yes	100
+kfe	Koromfe	14.25	-0.916666666667	Gur	Niger-Congo	Africa	no	5 No applicative construction	yes	200
+kha	Khalkha	47	105	Mongolic	Altaic	Eurasia	no	5 No applicative construction	yes	100
+kho	Khoekhoe	-25.5	18	Khoe-Kwadi	Khoe-Kwadi	Africa	yes	4 No other roles (= Only benefactive)	yes	100
+khs	Khasi	25.5	92	Khasian	Austro-Asiatic	Eurasia	no	5 No applicative construction	yes	200
+kio	Kiowa	37	-99	Kiowa-Tanoan	Kiowa-Tanoan	North America	no	5 No applicative construction	yes	100
+klv	Kilivila	-8.5	151.083333333	Oceanic	Austronesian	Papunesia	no	5 No applicative construction	no	200
+knd	Kannada	14	76	Southern Dravidian	Dravidian	Eurasia	yes	4 No other roles (= Only benefactive)	yes	100
+knr	Kanuri	12	13	Western Saharan	Saharan	Africa	yes	2 Locative	yes	200
+koa	Koasati	34.8333333333	-85.1666666667	Muskogean	Muskogean	North America	no	5 No applicative construction	yes	100
+kob	Kobon	-5.16666666667	144.333333333	Madang	Trans-New Guinea	Papunesia	no	5 No applicative construction	yes	200
+kor	Korean	37.5	128	Korean	Korean	Eurasia	no	5 No applicative construction	yes	100
+krk	Karok	41.6666666667	-123	Karok	Karok	North America	yes	1 Instrument	yes	100
+kro	Krongo	10.5	30	Kadugli	Kadu	Africa	yes	2 Locative	no	100
+kse	Koyraboro Senni	16	0	Songhay	Songhay	Africa	yes	1 Instrument	yes	100
+kut	Kutenai	49.5	-116	Kutenai	Kutenai	North America	yes	1 Instrument	yes	100
+lak	Lak	42.1666666667	47.1666666667	Lak-Dargwa	Nakh-Daghestanian	Eurasia	no	5 No applicative construction	NA	200
+lan	Lango	2.16666666667	33	Nilotic	Eastern Sudanic	Africa	yes	2 Locative	yes	100
+lat	Latvian	57	24	Baltic	Indo-European	Eurasia	no	5 No applicative construction	yes	200
+lav	Lavukaleve	-9.08333333333	159.2	Lavukaleve	Solomons East Papuan	Papunesia	no	5 No applicative construction	yes	100
+lez	Lezgian	41.6666666667	47.8333333333	Lezgic	Nakh-Daghestanian	Eurasia	no	5 No applicative construction	yes	100
+lkt	Lakhota	43.8333333333	-101.833333333	Core Siouan	Siouan	North America	yes	4 No other roles (= Only benefactive)	yes	100
+luv	Luvale	-12	22	Bantoid	Niger-Congo	Africa	yes	3 Instrument and locative	yes	100
+mak	Makah	48.3333333333	-124.666666667	Southern Wakashan	Wakashan	North America	no	5 No applicative construction	yes	100
+mal	Malagasy	-20	47	Barito	Austronesian	Africa	no	3 Instrument and locative	yes	100
+mao	Maori	-40	176	Oceanic	Austronesian	Papunesia	no	5 No applicative construction	yes	200
+map	Mapudungun	-38	-72	Araucanian	Araucanian	South America	no	5 No applicative construction	yes	100
+mar	Maricopa	33.1666666667	-113.166666667	Yuman	Hokan	North America	yes	2 Locative	yes	100
+mau	Maung	-11.9166666667	133.5	Iwaidjan	Iwaidjan	Australia	no	5 No applicative construction	yes	100
+may	Maybrat	-1.33333333333	132.5	North-Central Bird's Head	West Papuan	Papunesia	yes	1 Instrument	no	100
+mei	Meithei	24.75	94	Kuki-Chin	Sino-Tibetan	Eurasia	yes	4 No other roles (= Only benefactive)	yes	100
+mnd	Mandarin	34	110	Chinese	Sino-Tibetan	Eurasia	no	5 No applicative construction	yes	100
+mrl	Murle	6.5	33.5	Surmic	Eastern Sudanic	Africa	no	5 No applicative construction	yes	200
+mrt	Martuthunira	-20.8333333333	116.5	Western Pama-Nyungan	Pama-Nyungan	Australia	no	5 No applicative construction	yes	100
+mxc	Mixtec (Chalcatongo)	17.05	-97.5833333333	Mixtecan	Oto-Manguean	North America	no	5 No applicative construction	yes	100
+myi	Mangarrayi	-14.6666666667	133.5	Mangarrayi	Mangarrayi-Maran	Australia	no	5 No applicative construction	yes	100
+ndy	Ndyuka	4.5	-54.5	Creoles and Pidgins	other	South America	no	5 No applicative construction	no	200
+nez	Nez Perce	46	-116	Sahaptian	Penutian	North America	yes	2 Locative	yes	200
+ngi	Ngiyambaa	-31.75	145.5	Southeastern Pama-Nyungan	Pama-Nyungan	Australia	no	5 No applicative construction	yes	100
+nht	Nahuatl (Tetelcingo)	19.6666666667	-99	Aztecan	Uto-Aztecan	North America	yes	NA	yes	200
+niv	Nivkh	53.3333333333	142	Nivkh	Nivkh	Eurasia	no	5 No applicative construction	yes	200
+nko	Nkore-Kiga	-0.916666666667	29.8333333333	Bantoid	Niger-Congo	Africa	yes	1 Instrument	yes	200
+nug	Nunggubuyu	-13.75	135.666666667	Nunggubuyu	Gunwinyguan	Australia	yes	4 No other roles (= Only benefactive)	yes	200
+ond	Oneida	43	-75.6666666667	Northern Iroquoian	Iroquoian	North America	yes	3 Instrument and locative	yes	100
+orh	Oromo (Harar)	9	42	Lowland East Cushitic	Afro-Asiatic	Africa	no	5 No applicative construction	yes	100
+otm	Otomí (Mezquital)	20.1666666667	-99.1666666667	Otomian	Oto-Manguean	North America	no	5 No applicative construction	no	100
+pai	Paiwan	22.5	120.833333333	Paiwan	Austronesian	Papunesia	yes	3 Instrument and locative	yes	100
+pau	Paumarí	-6	-64	Arauan	Arauan	South America	yes	4 No other roles (= Only benefactive)	yes	200
+pit	Pitjantjatjara	-26	130	Western Pama-Nyungan	Pama-Nyungan	Australia	yes	NA	yes	200
+pms	Paamese	-16.5	168.25	Oceanic	Austronesian	Papunesia	no	5 No applicative construction	no	200
+prh	Pirahã	-7	-62	Mura	Mura	South America	no	5 No applicative construction	yes	100
+prs	Persian	32	54	Iranian	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+psm	Passamaquoddy-Maliseet	45	-67	Algonquian	Algic	North America	yes	4 No other roles (= Only benefactive)	yes	200
+qim	Quechua (Imbabura)	0.333333333333	-78	Quechuan	Quechuan	South America	no	5 No applicative construction	yes	100
+ram	Rama	11.75	-83.75	Rama	Chibchan	North America	no	5 No applicative construction	yes	100
+rap	Rapanui	-27.1166666667	-109.366666667	Oceanic	Austronesian	Papunesia	no	5 No applicative construction	yes	100
+rus	Russian	56	38	Slavic	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+san	Sango	5	18	Ubangi	Niger-Congo	Africa	no	5 No applicative construction	NA	100
+shk	Shipibo-Konibo	-7.5	-75	Panoan	Panoan	South America	yes	4 No other roles (= Only benefactive)	yes	200
+sla	Slave	67	-125	Athapaskan	Na-Dene	North America	no	5 No applicative construction	yes	100
+snm	Sanuma	4.5	-64.6666666667	Yanomam	Yanomam	South America	no	5 No applicative construction	yes	100
+spa	Spanish	40	-4	Romance	Indo-European	Eurasia	no	5 No applicative construction	yes	100
+sue	Suena	-7.75	147.55	Binanderean	Trans-New Guinea	Papunesia	no	5 No applicative construction	NA	200
+sup	Supyire	11.5	-5.58333333333	Gur	Niger-Congo	Africa	no	5 No applicative construction	yes	100
+swa	Swahili	-6.5	39	Bantoid	Niger-Congo	Africa	yes	2 Locative	yes	100
+tab	Taba	0	127.5	South Halmahera - West New Guinea	Austronesian	Papunesia	yes	4 No other roles (= Only benefactive)	yes	200
+tag	Tagalog	15	121	Greater Central Philippine	Austronesian	Papunesia	no	3 Instrument and locative	yes	100
+tha	Thai	16	101	Kam-Tai	Tai-Kadai	Eurasia	no	5 No applicative construction	no	100
+tiw	Tiwi	-11.5	131	Tiwian	Tiwian	Australia	yes	1 Instrument	yes	100
+tuk	Tukang Besi	-5.5	123.5	Celebic	Austronesian	Papunesia	yes	3 Instrument and locative	yes	100
+tur	Turkish	39	35	Turkic	Altaic	Eurasia	no	5 No applicative construction	yes	100
+una	Una	-4.66666666667	140	Mek	Trans-New Guinea	Papunesia	yes	4 No other roles (= Only benefactive)	yes	200
+urk	Urubú-Kaapor	-2.33333333333	-46.5	Tupi-Guaraní	Tupian	South America	yes	1 Instrument	yes	200
+usa	Usan	-4.83333333333	145.166666667	Madang	Trans-New Guinea	Papunesia	yes	4 No other roles (= Only benefactive)	yes	200
+vie	Vietnamese	10.5	106.5	Viet-Muong	Austro-Asiatic	Eurasia	no	5 No applicative construction	yes	100
+wam	Wambaya	-18.6666666667	135.75	Wambayan	Mirndi	Australia	yes	2 Locative	yes	200
+war	Wari'	-11.3333333333	-65	Chapacura-Wanham	Chapacura-Wanham	South America	no	5 No applicative construction	yes	100
+wch	Wichí	-22.5	-62.5833333333	Matacoan	Matacoan	South America	no	5 No applicative construction	yes	100
+wic	Wichita	33.3333333333	-97.3333333333	Caddoan	Caddoan	North America	yes	1 Instrument	yes	100
+wra	Warao	9.33333333333	-61.6666666667	Warao	Warao	South America	no	5 No applicative construction	yes	100
+wrd	Wardaman	-15.5	131	Yangmanic	Yangmanic	Australia	no	5 No applicative construction	yes	200
+yag	Yagua	-3.5	-72	Peba-Yaguan	Peba-Yaguan	South America	yes	3 Instrument and locative	yes	100
+yaq	Yaqui	27.5	-110.25	Cahita	Uto-Aztecan	North America	yes	4 No other roles (= Only benefactive)	yes	100
+yid	Yidiny	-17	145.75	Northern Pama-Nyungan	Pama-Nyungan	Australia	yes	4 No other roles (= Only benefactive)	yes	200
+yim	Yimas	-4.66666666667	143.55	Lower Sepik	Lower Sepik-Ramu	Papunesia	yes	4 No other roles (= Only benefactive)	yes	200
+yor	Yoruba	8	4.33333333333	Defoid	Niger-Congo	Africa	no	5 No applicative construction	no	100
+ypk	Yup'ik (Central)	59.5	-160	Eskimo	Eskimo-Aleut	North America	no	5 No applicative construction	yes	200
+yur	Yurok	41.3333333333	-124	Yurok	Algic	North America	no	5 No applicative construction	NA	200
+zqc	Zoque (Copainalá)	17	-93.25	Mixe-Zoque	Mixe-Zoque	North America	yes	4 No other roles (= Only benefactive)	NA	100
+zul	Zulu	-30	30	Bantoid	Niger-Congo	Africa	yes	1 Instrument	yes	100

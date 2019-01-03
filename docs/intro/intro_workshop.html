@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tools for Reproducible Research in Linguistics</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bradley McDonnell1, Na-Rae Han2, Eve Koller1     1University of Hawai‘i at Mānoa  2University of Pittsburgh" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Tools for Reproducible Research in Linguistics
+## LSA 2019
+### Bradley McDonnell<sup>1</sup>, Na-Rae Han<sup>2</sup>, Eve Koller<sup>1</sup> <br/> <br/> <sup>1</sup>University of Hawai‘i at Mānoa<br/> <sup>2</sup>University of Pittsburgh
+### 2019/01/03 (updated: 2018-12-30)
+
+---
+
+
+
+
+
+
+
+class: inverse, middle, center
+
+# Introduction &amp; Introductions
+
+ 
+
+---
+# Who are we?
+
+- Brad McDonnell
+  
+- Na-Rae Han
+
+- Eve Koller
+
+---
+# Why are we offering this workshop? 
+
+Part of larger project (NSF SMA \#1745249) to increase data science literacy for all of linguistics. 
+
+  1. Several Workshops: 
+    - 2018, 2019 LSA Annual Meeting 
+    - 2019 LSA Linguistic Institute [Wednesday Workshops](https://lsa2019.ucdavis.edu/wednesday-workshops/)
+  1. Handbook for Linguistic Data Managment (MIT Press Open)
+    - ed. by Andrea Berez-Kroeker, Bradley McDonnell, Eve Koller, Lauren Collister
+
+
+&lt;!--.footnote[
+&lt;img src="intro_workshop_files/nsf-logo.png" style="width: 15%" align="left"/&gt;  
+
+This material is based upon work supported by the National Science Foundation under grant SMA-1745249 to the University of Hawai‘i at Mānoa. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+] --&gt;
+
+
+---
+# Who are you?
+
+## Share the following:
+
+- Name
+- Research interests
+- Reasons for taking the workshop
+
+
+---
+
+# What is Reproducible Research?
+
+"[...] *reproducibility* [...] in research means that the data on which publications are based are made available so that other scientists could ostensibly verify the results for themselves."
+
+(Gawne and Berez-Kroeker, 2019: 21)
+
+"The idea [of reproducible research] is the final product of research is not only the paper itself, but also the full computational environment used to produce the results in the paper such as the code and data necessary for reproduction of the results..."
+
+
+Xie (2015: 5)
+in discussion of Fomel and Claerbout (2009)
+
+.footnote[
+**Note:** *Reproducibility* differs from *replicability*, "in which the steps of a research project are replicated by another scientist, yielding new data which can confirm or contradict previous data" (Gawne and Berez-Kroeker, 2019: 21).
+
+\*For many types of linguistic research, *replication* is simply not possible.
+]
+---
+
+class: inverse, middle, center
+
+# What are some reasons for practicing reproducible research?
+
+
+???
+
+- For science to be trustworthy
+- Allows us to confirm previous analyses
+- Allows us to build upon others' analyses 
+- Decreases the chances of copy/past errors
+- Allows us to focus more time on the research and not tedious tasks
+
+
+---
+
+# Tools
+
+Reproducible research is increasingly possible with the proliferation of tools.
+
+&lt;img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" style="width: 15%" align="right"/&gt;
+- git allows us to keep track of the changes we make to code, data, etc. 
+
+
+- GitHub allows us&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/200px-Octicons-mark-github.svg.png" style="width: 15%" align="right"/&gt;  
+  - to keep track of these changes while collaborating with others,
+  - share research with others 
+
+  
+- RStudio and Jyputer notebooks allow us weave together code, code output, visulization, data, analysis, and documentation.
+
+&lt;img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 25%" align="left"/&gt; 
+
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/200px-Jupyter_logo.svg.png" style="width: 25%" align="right"/&gt; 
+???
+
+The means to make research reproducible 
+
+ 
+
+---
+
+# Goals of the workshop
+
+1. Use basic `git` commands (e.g., commit, status)
+1. Create a repo on GitHub
+1. Work collaboratively on GitHub Repo
+1. Either...
+  - Integrate Markdown and Python in Jupyter Notebooks
+  - Integrate R code and Markdown for dynamic (`knitr`) documents
+
+---
+
+.pull-left[
+### What we're teaching...
+
+  1. git
+  1. GitHub
+  1. Jupyter Notebooks
+  1. RStudio
+]
+
+.pull-right[
+### What we're ***not*** teaching...
+  1. R
+  1. Python
+]
+
+---
+
+# Overview of the workshop
+
+| Time | Topic | Presenters |
+|------|-------|------------|
+| 9:00 - 9:15 | Introductions | |
+| 9:15 - 9:30 | Overview of workshop | Brad | 
+| 9:30 - 10:45 | [Introduction to git](intro_to_git.md) | Na-Rae |
+| **10:45 - 11:00** | **Break** | |
+| 11:00 - 12:30 | [Linking git and GitHub](linking_git_and_github.md) | Na-Rae, Brad |
+| **12:30 - 1:30** |  **Lunch** | |
+| 1:30 - 1:45 | RStudio with R demo  | Brad |
+| 1:45 - 2:00 | Jupyter Notebooks with Python demo  | Na-Rae |
+| 2:00 - 3:15 | Break out groups with RStudio and Jupyter Notebooks | |
+| 3:15 - 3:30 | Concluding remarks |Brad|
+
+
+---
+
+# References
+
+
+Fomel, S. and J. F. Claerbout (2009). "Guest Editors'
+Introduction: Reproducible Research". In: _Computing in Science &amp;
+Engineering_ 11.1, pp. 5-7. ISSN: 1521-9615. DOI:
+[10/drqmvs](https://doi.org/10/drqmvs).
+
+Gawne, L. and A. L. Berez-Kroeker (2019). "Reflections on
+Reproducible Research". In: _Reflections on Language Documentation
+20 Years after Himmelmann 1998_. Ed. by B. McDonnell, A. L.
+Berez-Kroker and G. Holton. Language Documentation &amp; Conservation
+Special Publication 15. Honolulu: University of Hawaii Press, pp.
+20-30.
+
+Xie, Y. (2015). _Dynamic Documents with R and Knitr_. Second
+edition. Boca Raton: CRC Press/Taylor &amp; Francis. ISBN:
+978-1-4987-1696-3.
+
+
+--- 
+
+---
+
+class: inverse, middle, center
+
+# Questions?
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

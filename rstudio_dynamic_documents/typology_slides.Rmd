@@ -1,0 +1,318 @@
+---
+title: "The Typology of Causative-Applicative Syncretism"
+author: "Bradley McDonnell"
+date: "1/1/2019"
+output: 
+  ioslides_presentation: 
+    incremental: true
+bibliography: bib/causative-applicative.bib
+---
+
+
+<!--TASK
+
+1. Knit slides to see what they look like. Then change...
+
+output: ioslides_presentation
+
+to...
+
+output: 
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+
+Notice a difference? (I think it looks much better.)
+
+2. add the bibliography "caus-appl.bib" for these slides. 
+
+-->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r load-data, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(tidyverse)
+library(leaflet) # for creating maps
+library(wesanderson) # for custom colors
+library(knitr) # for tables
+library(kableExtra) # for tables
+
+## Load datasets
+wals_200_caus_appl <- read_tsv("data/wals_200_caus_appl.csv")
+wals_200_syncretism <- read_tsv("data/wals_200_syncretism.csv")
+
+## Define colors for maps
+pal <- colorFactor(palette = wes_palette(name = "Zissou1")[c(2,5)],
+                   domain = levels(wals_200_caus_appl$causative_111a)
+                   )
+pal2 <- colorFactor(palette = wes_palette(name = "Zissou1")[c(5)],
+                    domain = levels(wals_200_caus_appl$reported)
+                    )
+```
+
+
+## Goals
+
+1. An overview of causatives and applicatives in the world's languages.
+1. Worldwide distribution of causative-applicative syncretism.
+     - Distribution within a subset of the WALS 200 sample.
+1. Challenges & prospects creating a typology of causative-applicative syncretism.
+
+<!-- Task 
+Try to add > before each, item in the list above... what happens?  
+
+Delete them and then add... 
+    
+    incremental: true
+
+    below this command
+    
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+
+This means that all bullet points are incremental.
+
+You can also adjust the speed of the slides just below the "incremental: true"...
+
+    transition: slower 
+
+You can also make it "faster".
+
+-->
+
+## Causatives 
+
+
+
+
+
+
+## WALS map for causatives 
+
+```{r eval=require('leaflet'), echo=FALSE}
+causative_map <- wals_200_caus_appl %>%
+  na.omit() %>%
+  leaflet() %>%
+  fitBounds(lng1 = -170, lat1 = -50, lng2 = 170, lat2 = 70) %>%
+  addTiles() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers(~longitude, 
+                   ~latitude, 
+                   color = ~pal(causative_111a), 
+                   weight = 1, 
+                   fillColor = ~pal2(causative_111a),
+                   fillOpacity = 0.75,
+                   opacity = 1,
+                   radius =  3, 
+                   label=~as.character(name)
+  ) %>%
+  addLegend("topright", 
+            pal = pal, 
+            values = ~causative_111a,
+            title = "Causatives",
+            opacity = 1
+  )
+causative_map
+```
+### [@song2013nonperiphrastic]
+
+
+<!--
+1. Add a new slide with the title "Geographical distribution"
+2. Include a list of where applicatives occur and do not occur
+-->
+
+## Causatives 
+
+```{r caus-table}
+wals_200_caus_appl %>%
+  na.omit() %>%
+  group_by(causative_111a) %>%
+  summarize(n=n()) %>%
+  mutate(rel.freq = paste0(round(100 * n/sum(n), 0), "%")) %>%
+  kable(format = 'html', 
+        align = rep('c', 3),
+        col.names = c("Causatives",
+                      "Total (n)",
+                      "Total (%)")
+        )  %>%
+kable_styling(bootstrap_options = "striped", font_size = 30) %>%
+row_spec(0, font_size = 30)
+```
+
+## Applicatives
+
+
+## WALS map for applicatives 
+
+```{r appl-map}
+applicative_map <- wals_200_caus_appl %>%
+  na.omit() %>%
+  leaflet() %>% 
+  fitBounds(lng1 = -170, lat1 = -50, lng2 = 170, lat2 = 70) %>%
+  addTiles() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers(~longitude, 
+                   ~latitude, 
+                   color = ~pal(applicative_109a), 
+                   weight = 1, 
+                   fillColor = ~pal2(applicative_109a),
+                   fillOpacity = 0.75,
+                   opacity = 1,
+                   radius = 3, 
+                   label=~as.character(name)
+  ) %>%
+  addLegend("topright", 
+            pal = pal, 
+            values = ~applicative_109a,
+            title = "Applicatives",
+            opacity = 1
+  )
+applicative_map
+```
+###[@polinsky2013applicative]
+
+<!--
+1. Add a new slide with the title "Geographical distribution"
+2. Include a list of where applicatives occur and do not occur
+-->
+
+## Applicatives totals 
+
+```{r, echo=FALSE}
+wals_200_caus_appl %>%
+  na.omit() %>%
+  group_by(applicative_109a) %>%
+  summarize(n=n()) %>%
+  mutate(rel.freq = paste0(round(100 * n/sum(n), 0), "%")) %>%
+  kable(format = 'html',
+        align = rep('c',3),
+        col.names = c("Applicatives",
+                      "Total (n)",
+                      "Total (%)")
+        )  %>%
+  kable_styling(bootstrap_options = "striped", font_size = 30) %>%
+  row_spec(0, font_size = 30)
+```
+
+
+## Causative & Applicatives 
+
+```{r caus-appl}
+caus_appl_table <- wals_200_caus_appl %>%
+  na.omit() %>%
+  group_by(causative_111a, applicative_109a) %>%
+  summarize(n=n()) 
+
+caus_appl_table %>%
+  kable(format = 'html', 
+        align = rep('c',3),
+        col.names = c("Causatives", 
+                      "Applicatives", 
+                      "Total (n)")
+        )  %>%
+  kable_styling(bootstrap_options = "striped", font_size = 30) %>%
+  row_spec(0, font_size = 30) %>%
+  collapse_rows(columns = 1, valign = "middle")
+```
+
+
+## Causative & Applicatives
+
+<!-- TASK 
+
+Add {.smaller} after the slide heading above.
+
+-->
+
+```{r caus-apple-df, include = FALSE}
+caus_appl_table_df <- caus_appl_table %>%
+  ungroup %>%
+  as.data.frame()
+```
+
+- Most langauges have a **causative** but *no* **applicative** <br/> (n = `r caus_appl_table_df[3,3]`)
+- Many languages have a **causative** *and* an **applicative** <br/> (n = `r caus_appl_table_df[4,3]`)
+- A small number of langauges have *neither* a **causative** *nor* an **applicative** <br/> (n = `r caus_appl_table_df[1,3]`)
+- Very *few* langauges have an **applicative** but *no* **causative** <br/> (n = `r caus_appl_table_df[2,3]`)
+
+
+## Causative-applicative syncretism map
+
+```{r sync-map}
+syncretism_map <- wals_200_syncretism %>%
+  leaflet() %>%
+  fitBounds(lng1 = -170, lat1 = -50, lng2 = 170, lat2 = 70) %>%
+  addTiles() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addCircleMarkers(~longitude, 
+                   ~latitude, 
+                   color = ~pal(syncretism), 
+                   weight = 1, 
+                   radius = 4, 
+                   fillColor = ~pal(syncretism), 
+                   fillOpacity = 0.75,
+                   opacity = 1,
+                   label=~as.character(name)
+                   ) %>%
+  addLegend("topright", 
+            pal = pal, 
+            values = ~syncretism,
+            title = "Syncretism",
+            opacity = 1
+  )
+syncretism_map
+```
+
+## Causative-applicative syncretism
+
+```{r sync-table}
+wals_200_syncretism %>%
+  group_by(syncretism) %>%
+  summarize(n=n()) %>%
+  mutate(rel.freq = paste0(round(100 * n/sum(n), 0), "%")) %>%
+  kable(format = 'html',
+        align = rep('c',3),
+        col.names = c("Syncretism", 
+                      "Total (n)",
+                      "Total (%)")
+        )  %>%
+  kable_styling(bootstrap_options = "striped", font_size = 30) %>%
+  row_spec(0, font_size = 30)
+```
+
+
+---- 
+
+<!-- Note that this how you create a slide without a title in case you're curious -->
+
+Go to <https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html> for more ideas of what to do with your slides. 
+
+For even more on **isoslides** go to <https://openscience.nuance-r.com/ioslides_presentation_format.html>
+
+For `kable` tables, go to <https://haozhu233.github.io/kableExtra/awesome_table_in_html.html>
+
+For another style of slides using R Markdown, see `xaringan` <https://github.com/yihui/xaringan>
+
+If you are interested in bibliographies see <https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
+
+----
+
+If you want to number tables, see: 
+<https://www.r-bloggers.com/r-markdown-how-to-number-and-reference-tables/>
+
+If you wanted to look at potential article templates: 
+<https://github.com/rstudio/rticles>
+
+Some other table options in R Markdown: 
+<https://davidgohel.github.io/flextable/index.html>
+
+Tips for using knitr and R Markdown with Word (.docx) files
+<https://rmarkdown.rstudio.com/articles_docx.html>
+
+
+## References

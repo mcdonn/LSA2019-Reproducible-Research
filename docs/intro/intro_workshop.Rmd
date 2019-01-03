@@ -1,0 +1,198 @@
+---
+title: "Tools for Reproducible Research in Linguistics"
+subtitle: "LSA 2019"
+author: "Bradley McDonnell^1^, Na-Rae Han^2^, Eve Koller^1^ <br/> <br/> ^1^University of Hawai‘i at Mānoa<br/> ^2^University of Pittsburgh"
+date: "2019/01/03 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r, load_refs, echo=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           cite.style = "authoryear", 
+           style = "markdown",
+           hyperlink = FALSE, 
+           dashed = FALSE)
+rrBib <- ReadBib("intro_workshop_files/rr.bib", check = FALSE)
+```
+
+class: inverse, middle, center
+
+# Introduction & Introductions
+
+ 
+
+---
+# Who are we?
+
+- Brad McDonnell
+  
+- Na-Rae Han
+
+- Eve Koller
+
+---
+# Why are we offering this workshop? 
+
+Part of larger project (NSF SMA \#1745249) to increase data science literacy for all of linguistics. 
+
+  1. Several Workshops: 
+    - 2018, 2019 LSA Annual Meeting 
+    - 2019 LSA Linguistic Institute [Wednesday Workshops](https://lsa2019.ucdavis.edu/wednesday-workshops/)
+  1. Handbook for Linguistic Data Managment (MIT Press Open)
+    - ed. by Andrea Berez-Kroeker, Bradley McDonnell, Eve Koller, Lauren Collister
+
+
+<!--.footnote[
+<img src="intro_workshop_files/nsf-logo.png" style="width: 15%" align="left"/>  
+
+This material is based upon work supported by the National Science Foundation under grant SMA-1745249 to the University of Hawai‘i at Mānoa. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+] -->
+
+
+---
+# Who are you?
+
+## Share the following:
+
+- Name
+- Research interests
+- Reasons for taking the workshop
+
+
+---
+
+# What is Reproducible Research?
+
+"[...] *reproducibility* [...] in research means that the data on which publications are based are made available so that other scientists could ostensibly verify the results for themselves."
+
+`r Citep(rrBib, "gawne2019reflections", after=": 21")`
+
+"The idea [of reproducible research] is the final product of research is not only the paper itself, but also the full computational environment used to produce the results in the paper such as the code and data necessary for reproduction of the results..."
+
+
+`r TextCite(rrBib, "xie2015dynamic", after=": 5")`
+in discussion of `r TextCite(rrBib, "fomel2009guest")`
+
+.footnote[
+**Note:** *Reproducibility* differs from *replicability*, "in which the steps of a research project are replicated by another scientist, yielding new data which can confirm or contradict previous data" `r Citep(rrBib, "gawne2019reflections", after=": 21")`.
+
+\*For many types of linguistic research, *replication* is simply not possible.
+]
+---
+
+class: inverse, middle, center
+
+# What are some reasons for practicing reproducible research?
+
+
+???
+
+- For science to be trustworthy
+- Allows us to confirm previous analyses
+- Allows us to build upon others' analyses 
+- Decreases the chances of copy/past errors
+- Allows us to focus more time on the research and not tedious tasks
+
+
+---
+
+# Tools
+
+Reproducible research is increasingly possible with the proliferation of tools.
+
+<img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" style="width: 15%" align="right"/>
+- git allows us to keep track of the changes we make to code, data, etc. 
+
+
+- GitHub allows us<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/200px-Octicons-mark-github.svg.png" style="width: 15%" align="right"/>  
+  - to keep track of these changes while collaborating with others,
+  - share research with others 
+
+  
+- RStudio and Jyputer notebooks allow us weave together code, code output, visulization, data, analysis, and documentation.
+
+<img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-flat.svg" style="width: 25%" align="left"/> 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/200px-Jupyter_logo.svg.png" style="width: 25%" align="right"/> 
+???
+
+The means to make research reproducible 
+
+ 
+
+---
+
+# Goals of the workshop
+
+1. Use basic `git` commands (e.g., commit, status)
+1. Create a repo on GitHub
+1. Work collaboratively on GitHub Repo
+1. Either...
+  - Integrate Markdown and Python in Jupyter Notebooks
+  - Integrate R code and Markdown for dynamic (`knitr`) documents
+
+---
+
+.pull-left[
+### What we're teaching...
+
+  1. git
+  1. GitHub
+  1. Jupyter Notebooks
+  1. RStudio
+]
+
+.pull-right[
+### What we're ***not*** teaching...
+  1. R
+  1. Python
+]
+
+---
+
+# Overview of the workshop
+
+| Time | Topic | Presenters |
+|------|-------|------------|
+| 9:00 - 9:15 | Introductions | |
+| 9:15 - 9:30 | Overview of workshop | Brad | 
+| 9:30 - 10:45 | [Introduction to git](intro_to_git.md) | Na-Rae |
+| **10:45 - 11:00** | **Break** | |
+| 11:00 - 12:30 | [Linking git and GitHub](linking_git_and_github.md) | Na-Rae, Brad |
+| **12:30 - 1:30** |  **Lunch** | |
+| 1:30 - 1:45 | RStudio with R demo  | Brad |
+| 1:45 - 2:00 | Jupyter Notebooks with Python demo  | Na-Rae |
+| 2:00 - 3:15 | Break out groups with RStudio and Jupyter Notebooks | |
+| 3:15 - 3:30 | Concluding remarks |Brad|
+
+
+---
+
+# References
+
+
+```{r, 'refs', results='asis', echo=FALSE}
+PrintBibliography(rrBib)
+```
+
+
+--- 
+
+---
+
+class: inverse, middle, center
+
+# Questions?
