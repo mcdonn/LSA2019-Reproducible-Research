@@ -72,5 +72,14 @@ This is a very basic example of a dynamic document. First, use the `knit` comman
 ## [Exercise 2: Typology of causatives and applicatives](typology_paper.Rmd)
 This is a very basic example of a slides using `knitr` and R Markdown. Again, first use the `knit` command to compile the document. Then, read through the document and look out for commented sections in between \<!-- and -->. For each of these, I list different tasks to complete throughout the document. I'll be walking around to help you complete these tasks.
 
-## Exercise 3: Experimenting on your own
+## Exercise 3: Slides in xaringan
+Another package worth looking into is [xaringan](https://github.com/yihui/xaringan). It is based upon reveal.js. 
+
+- Install it by running `install.packages(xaringan)`. 
+- Click File... > New File > R Markdown...
+- Click From template in the left pane 
+- Select ninja presentation and then OK.
+- The template file explains all of the formatting styles in xaringan. Try it out, and even try to repoduce the slides from Exercise 2 in xaringan. 
+
+## Exercise 4: Experimenting on your own
 If you have additional time, you can *either* create slides from the document in **Exercise 1** *or* create a document from the slides in **Exercise 2**. I provide a number of links at the end of exercise 2 for you to get some ideas of how you can do even more with dynamic documents.
