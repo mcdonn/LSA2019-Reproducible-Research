@@ -130,8 +130,8 @@ $ pwd
 
 Let's create a file called `zulu.txt` that contains some notes
 about the language.
-We'll use `nano` to edit the file; you can use your favorite editor.
-In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). 
+I'll use `nano` to edit the file; you can use your favorite plain-text editor if you have one. 
+(Note: It does not have to be the `core.editor` you set globally earlier.)  
 
 ```bash
 $ nano zulu.txt
@@ -143,7 +143,7 @@ An editor window will open up. Type the text below into the `zulu.txt` file:
 belongs to the Bantu language family
 ```
 
-To save and exit `nano`,  hit `Ctrl+X`, and then `y` to save. `zulu.txt` now contains a single line, which we can see by running:
+To save and exit `nano`,  hit `Ctrl+X`, and then `y` to save. `zulu.txt` now contains a single line, which we can view by running the `cat` ("concatenate") command:
 
 ```bash
 $ cat zulu.txt
@@ -186,10 +186,9 @@ Changes to be committed:
 	new file:   zulu.txt
 ```
 
-Git now knows that it's supposed to keep track of `zulu.txt`,
-but it hasn't recorded these changes as a commit yet.
-To get it to do that,
-we need to run one more command:
+Git now knows that it's supposed to keep track of `zulu.txt`, 
+but it hasn't recorded these changes yet.
+To get it to do that, we need to run `git commit`:
 
 ```bash
 $ git commit -m "start notes on Zulu language"
@@ -201,8 +200,7 @@ $ git commit -m "start notes on Zulu language"
 When we run `git commit`,
 Git takes everything we have told it to save by using `git add`
 and stores a copy permanently inside the special `.git` directory.
-This permanent copy is called a **commit** and its short identifier is `f22b25e`.
-Your commit may have another identifier.
+This permanent copy is called a **commit** and its short identifier is `f22b25e` in this example.
 
 We use the `-m` flag (for "message")
 to record a short, descriptive, and specific comment that will help us remember later on what we did and why.
@@ -233,9 +231,7 @@ Date:   Thu Aug 22 09:51:46 2018 -0400
 
 `git log` lists all commits  made to a repository in reverse chronological order.
 The listing for each commit includes
-the commit's full identifier
-(which starts with the same characters as
-the short identifier printed by the `git commit` command earlier),
+the commit's full identifier (which starts with the same `f22b25e`),
 the commit's author,
 when it was created, and the log message Git was given when the commit was created.
 
@@ -273,9 +269,9 @@ The last line is the key phrase:
 We have changed this file,
 but we haven't told Git we will want to save those changes
 (which we do with `git add`)
-nor have we saved them (which we do with `git commit`).
-So let's do that now. It is good practice to always review
-our changes before saving them. We do this using `git diff`.
+nor have we actually saved them (which we do with `git commit`).
+Before taking those steps, it is good practice to always review
+our changes. We do this using `git diff`.
 This shows us the differences between the current state
 of the file and the most recently saved version:
 
@@ -290,10 +286,7 @@ index df0654a..315bf3a 100644
 +spoken in South Africa
 ```
 
-The output is cryptic because
-it is actually a series of commands for tools like editors and `patch`
-telling them how to reconstruct one file given the other.
-If we break it down into pieces:
+The output is cryptic, but to break it down into pieces:
 
 1.  The first line tells us that Git is producing output similar to the Unix `diff` command
     comparing the old and new versions of the file.
@@ -374,9 +367,12 @@ and `git commit` then *actually takes* the snapshot, and
 
 ## A Commit Workflow
 
+<!-- 
 Let's watch as our changes to a file move from our editor
-to the staging area and into long-term storage.
-First, we'll add another line to the file:
+to the staging area and into long-term storage. -->
+
+Let's recap by trying another round, from start to finish. 
+First, we'll add another line to the Zulu file, this time about word order:
 
 ```bash
 $ nano zulu.txt
@@ -409,12 +405,10 @@ and see what `git diff` reports:
 $ git add zulu.txt
 $ git diff
 ```
-
-There is no output!
-As far as Git can tell,
+<!-- As far as Git can tell,
 there's no difference between what it's been asked to save permanently
-and what's currently in the directory.
-However, if we use the `--staged` flag:
+and what's currently in the directory. -->
+It displays no difference, because the new changes have been added to the staging area. To show differences between the last commit and what's staged, we need to specify the `--staged` flag:
 
 ```bash
 $ git diff --staged
@@ -428,10 +422,7 @@ index 315bf3a..b36abfd 100644
 +word order: SVO
 ```
 
-it shows us the difference between
-the last committed change
-and what's in the staging area.
-Let's save our changes:
+Let's then save our changes through committing:
 
 ```bash
 $ git commit -m "add word order info"
@@ -557,36 +548,11 @@ so `HEAD~1`
 means "the previous commit",
 while `HEAD~123` goes back 123 commits from where we are now.
 
-<!-- 
-We can also refer to commits using
-those long strings of digits and letters
-that `git log` displays.
-These are unique IDs for the changes,
-and "unique" really does mean unique:
-every change to any set of files on any computer
-has a unique 40-character identifier.
-Our first commit was given the ID
-`f22b25e3233b4645dabd0d81e651fe074bd8e73b`. Instead of forcing us to type in the full 40 characters, though, Git mercifully lets us use the first few characters: 
-
-```bash
-$ git diff f22b25e zulu.txt
-diff --git a/zulu.txt b/zulu.txt
-index df0654a..93a3e13 100644
---- a/zulu.txt
-+++ b/zulu.txt
-@@ -1 +1,4 @@
- belongs to the Bantu language family
-+spoken in South Africa
-+word order: SVO
-+a close relative of Spanish
-```
--->
 
 All right! So
 we can save changes to files and see what we've changed—now how
-can we restore older versions of things?
-Let's suppose we change our mind about the last update to
-`zulu.txt`, about its relation to Spanish, which turns out incorrect. 
+can we restore older versions of things? We need that, 
+as we realize Zulu is in fact not related to Spanish and decide to scrap that line. 
 Checking `git status` tells us that the file has been changed,
 but those changes haven't been staged:
 
@@ -602,8 +568,8 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-We can put things back the way they were
-by simply using `git checkout`:
+We can put things back to the state of last commit 
+by simply using `git checkout HEAD filename`:
 
 ```bash
 $ git checkout HEAD zulu.txt
@@ -643,9 +609,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 
-Notice that the changes are on the staging area.
-Again, we can put things back the way they were
-by using `git checkout`:
+Notice that the changes are on the staging area. 
+If you decide to stick to this restored version, you will need to complete the process by committing, when the restored version will become the new `HEAD`. 
+If not, you can go back to the last commit point using `git checkout HEAD filename`:
 
 ```bash
 $ git checkout HEAD zulu.txt
