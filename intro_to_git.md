@@ -548,36 +548,11 @@ so `HEAD~1`
 means "the previous commit",
 while `HEAD~123` goes back 123 commits from where we are now.
 
-<!-- 
-We can also refer to commits using
-those long strings of digits and letters
-that `git log` displays.
-These are unique IDs for the changes,
-and "unique" really does mean unique:
-every change to any set of files on any computer
-has a unique 40-character identifier.
-Our first commit was given the ID
-`f22b25e3233b4645dabd0d81e651fe074bd8e73b`. Instead of forcing us to type in the full 40 characters, though, Git mercifully lets us use the first few characters: 
-
-```bash
-$ git diff f22b25e zulu.txt
-diff --git a/zulu.txt b/zulu.txt
-index df0654a..93a3e13 100644
---- a/zulu.txt
-+++ b/zulu.txt
-@@ -1 +1,4 @@
- belongs to the Bantu language family
-+spoken in South Africa
-+word order: SVO
-+a close relative of Spanish
-```
--->
 
 All right! So
 we can save changes to files and see what we've changed—now how
 can we restore older versions of things? We need that, 
-as we realize Zulu is in fact not  
-related to Spanish and decide to scrap that line. 
+as we realize Zulu is in fact not related to Spanish and decide to scrap that line. 
 Checking `git status` tells us that the file has been changed,
 but those changes haven't been staged:
 
@@ -594,7 +569,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 We can put things back to the state of last commit 
-by simply using `git checkout HEAD`:
+by simply using `git checkout HEAD filename`:
 
 ```bash
 $ git checkout HEAD zulu.txt
@@ -634,7 +609,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
 
-Notice that the changes are on the staging area. If you decide to stick to this restored version, you will need to complete the process by committing, when the restored version will become the new `HEAD`. If not, you can put things back using `git checkout HEAD`:
+Notice that the changes are on the staging area. 
+If you decide to stick to this restored version, you will need to complete the process by committing, when the restored version will become the new `HEAD`. 
+If not, you can go back to the last commit point using `git checkout HEAD filename`:
 
 ```bash
 $ git checkout HEAD zulu.txt
