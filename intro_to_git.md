@@ -438,7 +438,7 @@ On branch master
 nothing to commit, working directory clean
 ```
 
-and look at the history of what we've done so far:
+and look at the history of what we've done so far. By now, our log has gotten longer, so you will likely be thrown into pagination. You can hit `SPACE` to page down, and `q` to quit:  
 
 ```bash
 $ git log
