@@ -8,7 +8,7 @@
 * **Location:** Flatiron Room, Sheraton New York Times Square
 
 ## Instructors
-* **Bradley McDonnell**, University of Hawai‘i at Mānoa (<mcdonn@hawaii.edu>)
+* [**Bradley McDonnell**](http://www.bradleymcdonnell.org), University of Hawai‘i at Mānoa (<mcdonn@hawaii.edu>)
 * [**Na-Rae Han**](http://www.pitt.edu/~naraehan/), University of Pittsburgh (<naraehan@pitt.edu>)
 * [**Eve Okura Koller**](https://evekoller.com/), University of Hawai‘i at Mānoa (<ekoller@hawaii.edu>)
 

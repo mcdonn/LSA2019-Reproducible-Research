@@ -2,10 +2,7 @@
 title: "The Typology of Causative-Applicative Syncretism"
 author: "Bradley McDonnell"
 date: "1/1/2019"
-output: 
-  ioslides_presentation: 
-    incremental: true
-bibliography: bib/causative-applicative.bib
+output: ioslides_presentation
 ---
 
 
@@ -30,10 +27,10 @@ Notice a difference? (I think it looks much better.)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+options(htmltools.dir.version = FALSE)
 ```
 
 ```{r load-data, include=FALSE}
-options(htmltools.dir.version = FALSE)
 library(tidyverse)
 library(leaflet) # for creating maps
 library(wesanderson) # for custom colors
@@ -41,16 +38,17 @@ library(knitr) # for tables
 library(kableExtra) # for tables
 
 ## Load datasets
-wals_200_caus_appl <- read_tsv("data/wals_200_caus_appl.csv")
-wals_200_syncretism <- read_tsv("data/wals_200_syncretism.csv")
+wals_200_caus_appl <- read_tsv("data/wals_200_caus_appl.csv") %>%
+                              mutate(causative_111a = fct_recode(causative_111a), 
+                                     applicative_109a = fct_recode(applicative_109a)
+                                     )
+wals_200_syncretism <- read_tsv("data/wals_200_syncretism.csv") %>%
+                              mutate(syncretism = fct_recode(syncretism))
 
 ## Define colors for maps
 pal <- colorFactor(palette = wes_palette(name = "Zissou1")[c(2,5)],
                    domain = levels(wals_200_caus_appl$causative_111a)
                    )
-pal2 <- colorFactor(palette = wes_palette(name = "Zissou1")[c(5)],
-                    domain = levels(wals_200_caus_appl$reported)
-                    )
 ```
 
 
@@ -92,8 +90,8 @@ You can also make it "faster".
 
 
 ## WALS map for causatives 
-
-```{r eval=require('leaflet'), echo=FALSE}
+### [@song2013nonperiphrastic]
+```{r caus-map}
 causative_map <- wals_200_caus_appl %>%
   na.omit() %>%
   leaflet() %>%
@@ -104,7 +102,7 @@ causative_map <- wals_200_caus_appl %>%
                    ~latitude, 
                    color = ~pal(causative_111a), 
                    weight = 1, 
-                   fillColor = ~pal2(causative_111a),
+                   fillColor = ~pal(causative_111a),
                    fillOpacity = 0.75,
                    opacity = 1,
                    radius =  3, 
@@ -118,7 +116,7 @@ causative_map <- wals_200_caus_appl %>%
   )
 causative_map
 ```
-### [@song2013nonperiphrastic]
+
 
 
 <!--
@@ -148,6 +146,7 @@ row_spec(0, font_size = 30)
 
 
 ## WALS map for applicatives 
+###[@polinsky2013applicative]
 
 ```{r appl-map}
 applicative_map <- wals_200_caus_appl %>%
@@ -160,7 +159,7 @@ applicative_map <- wals_200_caus_appl %>%
                    ~latitude, 
                    color = ~pal(applicative_109a), 
                    weight = 1, 
-                   fillColor = ~pal2(applicative_109a),
+                   fillColor = ~pal(applicative_109a),
                    fillOpacity = 0.75,
                    opacity = 1,
                    radius = 3, 
@@ -174,7 +173,6 @@ applicative_map <- wals_200_caus_appl %>%
   )
 applicative_map
 ```
-###[@polinsky2013applicative]
 
 <!--
 1. Add a new slide with the title "Geographical distribution"
@@ -284,6 +282,10 @@ wals_200_syncretism %>%
   kable_styling(bootstrap_options = "striped", font_size = 30) %>%
   row_spec(0, font_size = 30)
 ```
+
+<!--
+It would be ideal for "yes" to occur before "no"" in the maps. Can you figure out how to accomplish this?
+-->
 
 
 ---- 

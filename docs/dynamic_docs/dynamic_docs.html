@@ -14,7 +14,7 @@ class: center, middle, inverse, title-slide
 # Dynamic Documents in RStudio
 ## LSA 2019
 ### Bradley McDonnell<br/>University of Hawai‘i at Mānoa
-### 2019/01/03 (updated: 2019-01-01)
+### 2019/01/03 (updated: 2019-01-03)
 
 ---
 
@@ -30,12 +30,12 @@ code.md{
 
 # Dynamic documents
 
-- To my knoweledge term coined by Yihui Xie for the R package `knitr` based on earlier versions of `Sweave`
-- `knitr`allows us to create documents in various formats (e.g., LateX, Markdown) with various outputs (HTML slides, `Shiny` apps, PDF documents), all of which combines Markup and executable code.
-- In the breakout section, we'll primarily work with **RMarkdown**, an *R-flavor* of traditional Markdown.
-  - I will show one example of `knitr` with LaTeX
+- "Dynamic documents" was coined by Yihui Xie for the R package `knitr` based on earlier versions of `Sweave`
+- `knitr` allows us to create documents in various formats (e.g., LateX, Markdown) with various outputs (HTML slides, `Shiny` apps, PDF documents), all of which combines Markup and executable code.
 
 ![](https://d33wubrfki0l68.cloudfront.net/61d189fd9cdf955058415d3e1b28dd60e1bd7c9b/b739c/lesson-images/rmarkdownflow.png)
+
+- In the breakout section, we'll primarily work with **R Markdown**, an *R-flavor* of traditional Markdown.
 
 ---
 
@@ -116,7 +116,7 @@ The YAML header can be quite complicated.
 title: "Dynamic Documents in RStudio"
 subtitle: "LSA 2019"
 author: "Bradley McDonnell&lt;br/&gt;University of Hawai‘i at Mānoa"
-date: "2019/01/03 (updated: 2019-01-01)"
+date: "2019/01/03 (updated: 2019-01-03)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -147,7 +147,7 @@ pse_stress &lt;- read_tsv("data/pse-stress-simplified.csv") %&gt;%
                                 Vowel = fct_recode(Vowel),
                                 Weight = fct_recode(Weight),
                                 Focus = fct_recode(Focus),
-                                Final = fct_recode(Final),
+                                Final = fct_recode(Final)
                                 )
                                       
 # A simple boxplot of intensity
