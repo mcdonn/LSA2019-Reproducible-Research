@@ -28,7 +28,7 @@ GitHub accounts has different types of accounts. The [free account](https://gith
 	- Choose the Free account and click Continue and then Submit
 	- You now have a GitHub account
 
-It's also a good idea to apply for "Education Discount", available to faculty and students, which bumps you up to the ["Pro" level access for free](https://github.com/pricing). Follow these steps to sign up for GitHub and apply for the educational discount: 
+It's also a good idea to apply for "Educational Discount", available to faculty and students, which bumps you up to the ["Pro" level access for free](https://github.com/pricing). Follow these steps to apply for the educational discount: 
 
 1. Go to [https://education.github.com/](https://education.github.com/)
 	- Click on **Get benefits** button in the upper right corner

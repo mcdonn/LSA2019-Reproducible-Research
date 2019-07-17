@@ -70,7 +70,7 @@ It's your time to try: go ahead add another Zulu language fact to `zulu.txt`: it
 Now that I have the repository living online, I can have collaborators.  But what happens when multiple people work on the same repo? Let's find out. First, I will add Brad as a collaborator of my "languages" repo. I go to the GitHub repo, click the settings button on the right, then select Collaborators, and enter Brad's username.
 
 
-Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then **clones** the repo onto his laptop (more on this later) and goes to work... He adds a new file `japanese.txt`, which he pushes to the GitHub repo.  
+Brad will then get an email message. He can also access the invitation via https://github.com/notifications. Upon accepting it, he will have full access (aka "push" access) to the repo. He then **clones** the repo onto his laptop (using `git clone https://github.com/naraehan/languages.git`) and goes to work... He adds a new file `japanese.txt`, which he pushes to the GitHub repo.  
 
 That means the GitHub repo is more up-to-date than my own local repo on my laptop! What to do? The key is **pull**. Now that the remote repo can be ahead of my local copy, I need to have `pull` as an important first step of my workflow: 
 
