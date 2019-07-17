@@ -27,8 +27,6 @@ $ git config --global --list
 user.name=Na-Rae Han
 user.email=naraehan@gmail.com
 core.editor=nano
-core.autocrlf=input
-core.safecrlf=false
 ```
 
 Your name and email will need setting up. Commands to set them on your machine:
@@ -191,8 +189,8 @@ but it hasn't recorded these changes yet.
 To get it to do that, we need to run `git commit`:
 
 ```bash
-$ git commit -m "start notes on Zulu language"
-[master (root-commit) f22b25e] start notes on Zulu language
+$ git commit -m "started notes on Zulu language"
+[master (root-commit) f22b25e] started notes on Zulu language
  1 file changed, 1 insertion(+)
  create mode 100644 zulu.txt
 ```
@@ -226,7 +224,7 @@ commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 09:51:46 2018 -0400
 
-    start notes on Zulu language
+    started notes on Zulu language
 ```
 
 `git log` lists all commits  made to a repository in reverse chronological order.
@@ -302,7 +300,7 @@ The output is cryptic, but to break it down into pieces:
 After reviewing our change, we go for committing:
 
 ```bash
-$ git commit -m "add region information"
+$ git commit -m "added region information"
 $ git status
 On branch master
 Changes not staged for commit:
@@ -320,13 +318,13 @@ Let's fix that. We add *and then* commit:
 
 ```bash
 $ git add zulu.txt
-$ git commit -m "add region information"
-[master 34961b1] add region information
+$ git commit -m "added region information"
+[master 34961b1] added region information
  1 file changed, 1 insertion(+)
 ```
 
-Git insists that we add files to the set we want to commit
-before actually committing anything. This allows us to commit our
+Git insists that we **add files to the set we want to commit**
+before actually committing anything. Suppose we are working on multiple languages: say Zulu, Xhosa and Japanese, and just edited all of them to include region information.  All these files then can be git-added and committed in one swoop, as a version that reflects the same update across all files. Additionally, staging allows us to commit our
 changes in stages and capture changes in logical portions rather than
 only large batches.
 For example, suppose we're adding a few citations to relevant research to our thesis.
@@ -425,8 +423,8 @@ index 315bf3a..b36abfd 100644
 Let's then save our changes through committing:
 
 ```bash
-$ git commit -m "add word order info"
-[master 005937f] add word order info
+$ git commit -m "added word order info"
+[master 005937f] added word order info
  1 file changed, 1 insertion(+)
 ```
 
@@ -446,19 +444,19 @@ commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 10:14:07 2018 -0400
 
-    add word order info
+    added word order info
 
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 10:07:21 2018 -0400
 
-    add region information
+    added region information
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 09:51:46 2018 -0400
 
-    start notes on zulu language
+    started notes on zulu language
 ```
 
 
@@ -529,7 +527,7 @@ commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Henry Higgins <profhiggins@oxford.edu>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
-    start notes on zulu
+    started notes on zulu
 
 diff --git a/zulu.txt b/zulu.txt
 new file mode 100644
