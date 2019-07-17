@@ -1,4 +1,4 @@
-# Software Installation Guide
+﻿# Software Installation Guide
 
 We need three software components: [**git**](#git-and-github), [**R**](#r-and-r-studio) and [**Python 3**](#python-3). The Python component also require two add-ons: **Jupyter Notebook** and **NLTK**. 
 
@@ -21,16 +21,20 @@ Git is an open-source version control system and runs locally on your machine. T
 ### Signing up for a GitHub Account
 <img src='img/Octocat.png' align=right>
 
-GitHub accounts has different types of accounts. The [free account](https://github.com/pricing) allows you to create public repositories and collaborate with others; you can even have *private* repositories that only you and your collaborators can see (although you are limited to 3 collaborators). 
+GitHub accounts come in [different levels](https://github.com/pricing). 
+The free account allows you to create public repositories and collaborate with others; 
+you can even have *private* repositories that only you and your collaborators can see 
+(although you are limited to 3 collaborators). 
 
-1. Go to [https://github.com](https://github.com)
+- Go to [https://github.com](https://github.com)
 	- Create a username, supply an email (best to use .edu email) and password. 
 	- Choose the Free account and click Continue and then Submit
 	- You now have a GitHub account
 
-It's also a good idea to apply for "Educational Discount", available to faculty and students, which bumps you up to the ["Pro" level access for free](https://github.com/pricing). Follow these steps to apply for the educational discount: 
+While at it, it's also a good idea to apply for "Educational Discount", 
+available to faculty and students, which bumps you up to the ["Pro" level access for free](https://github.com/pricing). Follow these steps to apply: 
 
-1. Go to [https://education.github.com/](https://education.github.com/)
+- Go to [https://education.github.com/](https://education.github.com/)
 	- Click on **Get benefits** button in the upper right corner
 	- Fill out the questions (select Individual account for question 2) and click Next
 	- Then fill out your name, university issued email address, name of school, and a brief description of how you plan to use GitHub.
