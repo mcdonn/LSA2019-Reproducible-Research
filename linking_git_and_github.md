@@ -142,7 +142,7 @@ What happened? Turns out Brad had pushed his change in the meantime, therefore m
 
 <img src="http://swcarpentry.github.io/git-novice/fig/conflict.svg" width=450px>
 
-Git rejects the push because it detects that the remote repository has new updates that have not been incorporated into my local branch. What I have to do is pull the changes from GitHub, merge them into the copy I'm currently working in, and then push that. So I start by pulling:
+Git rejects the push because it detects that the remote repository has new updates that have not been incorporated into my local branch. What I have to do is **pull** the changes from GitHub, merge them into the copy I'm currently working in, and then push that. So I start by pulling:
 
 ```bash
 $ git pull origin master
@@ -157,7 +157,7 @@ CONFLICT (content): Merge conflict in zulu.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-OK, so that means... `pull` failed? Actually, it only succeeded half-way. `pull` in fact consists of two steps: **fetching** and **merging**, and it failed at the latter step. After the changes from remote branch have been **fetched**, Git detects that changes I made to my local copy overlap with those made to the remote repository, and therefore refuses to **merge** the two versions to stop me from trampling on our previous work. Git then alters the affected file to mark the conflict: 
+OK, so that means... `pull` failed? Actually, it only succeeded half-way. `pull` in fact consists of two steps: **fetching** and **merging**, and it failed at the latter step. After the changes from remote branch have been **fetched**, Git detects that changes I made to my local copy overlap with those made to the remote repository, and therefore refuses to **merge** the two versions to stop me from trampling on our previous work. Git then alters the affected file to **mark the conflict**: 
 
 ```bash
 $ cat zulu.txt
