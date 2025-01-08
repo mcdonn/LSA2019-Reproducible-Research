@@ -301,7 +301,6 @@ After reviewing our change, we go for committing:
 
 ```bash
 $ git commit -m "added region information"
-$ git status
 On branch master
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
